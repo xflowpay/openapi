@@ -3727,18 +3727,6 @@
             }
           },
           {
-            "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the from amount currency.",
-            "in": "query",
-            "name": "from.currency",
-            "required": false,
-            "schema": {
-              "enum": [
-                "USD"
-              ],
-              "type": "string"
-            }
-          },
-          {
             "description": "A limit on the number of objects to be returned, between 1 and 10. If this parameter is not specified, a default value of 10 is assumed.",
             "in": "query",
             "name": "limit",
@@ -3748,61 +3736,12 @@
             }
           },
           {
-            "description": "Unique identifier for the object that created this underlying payment object.",
-            "in": "query",
-            "name": "linked_id",
-            "required": false,
-            "schema": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            }
-          },
-          {
             "description": "A cursor for use in pagination. `starting_after` is an object identifier that defines your place in the list. For instance, if you make a list request and receive 5 objects, ending with `obj_bar`, your subsequent call can include `starting_after=obj_bar` in order to fetch the next page of the list.",
             "in": "query",
             "name": "starting_after",
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the to amount currency.",
-            "in": "query",
-            "name": "to.currency",
-            "required": false,
-            "schema": {
-              "enum": [
-                "INR",
-                "USD"
-              ],
-              "type": "string"
-            }
-          },
-          {
-            "description": "Payment type.",
-            "in": "query",
-            "name": "type",
-            "required": false,
-            "schema": {
-              "enum": [
-                "adjustment_negative",
-                "adjustment_positive",
-                "fee_advance_debit",
-                "funds_credit",
-                "funds_debit",
-                "fx_fee",
-                "payout",
-                "payout_failure",
-                "payout_fee",
-                "platform_partner_debit",
-                "processing_fee",
-                "reconcile",
-                "transfer"
-              ],
-              "type": "array"
             }
           }
         ],
@@ -3970,40 +3909,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "description": "Valid status for payouts.",
-            "in": "query",
-            "name": "status",
-            "required": false,
-            "schema": {
-              "enum": [
-                "initialized",
-                "processing",
-                "settled",
-                "failed",
-                "hold"
-              ],
-              "type": "array"
-            }
-          },
-          {
-            "description": "Account identifier for the account to which funds are being deposited. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-            "in": "query",
-            "name": "to.account_id",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "description": "Address identifier of the account to which funds are being deposited. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
-            "in": "query",
-            "name": "to.address_id",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -4095,16 +4000,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "UpdatePayoutRequestMetadata",
-                    "type": "object"
-                  }
-                },
+                "properties": {},
                 "title": "UpdatePayoutRequest",
                 "type": "object"
               }
@@ -4220,53 +4116,12 @@
             }
           },
           {
-            "description": "`true` if the person is the director of the account entity, `false` otherwise.",
-            "in": "query",
-            "name": "relationship.director",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "description": "`true` if the person is the owner of the account entity, `false` otherwise.",
-            "in": "query",
-            "name": "relationship.owner",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "description": "`true` if the person is the representative of the account entity, `false` otherwise.",
-            "in": "query",
-            "name": "relationship.representative",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
             "description": "A cursor for use in pagination. `starting_after` is an object identifier that defines your place in the list. For instance, if you make a list request and receive 5 objects, ending with `obj_bar`, your subsequent call can include `starting_after=obj_bar` in order to fetch the next page of the list.",
             "in": "query",
             "name": "starting_after",
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "description": "Valid status for persons.",
-            "in": "query",
-            "name": "status",
-            "required": false,
-            "schema": {
-              "enum": [
-                "pending",
-                "unverified",
-                "verified"
-              ],
-              "type": "array"
             }
           }
         ],
@@ -4320,60 +4175,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "full_name": {
-                    "description": "Full name (i.e first name followed by the last name) of the person.",
-                    "type": "string"
-                  },
-                  "relationship": {
-                    "description": "Relationship of the person with the account.",
-                    "properties": {
-                      "director": {
-                        "description": "`true` if the person is the director of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      },
-                      "owner": {
-                        "description": "`true` if the person is the owner of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      },
-                      "representative": {
-                        "description": "`true` if the person is the representative of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      }
-                    },
-                    "title": "CreatePersonRequestRelationship",
-                    "type": "object"
-                  },
-                  "supporting_documentation": {
-                    "description": "Documents required to prove relationship of the person with the account.",
-                    "properties": {
-                      "id_document": {
-                        "description": "File identifier of the document that identifies this person. This can be a tax document like a PAN card (set `file.purpose` to `identity_document` during file creation) or an alternate document like a passport (set `file.purpose` to `additional_verification`).",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "id_document"
-                    ],
-                    "title": "CreatePersonRequestSupportingDocumentation",
-                    "type": "object"
-                  },
-                  "supporting_ids": {
-                    "description": "Details about identification documents.",
-                    "properties": {
-                      "tax": {
-                        "description": "Tax Identification Number (e.g. PAN for Indian individuals).",
-                        "type": "string"
-                      }
-                    },
-                    "title": "CreatePersonRequestSupportingIds",
-                    "type": "object"
-                  }
-                },
-                "required": [
-                  "relationship",
-                  "supporting_documentation"
-                ],
+                "properties": {},
                 "title": "CreatePersonRequest",
                 "type": "object"
               }
@@ -4449,53 +4251,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "full_name": {
-                    "description": "Full name (i.e first name followed by the last name) of the person.",
-                    "type": "string"
-                  },
-                  "relationship": {
-                    "description": "Relationship of the person with the account.",
-                    "properties": {
-                      "director": {
-                        "description": "`true` if the person is the director of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      },
-                      "owner": {
-                        "description": "`true` if the person is the owner of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      },
-                      "representative": {
-                        "description": "`true` if the person is the representative of the account entity, `false` otherwise.",
-                        "type": "boolean"
-                      }
-                    },
-                    "title": "UpdatePersonRequestRelationship",
-                    "type": "object"
-                  },
-                  "supporting_documentation": {
-                    "description": "Documents required to prove relationship of the person with the account.",
-                    "properties": {
-                      "id_document": {
-                        "description": "File identifier of the document that identifies this person. This can be a tax document like a PAN card (set `file.purpose` to `identity_document` during file creation) or an alternate document like a passport (set `file.purpose` to `additional_verification`).",
-                        "type": "string"
-                      }
-                    },
-                    "title": "UpdatePersonRequestSupportingDocumentation",
-                    "type": "object"
-                  },
-                  "supporting_ids": {
-                    "description": "Details about identification documents.",
-                    "properties": {
-                      "tax": {
-                        "description": "Tax Identification Number (e.g. PAN for Indian individuals).",
-                        "type": "string"
-                      }
-                    },
-                    "title": "UpdatePersonRequestSupportingIds",
-                    "type": "object"
-                  }
-                },
+                "properties": {},
                 "title": "UpdatePersonRequest",
                 "type": "object"
               }
@@ -4552,6 +4308,13 @@
         ],
         "responses": {
           "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/person"
+                }
+              }
+            },
             "description": "Successful response."
           },
           "default": {
@@ -4594,7 +4357,7 @@
             }
           },
           {
-            "description": "Sell amount value",
+            "description": "Sell amount value.",
             "in": "query",
             "name": "sell.amount",
             "required": false,
@@ -4615,7 +4378,7 @@
             }
           },
           {
-            "description": "Quote type.",
+            "description": "Valid quote types.",
             "in": "query",
             "name": "type",
             "required": true,
@@ -4656,18 +4419,6 @@
         "description": "Returns a list of receivables.",
         "operationId": "ListReceivables",
         "parameters": [
-          {
-            "description": "Unique identifier for the account object of `type=partner`.",
-            "in": "query",
-            "name": "account_id",
-            "required": false,
-            "schema": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            }
-          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -4719,18 +4470,6 @@
             }
           },
           {
-            "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-            "in": "query",
-            "name": "currency",
-            "required": false,
-            "schema": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            }
-          },
-          {
             "description": "A cursor for use in pagination. `ending_before` is an object identifier that defines your place in the list. For instance, if you make a list request and receive 5 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.",
             "in": "query",
             "name": "ending_before",
@@ -4755,24 +4494,6 @@
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "description": "Valid status for receivables.",
-            "in": "query",
-            "name": "status",
-            "required": false,
-            "schema": {
-              "enum": [
-                "draft",
-                "verifying",
-                "activated",
-                "completed",
-                "cancelled",
-                "hold",
-                "input_required"
-              ],
-              "type": "array"
             }
           }
         ],
@@ -4826,79 +4547,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "account_id": {
-                    "description": "",
-                    "type": "string"
-                  },
-                  "amount_maximum_reconcilable": {
-                    "description": "Maximum amount value that can be reconciled. This field can be edited by the user.",
-                    "type": "string"
-                  },
-                  "currency": {
-                    "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                    "enum": [
-                      "USD"
-                    ],
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "Represents an array of deposit objects due to which amount is locked.",
-                    "type": "string"
-                  },
-                  "invoice": {
-                    "description": "Relationship of the person with the account.",
-                    "properties": {
-                      "amount": {
-                        "description": "Total amount value on the invoice.",
-                        "type": "string"
-                      },
-                      "creation_date": {
-                        "description": "The date on which the invoice was created in YYYY-MM-DD format.",
-                        "type": "string"
-                      },
-                      "currency": {
-                        "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                        "type": "string"
-                      },
-                      "document": {
-                        "description": "Represents a file object with invoice details.",
-                        "type": "string"
-                      },
-                      "due_date": {
-                        "description": "The date on which the invoice amount is due in YYYY-MM-DD format.",
-                        "type": "string"
-                      },
-                      "reference_number": {
-                        "description": "Unique identification number on the invoice.",
-                        "type": "string"
-                      }
-                    },
-                    "title": "CreateReceivableRequestInvoice",
-                    "type": "object"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "CreateReceivableRequestMetadata",
-                    "type": "object"
-                  },
-                  "purpose_code": {
-                    "description": "[Purpose codes](https://www.rbi.org.in/upload/notification/pdfs/52220.pdf) defined by the Financial Regulator for cross-border transactions.",
-                    "type": "string"
-                  },
-                  "transaction_type": {
-                    "description": "Receivable transaction type.",
-                    "enum": [
-                      "goods",
-                      "services",
-                      "software"
-                    ],
-                    "type": "string"
-                  }
-                },
+                "properties": {},
                 "title": "CreateReceivableRequest",
                 "type": "object"
               }
@@ -4974,79 +4623,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "account_id": {
-                    "description": "",
-                    "type": "string"
-                  },
-                  "amount_maximum_reconcilable": {
-                    "description": "Maximum amount value that can be reconciled. This field can be edited by the user.",
-                    "type": "string"
-                  },
-                  "currency": {
-                    "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                    "enum": [
-                      "USD"
-                    ],
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "Represents an array of deposit objects due to which amount is locked.",
-                    "type": "string"
-                  },
-                  "invoice": {
-                    "description": "Relationship of the person with the account.",
-                    "properties": {
-                      "amount": {
-                        "description": "Total amount value on the invoice.",
-                        "type": "string"
-                      },
-                      "creation_date": {
-                        "description": "The date on which the invoice was created in YYYY-MM-DD format.",
-                        "type": "string"
-                      },
-                      "currency": {
-                        "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                        "type": "string"
-                      },
-                      "document": {
-                        "description": "Represents a file object with invoice details.",
-                        "type": "string"
-                      },
-                      "due_date": {
-                        "description": "The date on which the invoice amount is due in YYYY-MM-DD format.",
-                        "type": "string"
-                      },
-                      "reference_number": {
-                        "description": "Unique identification number on the invoice.",
-                        "type": "string"
-                      }
-                    },
-                    "title": "UpdateReceivableRequestInvoice",
-                    "type": "object"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "UpdateReceivableRequestMetadata",
-                    "type": "object"
-                  },
-                  "purpose_code": {
-                    "description": "[Purpose codes](https://www.rbi.org.in/upload/notification/pdfs/52220.pdf) defined by the Financial Regulator for cross-border transactions.",
-                    "type": "string"
-                  },
-                  "transaction_type": {
-                    "description": "Receivable transaction type.",
-                    "enum": [
-                      "goods",
-                      "services",
-                      "software"
-                    ],
-                    "type": "string"
-                  }
-                },
+                "properties": {},
                 "title": "UpdateReceivableRequest",
                 "type": "object"
               }
@@ -5270,15 +4847,6 @@
             }
           },
           {
-            "description": "Account identifier for the account from which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-            "in": "query",
-            "name": "from.account_id",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "A limit on the number of objects to be returned, between 1 and 10. If this parameter is not specified, a default value of 10 is assumed.",
             "in": "query",
             "name": "limit",
@@ -5294,44 +4862,6 @@
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "description": "Valid status for transfers.",
-            "in": "query",
-            "name": "type",
-            "required": false,
-            "schema": {
-              "enum": [
-                "initialized",
-                "processing",
-                "completed"
-              ],
-              "type": "array"
-            }
-          },
-          {
-            "description": "Account identifier for the account to which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-            "in": "query",
-            "name": "to.account_id",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "description": "Transfer type.",
-            "in": "query",
-            "name": "type",
-            "required": false,
-            "schema": {
-              "enum": [
-                "internal_transfer",
-                "platform_credit",
-                "platform_debit",
-                "platform_fee_payout"
-              ],
-              "type": "array"
             }
           }
         ],
@@ -5385,69 +4915,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "amount": {
-                    "description": "Amount value that will be deposited at the destination.",
-                    "type": "string"
-                  },
-                  "currency": {
-                    "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                    "enum": [
-                      "USD"
-                    ],
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
-                    "type": "string"
-                  },
-                  "from": {
-                    "description": "Details of the account and address from which the funds are being transferred.",
-                    "properties": {
-                      "account_id": {
-                        "description": "Account identifier for the account from which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                        "type": "string"
-                      }
-                    },
-                    "title": "CreateTransferRequestFrom",
-                    "type": "object"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "CreateTransferRequestMetadata",
-                    "type": "object"
-                  },
-                  "to": {
-                    "description": "Details of the account and address to which the transfer is being made.",
-                    "properties": {
-                      "account_id": {
-                        "description": "Account identifier for the account to which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                        "type": "string"
-                      }
-                    },
-                    "title": "CreateTransferRequestTo",
-                    "type": "object"
-                  },
-                  "type": {
-                    "description": "",
-                    "enum": [
-                      "internal_transfer",
-                      "platform_credit",
-                      "platform_debit"
-                    ],
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "amount",
-                  "currency",
-                  "from",
-                  "to",
-                  "type"
-                ],
+                "properties": {},
                 "title": "CreateTransferRequest",
                 "type": "object"
               }
@@ -5523,20 +4991,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "description": {
-                    "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
-                    "type": "string"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "UpdateTransferRequestMetadata",
-                    "type": "object"
-                  }
-                },
+                "properties": {},
                 "title": "UpdateTransferRequest",
                 "type": "object"
               }
@@ -5652,34 +5107,12 @@
             }
           },
           {
-            "description": "If `true`, the response will contain webhook endpoints for platforms. Else if `false`, the response will contain webhook endpoints for direct users or connected users.",
-            "in": "query",
-            "name": "platform",
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
             "description": "A cursor for use in pagination. `starting_after` is an object identifier that defines your place in the list. For instance, if you make a list request and receive 5 objects, ending with `obj_bar`, your subsequent call can include `starting_after=obj_bar` in order to fetch the next page of the list.",
             "in": "query",
             "name": "starting_after",
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "description": "The status of the webhook endpoint.",
-            "in": "query",
-            "name": "status",
-            "required": false,
-            "schema": {
-              "enum": [
-                "activated",
-                "deactivated"
-              ],
-              "type": "array"
             }
           }
         ],
@@ -5733,62 +5166,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "description": {
-                    "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
-                    "type": "string"
-                  },
-                  "enabled_events": {
-                    "description": "The list of events to enable for this endpoint. [’*’] indicates that all events are enabled.",
-                    "items": {
-                      "enum": [
-                        "account.address.activated",
-                        "account.payouts_enabled.updated",
-                        "account.status.activated",
-                        "account.status.hold",
-                        "address.created",
-                        "address.status.activated",
-                        "address.status.deactivated",
-                        "deposit.status.completed",
-                        "payout.status.initialized",
-                        "payout.status.processing",
-                        "payout.status.settled",
-                        "payout.status.failed",
-                        "payout.payment_confirmation.updated",
-                        "receivable.amount_reconciled.updated",
-                        "receivable.amount_settled_payouts.updated",
-                        "receivable.status.activated",
-                        "receivable.status.cancelled",
-                        "receivable.status.completed",
-                        "receivable.status.hold",
-                        "receivable.status.input_required",
-                        "receivable.status.verifying"
-                      ],
-                      "type": "string"
-                    },
-                    "type": "array"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "CreateWebhookRequestEndpointMetadata",
-                    "type": "object"
-                  },
-                  "platform": {
-                    "description": "If `true`, the webhook endpoint will receive events for the platform. Else if `false`, the webhook endpoint will receive events for direct or connected users. This parameter is optional for parameters",
-                    "type": "boolean"
-                  },
-                  "url": {
-                    "description": "The https URL of the webhook endpoint.",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "enabled_events",
-                  "url"
-                ],
+                "properties": {},
                 "title": "CreateWebhookEndpointRequest",
                 "type": "object"
               }
@@ -5864,58 +5242,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {
-                  "description": {
-                    "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
-                    "type": "string"
-                  },
-                  "enabled_events": {
-                    "description": "The list of events to enable for this endpoint. [’*’] indicates that all events are enabled.",
-                    "items": {
-                      "enum": [
-                        "account.address.activated",
-                        "account.payouts_enabled.updated",
-                        "account.status.activated",
-                        "account.status.hold",
-                        "address.created",
-                        "address.status.activated",
-                        "address.status.deactivated",
-                        "deposit.status.completed",
-                        "payout.status.initialized",
-                        "payout.status.processing",
-                        "payout.status.settled",
-                        "payout.status.failed",
-                        "payout.payment_confirmation.updated",
-                        "receivable.amount_reconciled.updated",
-                        "receivable.amount_settled_payouts.updated",
-                        "receivable.status.activated",
-                        "receivable.status.cancelled",
-                        "receivable.status.completed",
-                        "receivable.status.hold",
-                        "receivable.status.input_required",
-                        "receivable.status.verifying"
-                      ],
-                      "type": "string"
-                    },
-                    "type": "array"
-                  },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
-                    "title": "UpdateWebhookEndpointRequestMetadata",
-                    "type": "object"
-                  },
-                  "platform": {
-                    "description": "If `true`, the webhook endpoint will receive events for the platform. Else if `false`, the webhook endpoint will receive events for direct or connected users. This parameter is optional for parameters",
-                    "type": "boolean"
-                  },
-                  "url": {
-                    "description": "The https URL of the webhook endpoint.",
-                    "type": "string"
-                  }
-                },
+                "properties": {},
                 "title": "UpdateWebhookEndpointRequest",
                 "type": "object"
               }
@@ -7528,7 +6855,7 @@
             "type": "string"
           },
           "payout_eligible_at": {
-            "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the payment becomes eligible for payout. This is applicable only for payment type `reconcile`.",
+            "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the payment becomes eligible for payout. This is applicable only for Payment type `reconcile`.",
             "format": "unix-time",
             "type": "integer"
           },
@@ -7974,6 +7301,8 @@
           },
           "system_message": {
             "description": "Details regarding issues with the receivable.",
+            "minItems": 1,
+            "maxItems": 1,
             "items": {
               "properties": {
                 "code": {
@@ -8087,16 +7416,6 @@
             "title": "TransferTo",
             "type": "object"
           },
-          "type": {
-            "description": "Transfer type",
-            "enum": [
-              "internal_transfer",
-              "platform_credit",
-              "platform_debit",
-              "platform_fee_payout"
-            ],
-            "type": "string"
-          },
           "user_declaration": {
             "description": "File object providing details of the reason for the transfer to be created. This is applicable only for transfers between two different partners (this is an XFlow-Ops driven process for now).",
             "type": "string"
@@ -8119,30 +7438,8 @@
           },
           "enabled_events": {
             "description": "The list of events to enable for this endpoint. [’*’] indicates that all events are enabled.",
+            "maxItems": 1,
             "items": {
-              "enum": [
-                "account.address.activated",
-                "account.payouts_enabled.updated",
-                "account.status.activated",
-                "account.status.hold",
-                "address.created",
-                "address.status.activated",
-                "address.status.deactivated",
-                "deposit.status.completed",
-                "payout.status.initialized",
-                "payout.status.processing",
-                "payout.status.settled",
-                "payout.status.failed",
-                "payout.payment_confirmation.updated",
-                "receivable.amount_reconciled.updated",
-                "receivable.amount_settled_payouts.updated",
-                "receivable.status.activated",
-                "receivable.status.cancelled",
-                "receivable.status.completed",
-                "receivable.status.hold",
-                "receivable.status.input_required",
-                "receivable.status.verifying"
-              ],
               "type": "string"
             },
             "type": "array"
