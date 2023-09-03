@@ -207,7 +207,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       },
       "post": {
         "description": "Create an account.",
@@ -635,7 +638,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       }
     },
     "/v1/accounts/{account}": {
@@ -674,7 +680,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       },
       "post": {
         "description": "Update the details of an account.",
@@ -1091,7 +1100,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       }
     },
     "/v1/accounts/{account}/activate": {
@@ -1130,7 +1142,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       }
     },
     "/v1/accounts/{account}/deactivate": {
@@ -1169,7 +1184,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Accounts"
+        ]
       }
     },
     "/v1/addresses": {
@@ -1372,7 +1390,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Addresses"
+        ]
       },
       "post": {
         "description": "Create an address.",
@@ -1528,7 +1549,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Addresses"
+        ]
       }
     },
     "/v1/addresses/{address}": {
@@ -1567,7 +1591,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Addresses"
+        ]
       },
       "post": {
         "description": "Update the details of an address.",
@@ -1624,7 +1651,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Addresses"
+        ]
       }
     },
     "/v1/balance": {
@@ -1663,7 +1693,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Balance"
+        ]
       }
     },
     "/v1/balance/aggregate": {
@@ -1702,7 +1735,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Balance"
+        ]
       }
     },
     "/v1/balance_transactions": {
@@ -1853,7 +1889,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "BalanceTransactions"
+        ]
       }
     },
     "/v1/balance_transactions/{balance_transaction}": {
@@ -1892,7 +1931,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "BalanceTransactions"
+        ]
       }
     },
     "/v1/deposits": {
@@ -2109,7 +2151,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Deposits"
+        ]
       },
       "post": {
         "description": "Create a deposit.",
@@ -2215,7 +2260,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Deposits"
+        ]
       }
     },
     "/v1/deposits/{deposit}": {
@@ -2254,7 +2302,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Deposits"
+        ]
       },
       "post": {
         "description": "Update the details of a deposit.",
@@ -2311,7 +2362,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Deposits"
+        ]
       }
     },
     "/v1/events": {
@@ -2507,7 +2561,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Events"
+        ]
       }
     },
     "/v1/events/{event}": {
@@ -2546,7 +2603,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Events"
+        ]
       }
     },
     "/v1/exchange_rates": {
@@ -2712,7 +2772,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "ExchangeRates"
+        ]
       }
     },
     "/v1/exchange_rates/{exchange_rate}": {
@@ -2751,7 +2814,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "ExchangeRates"
+        ]
       }
     },
     "/v1/files": {
@@ -2909,7 +2975,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Files"
+        ]
       },
       "post": {
         "description": "Create a file.",
@@ -2976,7 +3045,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Files"
+        ]
       }
     },
     "/v1/files/{file}": {
@@ -3015,7 +3087,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Files"
+        ]
       },
       "post": {
         "description": "Update the details of a file.",
@@ -3072,7 +3147,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Files"
+        ]
       }
     },
     "/v1/files/{file}/contents": {
@@ -3111,7 +3189,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Files"
+        ]
       }
     },
     "/v1/payment_links": {
@@ -3338,7 +3419,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       },
       "post": {
         "description": "Create a PaymentLink.",
@@ -3407,7 +3491,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payment_links/{payment_link}": {
@@ -3446,7 +3533,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       },
       "post": {
         "description": "Update the details of a PaymentLink.",
@@ -3503,7 +3593,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payment_links/{payment_link}/activate": {
@@ -3542,7 +3635,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payment_links/{payment_link}/deactivate": {
@@ -3581,7 +3677,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payment_links/{payment_link}/expire": {
@@ -3620,7 +3719,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payment_links/{payment_link}/extend": {
@@ -3659,7 +3761,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "PaymentLinks"
+        ]
       }
     },
     "/v1/payments": {
@@ -3786,7 +3891,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Payments"
+        ]
       }
     },
     "/v1/payments/{payment}": {
@@ -3825,7 +3933,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Payments"
+        ]
       }
     },
     "/v1/payouts": {
@@ -3952,7 +4063,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Payouts"
+        ]
       }
     },
     "/v1/payouts/{payout}": {
@@ -3991,7 +4105,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Payouts"
+        ]
       },
       "post": {
         "description": "Update the details of a payout.",
@@ -4039,7 +4156,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Payouts"
+        ]
       }
     },
     "/v1/persons": {
@@ -4166,7 +4286,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Persons"
+        ]
       },
       "post": {
         "description": "Create a person.",
@@ -4203,7 +4326,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Persons"
+        ]
       }
     },
     "/v1/persons/{person}": {
@@ -4242,7 +4368,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Persons"
+        ]
       },
       "post": {
         "description": "Update the details of a person.",
@@ -4290,7 +4419,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Persons"
+        ]
       },
       "delete": {
         "description": "Delete a person.",
@@ -4327,7 +4459,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Persons"
+        ]
       }
     },
     "/v1/quotes": {
@@ -4411,7 +4546,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Quotes"
+        ]
       }
     },
     "/v1/receivables": {
@@ -4538,7 +4676,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       },
       "post": {
         "description": "Create a receivable.",
@@ -4575,7 +4716,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       }
     },
     "/v1/receivables/{receivable}": {
@@ -4614,7 +4758,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       },
       "post": {
         "description": "Update the details of a receivable.",
@@ -4662,7 +4809,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       }
     },
     "/v1/receivables/{receivable}/confirm": {
@@ -4701,7 +4851,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       }
     },
     "/v1/receivables/{receivable}/cancel": {
@@ -4740,7 +4893,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       }
     },
     "/v1/receivables/{receivable}/reconcile": {
@@ -4779,7 +4935,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Receivables"
+        ]
       }
     },
     "/v1/transfers": {
@@ -4906,7 +5065,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Transfers"
+        ]
       },
       "post": {
         "description": "Create a transfer.",
@@ -4943,7 +5105,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Transfers"
+        ]
       }
     },
     "/v1/transfers/{transfer}": {
@@ -4982,7 +5147,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Transfers"
+        ]
       },
       "post": {
         "description": "Update the details of a transfer.",
@@ -5030,7 +5198,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "Transfers"
+        ]
       }
     },
     "/v1/webhook_endpoints": {
@@ -5157,7 +5328,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       },
       "post": {
         "description": "Create a WebhookEndpoint.",
@@ -5194,7 +5368,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       }
     },
     "/v1/webhook_endpoints/{webhook_endpoint}": {
@@ -5233,7 +5410,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       },
       "post": {
         "description": "Update the details of a WebhookEndpoint.",
@@ -5281,7 +5461,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       }
     },
     "/v1/webhook_endpoints/{webhook_endpoint}/activate": {
@@ -5320,7 +5503,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       }
     },
     "/v1/webhook_endpoints/{webhook_endpoint}/deactivate": {
@@ -5359,7 +5545,10 @@
             },
             "description": "Error response."
           }
-        }
+        },
+        "tags": [
+          "WebhookEndpoints"
+        ]
       }
     }
   },
