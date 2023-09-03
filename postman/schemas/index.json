@@ -10406,12 +10406,21 @@
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                          "enum": [
-                            "USD"
-                          ],
-                          "type": [
-                            "string",
-                            "null"
+                          "oneOf": [
+                            {
+                              "enum": [
+                                "USD"
+                              ],
+                              "type": [
+                                "string"
+                              ]
+                            },
+                            {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
                           ]
                         }
                       }
@@ -10434,12 +10443,21 @@
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                          "enum": [
-                            "USD"
-                          ],
-                          "type": [
-                            "string",
-                            "null"
+                          "oneOf": [
+                            {
+                              "enum": [
+                                "USD"
+                              ],
+                              "type": [
+                                "string"
+                              ]
+                            },
+                            {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
                           ]
                         }
                       }
@@ -10496,12 +10514,21 @@
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                          "enum": [
-                            "USD"
-                          ],
-                          "type": [
-                            "string",
-                            "null"
+                          "oneOf": [
+                            {
+                              "enum": [
+                                "USD"
+                              ],
+                              "type": [
+                                "string"
+                              ]
+                            },
+                            {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
                           ]
                         }
                       }
@@ -10524,12 +10551,21 @@
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                          "enum": [
-                            "USD"
-                          ],
-                          "type": [
-                            "string",
-                            "null"
+                          "oneOf": [
+                            {
+                              "enum": [
+                                "USD"
+                              ],
+                              "type": [
+                                "string"
+                              ]
+                            },
+                            {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
                           ]
                         }
                       }
@@ -10573,9 +10609,17 @@
           },
           "livemode": {
             "description": "Has the value `true` if the object exists in livemode, the value `false` if the object exists in testmode or `null` in the case of a direct user or a platform (a direct user is an XFlow account of `type=user` which is not connected to an account of `type=platform`).",
-            "type": [
-              "boolean",
-              "null"
+            "oneOf": [
+              {
+                "type": [
+                  "boolean"
+                ]
+              },
+              {
+                "type": [
+                  "null"
+                ]
+              }
             ]
           },
           "logo_id": {
@@ -10635,12 +10679,21 @@
               },
               "monthly_anchor": {
                 "description": "The day of the month funds will be paid out. Only applies if interval is monthly. Payouts scheduled between the 29th and 31st of the month are sent on the last day of shorter months.",
-                "format": "int64",
-                "maximum": 31,
-                "minimum": 1,
-                "type": [
-                  "integer",
-                  "null"
+                "oneOf": [
+                  {
+                    "format": "int64",
+                    "maximum": 31,
+                    "minimum": 1,
+                    "type": [
+                      "integer"
+                    ]
+                  },
+                  {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
                 ]
               },
               "reason_code_not_enabled": {
@@ -10652,18 +10705,27 @@
               },
               "weekly_anchor": {
                 "description": "The day of the week funds will be paid out, of the style ‘monday’, ‘tuesday’, etc. Only applies if interval is `weekly`.",
-                "enum": [
-                  "monday",
-                  "tuesday",
-                  "wednesday",
-                  "thursday",
-                  "friday",
-                  "saturday",
-                  "sunday"
-                ],
-                "type": [
-                  "string",
-                  "null"
+                "oneOf": [
+                  {
+                    "enum": [
+                      "monday",
+                      "tuesday",
+                      "wednesday",
+                      "thursday",
+                      "friday",
+                      "saturday",
+                      "sunday"
+                    ],
+                    "type": [
+                      "string"
+                    ]
+                  },
+                  {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
                 ]
               }
             },
@@ -10760,10 +10822,20 @@
               },
               "time": {
                 "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the terms of service was accepted.",
-                "format": "unix-time",
-                "type": [
-                  "integer",
-                  "null"
+                "oneOf": [
+                  {
+                    "format": "unix-time",
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
                 ]
               },
               "user_agent": {
@@ -11053,8 +11125,6 @@
           },
           "available": {
             "description": "Funds that are available to the user within XFlow. For example, this could be funds which have been reconciled, but have not yet been picked up for reconciliation.",
-            "maxItems": 1,
-            "minItems": 1,
             "items": {
               "properties": {
                 "amount": {
@@ -11070,12 +11140,13 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "fee_advance": {
             "description": "Funds that have been transferred by the user to maintain balance within XFlow to enable connected users to have fees lower than the passthrough fees. This is `[]` for non-platform users.",
-            "maxItems": 1,
-            "minItems": 1,
             "items": {
               "properties": {
                 "amount": {
@@ -11091,7 +11162,10 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "livemode": {
             "description": "Has the value true if the object exists in `livemode` or the value false if the object exists in `testmode`.",
@@ -11106,8 +11180,6 @@
           },
           "payout_processing": {
             "description": "Funds that are being processed for payouts by XFlow.",
-            "maxItems": 1,
-            "minItems": 1,
             "items": {
               "properties": {
                 "amount": {
@@ -11123,12 +11195,13 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "pending": {
             "description": "Funds that are not yet available to the user within XFlow. For example, this could be funds which have been received against a particular account identifier but have not yet been reconciled.",
-            "maxItems": 1,
-            "minItems": 1,
             "items": {
               "properties": {
                 "amount": {
@@ -11144,7 +11217,10 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           }
         },
         "title": "Balance",
@@ -11226,15 +11302,22 @@
             "properties": {
               "account_id": {
                 "description": "Account identifier for the account from which funds are being deposited. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                "type": "string"
+                "type": [
+                  "string"
+                ]
               },
               "address_id": {
                 "description": "Address identifier of the account from which funds are being deposited. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "DepositFrom",
-            "type": "object"
+            "type": [
+              "object"
+            ]
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -11250,7 +11333,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "DepositMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -11261,18 +11347,30 @@
           },
           "payment_method": {
             "description": "Payment method via which funds were deposited.",
-            "enum": [
-              "affirm",
-              "afterpay",
-              "check",
-              "domestic_credit",
-              "domestic_debit",
-              "domestic_fast_credit",
-              "domestic_wire",
-              "global_wire",
-              "klarna"
-            ],
-            "type": "string"
+            "oneOf": [
+              {
+                "enum": [
+                  "affirm",
+                  "afterpay",
+                  "check",
+                  "domestic_credit",
+                  "domestic_debit",
+                  "domestic_fast_credit",
+                  "domestic_wire",
+                  "global_wire",
+                  "klarna"
+                ],
+                "type": [
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
           },
           "payment_method_details": {
             "description": "Unique identifier for the object.",
@@ -11283,24 +11381,42 @@
               }
             },
             "title": "DepositPaymentMethodDetails",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "reason_code": {
             "description": "Reason why the deposit was declined or disputed.",
-            "enum": [
-              "cancelled",
-              "duplicate",
-              "general",
-              "high_risk",
-              "incorrect_amount",
-              "poor_image_quality",
-              "unmatched_details"
-            ],
-            "type": "string"
+            "oneOf": [
+              {
+                "enum": [
+                  "cancelled",
+                  "duplicate",
+                  "general",
+                  "high_risk",
+                  "incorrect_amount",
+                  "poor_image_quality",
+                  "unmatched_details"
+                ],
+                "type": [
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
           },
           "statement_descriptor": {
             "description": "Narration available on the incoming deposit.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "status": {
             "description": "Valid status types associated with deposit.",
@@ -11318,7 +11434,9 @@
             "properties": {
               "account_id": {
                 "description": "Account identifier for the account to which funds are being deposited. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                "type": "string"
+                "type": [
+                  "string"
+                ]
               },
               "address_id": {
                 "description": "Address identifier of the account to which funds are being deposited. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
