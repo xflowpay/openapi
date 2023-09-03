@@ -10289,8 +10289,7 @@
               "legal_name": {
                 "description": "Unique name as per official documents.",
                 "type": [
-                  "string",
-                  "null"
+                  "string"
                 ]
               },
               "physical_address": {
@@ -10306,7 +10305,8 @@
                   "country": {
                     "description": "Country details in the [ISO 3166-1 alpha 2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) in uppercase.",
                     "enum": [
-                      "IN"
+                      "IN",
+                      "SG"
                     ],
                     "type": "string"
                   },
@@ -10361,8 +10361,7 @@
                   "other"
                 ],
                 "type": [
-                  "string",
-                  "null"
+                  "string"
                 ]
               },
               "website": {
