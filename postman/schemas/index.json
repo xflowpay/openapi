@@ -12625,7 +12625,10 @@
               "services",
               "software"
             ],
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "title": "Receivable",
