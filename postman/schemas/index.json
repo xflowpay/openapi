@@ -23,6 +23,15 @@
         "operationId": "ListAccounts",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "description": "This parameter represents the state of the `xflow_receive` addresses associated with this account. The valid values include `deactivated`, `requested`, `processing` and `activated`.",
             "in": "query",
             "name": "address",
@@ -289,6 +298,17 @@
       "post": {
         "description": "Create an account.",
         "operationId": "CreateAccount",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -790,6 +810,15 @@
         "operationId": "RetrieveAccount",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "account",
             "required": true,
@@ -902,6 +931,26 @@
       "post": {
         "description": "Update the details of an account.",
         "operationId": "UpdateAccount",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "account",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1274,17 +1323,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "account",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -1391,6 +1429,15 @@
         "description": "Activates an account.",
         "operationId": "ActivateAccount",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "account",
@@ -1508,6 +1555,15 @@
         "operationId": "DeactivateAccount",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "account",
             "required": true,
@@ -1623,6 +1679,15 @@
         "description": "Returns a list of addresses.",
         "operationId": "ListAddresses",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Unique identifier of an account object associated with this address.",
             "in": "query",
@@ -1900,6 +1965,17 @@
       "post": {
         "description": "Create an address.",
         "operationId": "CreateAddress",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2137,6 +2213,15 @@
         "operationId": "RetrieveAddress",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "address",
             "required": true,
@@ -2249,6 +2334,26 @@
       "post": {
         "description": "Update the details of an address.",
         "operationId": "UpdateAddress",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "address",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2269,17 +2374,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "address",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -2386,6 +2480,15 @@
         "description": "Retrieve a balance.",
         "operationId": "RetrieveBalance",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Unique identifier for the account object for which this balance is associated. If this is not specified, then the balance object will be returned for the context that the user is in.",
             "in": "query",
@@ -2503,6 +2606,15 @@
         "operationId": "RetrieveAggregateBalance",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "description": "Unique identifier for the account object for which this balance is associated. If this is not specified, then the balance object will be returned for the context that the user is in.",
             "in": "query",
             "name": "account_id",
@@ -2618,6 +2730,15 @@
         "description": "Returns a list of BalanceTransactions.",
         "operationId": "ListBalanceTransactions",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -2847,6 +2968,15 @@
         "operationId": "RetrieveBalanceTransaction",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "balance_transaction",
             "required": true,
@@ -2962,6 +3092,15 @@
         "description": "Returns a list of deposits.",
         "operationId": "ListDeposits",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -3253,6 +3392,17 @@
       "post": {
         "description": "Create a deposit.",
         "operationId": "CreateDeposit",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -3440,6 +3590,15 @@
         "operationId": "RetrieveDeposit",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "deposit",
             "required": true,
@@ -3552,6 +3711,26 @@
       "post": {
         "description": "Update the details of a deposit.",
         "operationId": "UpdateDeposit",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "deposit",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -3572,17 +3751,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "deposit",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -3689,6 +3857,15 @@
         "description": "Returns a list of events.",
         "operationId": "ListEvents",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "The identifier for the account to which the associated object that generated this event belongs. This can be passed only by an account of `type=platform`.",
             "in": "query",
@@ -3963,6 +4140,15 @@
         "operationId": "RetrieveEvent",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "event",
             "required": true,
@@ -4078,6 +4264,15 @@
         "description": "Returns a list of ExchangeRates.",
         "operationId": "ListExchangeRates",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the buy amount currency.",
             "in": "query",
@@ -4322,6 +4517,15 @@
         "operationId": "RetrieveExchangeRate",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "exchange_rate",
             "required": true,
@@ -4437,6 +4641,15 @@
         "description": "Returns a list of files.",
         "operationId": "ListFiles",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -4669,6 +4882,17 @@
       "post": {
         "description": "Create a file.",
         "operationId": "CreateFile",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -4824,6 +5048,15 @@
         "operationId": "RetrieveFile",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "file",
             "required": true,
@@ -4936,6 +5169,26 @@
       "post": {
         "description": "Update the details of a file.",
         "operationId": "UpdateFile",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "file",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -4956,17 +5209,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "file",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -5073,6 +5315,15 @@
         "description": "Download a file.",
         "operationId": "DownloadFile",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "file",
@@ -5195,6 +5446,15 @@
         "description": "Returns a list of PaymentLinks.",
         "operationId": "ListPaymentLinks",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Unique identifier for the account object associated with the PaymentLink.",
             "in": "query",
@@ -5496,6 +5756,17 @@
       "post": {
         "description": "Create a PaymentLink.",
         "operationId": "CreatePaymentLink",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5646,6 +5917,15 @@
         "operationId": "RetrievePaymentLink",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "payment_link",
             "required": true,
@@ -5758,6 +6038,26 @@
       "post": {
         "description": "Update the details of a PaymentLink.",
         "operationId": "UpdatePaymentLink",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "payment_link",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5778,17 +6078,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "payment_link",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -5895,6 +6184,15 @@
         "description": "Activate a PaymentLink.",
         "operationId": "ActivatePaymentLink",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "payment_link",
@@ -6012,6 +6310,15 @@
         "operationId": "DeactivatePaymentLink",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "payment_link",
             "required": true,
@@ -6127,6 +6434,15 @@
         "description": "Expire a PaymentLink.",
         "operationId": "ExpirePaymentLink",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "payment_link",
@@ -6244,6 +6560,15 @@
         "operationId": "ExtendPaymentLink",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "payment_link",
             "required": true,
@@ -6359,6 +6684,15 @@
         "description": "Returns a list of payments.",
         "operationId": "ListPayments",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -6564,6 +6898,15 @@
         "operationId": "RetrievePayment",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "payment",
             "required": true,
@@ -6679,6 +7022,15 @@
         "description": "Returns a list of payouts.",
         "operationId": "ListPayouts",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -6884,6 +7236,15 @@
         "operationId": "RetrievePayout",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "payout",
             "required": true,
@@ -6996,6 +7357,26 @@
       "post": {
         "description": "Update the details of a payout.",
         "operationId": "UpdatePayout",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "payout",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7007,17 +7388,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "payout",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -7124,6 +7494,15 @@
         "description": "Returns a list of persons.",
         "operationId": "ListPersons",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -7325,6 +7704,17 @@
       "post": {
         "description": "Create a person.",
         "operationId": "CreatePerson",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7443,6 +7833,15 @@
         "operationId": "RetrievePerson",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "person",
             "required": true,
@@ -7555,6 +7954,26 @@
       "post": {
         "description": "Update the details of a person.",
         "operationId": "UpdatePerson",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "person",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7566,17 +7985,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "person",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -7798,6 +8206,15 @@
         "operationId": "RetrieveQuote",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "description": "Buy amount value.",
             "in": "query",
             "name": "buy.amount",
@@ -7958,6 +8375,15 @@
         "description": "Returns a list of receivables.",
         "operationId": "ListReceivables",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -8159,6 +8585,17 @@
       "post": {
         "description": "Create a receivable.",
         "operationId": "CreateReceivable",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8277,6 +8714,15 @@
         "operationId": "RetrieveReceivable",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "receivable",
             "required": true,
@@ -8389,6 +8835,26 @@
       "post": {
         "description": "Update the details of a receivable.",
         "operationId": "UpdateReceivable",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "receivable",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8400,17 +8866,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "receivable",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -8517,6 +8972,15 @@
         "description": "Confirm the details of a receivable.",
         "operationId": "ConfirmReceivable",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "path",
             "name": "receivable",
@@ -8634,6 +9098,15 @@
         "operationId": "CancelReceivable",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "receivable",
             "required": true,
@@ -8750,6 +9223,15 @@
         "operationId": "ReconcileReceivable",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "receivable",
             "required": true,
@@ -8865,6 +9347,15 @@
         "description": "Returns a list of transfers.",
         "operationId": "ListTransfers",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -9066,6 +9557,17 @@
       "post": {
         "description": "Create a transfer.",
         "operationId": "CreateTransfer",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9184,6 +9686,15 @@
         "operationId": "RetrieveTransfer",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "transfer",
             "required": true,
@@ -9296,6 +9807,26 @@
       "post": {
         "description": "Update the details of a transfer.",
         "operationId": "UpdateTransfer",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "transfer",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9307,17 +9838,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "transfer",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -9424,6 +9944,15 @@
         "description": "Returns a list of WebhookEndpoints.",
         "operationId": "ListWebhookEndpoints",
         "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
@@ -9625,6 +10154,17 @@
       "post": {
         "description": "Create a WebhookEndpoint.",
         "operationId": "CreateWebhookEndpoint",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9743,6 +10283,15 @@
         "operationId": "RetrieveWebhookEndpoint",
         "parameters": [
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "path",
             "name": "webhook_endpoint",
             "required": true,
@@ -9855,6 +10404,26 @@
       "post": {
         "description": "Update the details of a WebhookEndpoint.",
         "operationId": "UpdateWebhookEndpoint",
+        "parameters": [
+          {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "webhook_endpoint",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9866,17 +10435,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "webhook_endpoint",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "style": "simple"
-          }
-        ],
         "responses": {
           "200": {
             "headers": {
@@ -12664,14 +13222,14 @@
                 "description": "Account identifier for the account from which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
                 "type": [
                   "string",
-                  "string"
+                  "null"
                 ]
               },
               "address_id": {
                 "description": "Address identifier of the account from which funds are being transferred. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
                 "type": [
                   "string",
-                  "string"
+                  "null"
                 ]
               }
             },
