@@ -10848,13 +10848,14 @@
               },
               "last4": {
                 "description": "Last 4 digits of the bank account number.",
-                "type": "string"
+                "type": [
+                  "string"
+                ]
               },
               "number": {
                 "description": "Unique bank account number.",
                 "type": [
-                  "string",
-                  "null"
+                  "string"
                 ]
               }
             },
@@ -10911,7 +10912,10 @@
               }
             },
             "title": "AddressBillingDetails",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "category": {
             "description": "XFlow categorization of destination (for a store of value).",
@@ -10962,7 +10966,10 @@
           },
           "name": {
             "description": "Name on the destination (for a store of value).",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -10986,7 +10993,9 @@
             "properties": {
               "id_document": {
                 "description": "A [file object identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id) which references a document that identifies this destination (for a store of value).",
-                "type": "string"
+                "type": [
+                  "string"
+                ]
               }
             },
             "title": "AddressSupportingDocumentation",
@@ -11020,7 +11029,10 @@
                   "afterpay",
                   "klarna"
                 ],
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AddressWallet",
