@@ -417,7 +417,6 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -437,7 +436,6 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -479,7 +477,6 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -499,7 +496,6 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1025,7 +1021,6 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1045,7 +1040,6 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1087,7 +1081,6 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1107,7 +1100,6 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-
                             "items": {
                               "properties": {
                                 "amount": {
@@ -10494,7 +10486,6 @@
                 "properties": {
                   "fixed": {
                     "description": "Fixed payout fee details.",
-
                     "items": {
                       "properties": {
                         "amount": {
@@ -10523,7 +10514,6 @@
                   },
                   "minimum": {
                     "description": "Minimum payout fee details.",
-
                     "items": {
                       "properties": {
                         "amount": {
@@ -10816,27 +10806,45 @@
             "properties": {
               "domestic_credit": {
                 "description": "Represents the prefix associated with the bank account for a local ACH credit.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "domestic_debit": {
                 "description": "Represents the prefix associated with the bank account for a local ACH debit.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "domestic_fast_credit": {
                 "description": "Represents the prefix associated with the bank account for fast local ACH credit.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "domestic_wire": {
                 "description": "Represents the prefix (if any) associated with the bank account for a domestic wire.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "global_wire": {
                 "description": "Represents the Business Identifier Code (BIC) associated with the bank account.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "iban": {
                 "description": "Represents the International Bank Account Number (IBAN) associated with the bank account.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "last4": {
                 "description": "Last 4 digits of the bank account number.",
@@ -10844,18 +10852,27 @@
               },
               "number": {
                 "description": "Unique bank account number.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AddressBankAccount",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "billing_details": {
             "description": "Billing address.",
             "properties": {
               "city": {
                 "description": "City details in the official address.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "country": {
                 "description": "Country details in the [ISO 3166-1 alpha 2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) in uppercase.",
@@ -10866,19 +10883,31 @@
               },
               "line1": {
                 "description": "Line 1 in the official address.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "line2": {
                 "description": "Line 2 in the official address.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "postal_code": {
                 "description": "Postal code in the official address.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "state": {
                 "description": "State details in the official address.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AddressBillingDetails",
@@ -10926,7 +10955,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "AddressMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "name": {
             "description": "Name on the destination (for a store of value).",
@@ -10958,7 +10990,10 @@
               }
             },
             "title": "AddressSupportingDocumentation",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "type": {
             "description": "Type of destination (for a store of value). This can be `bank_account` or `wallet`.",
@@ -10973,7 +11008,10 @@
             "properties": {
               "email": {
                 "description": "Email registered with the wallet provider.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "provider": {
                 "description": "This can be `affirm`, `afterpay` or `klarna`.",
@@ -10986,7 +11024,10 @@
               }
             },
             "title": "AddressWallet",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           }
         },
         "title": "Address",
