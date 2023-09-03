@@ -417,8 +417,7 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -438,8 +437,7 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -481,8 +479,7 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -502,8 +499,7 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1029,8 +1025,7 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1050,8 +1045,7 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1093,8 +1087,7 @@
                         "properties": {
                           "fixed": {
                             "description": "Fixed payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -1114,8 +1107,7 @@
                           },
                           "minimum": {
                             "description": "Minimum payout fee details.",
-                            "maxItems": 1,
-                            "minItems": 1,
+
                             "items": {
                               "properties": {
                                 "amount": {
@@ -4782,43 +4774,6 @@
             "description": "Successful response."
           },
           "default": {
-            "headers": {
-              "Date": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Content-Length": {
-                "schema": {
-                  "type": "integer"
-                }
-              },
-              "Connection": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "x-amzn-RequestId": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "xflow-request-id": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "x-amz-apigw-id": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "X-Amzn-Trace-Id": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            },
             "headers": {
               "Date": {
                 "schema": {
@@ -10284,7 +10239,10 @@
             "properties": {
               "dba": {
                 "description": "Doing Business As, this is a 16 character customer-facing business name. Special characters like <, >, ', or \" are not allowed.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "email": {
                 "description": "Email address.",
@@ -10296,38 +10254,62 @@
                 "properties": {
                   "business": {
                     "description": "Unique identification number.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "tax": {
                     "description": "Tax Identification Number (e.g. Business PAN for Indian merchants).",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "tax_deduction": {
                     "description": "Tax deduction Account Number (e.g. TAN for Indian merchants).",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "tax_gst": {
                     "description": "Goods & Services Tax (GST) ID.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "tax_trade": {
                     "description": "Trade Identification Number (e.g. IEC for Indian merchants).",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "title": "AccountBusinessDetailsIds",
-                "type": "object"
+                "type": [
+                  "object",
+                  "null"
+                ]
               },
               "legal_name": {
                 "description": "Unique name as per official documents.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "physical_address": {
                 "description": "Details about the physical address.",
                 "properties": {
                   "city": {
                     "description": "City details in the official address.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "country": {
                     "description": "Country details in the [ISO 3166-1 alpha 2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) in uppercase.",
@@ -10338,19 +10320,31 @@
                   },
                   "line1": {
                     "description": "Line 1 in the official address.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "line2": {
                     "description": "Line 2 in the official address.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "postal_code": {
                     "description": "Postal code in the official address.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "state": {
                     "description": "State details in the official address.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "title": "AccountBusinessDetailsPhysicalAddress",
@@ -10358,7 +10352,10 @@
               },
               "product_description": {
                 "description": "Description of the account’s business activities.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "type": {
                 "description": "Valid values include `company`, `limited_liability_partnership`, `partnership`, `sole_proprietor`, `individual`, `business` and `other`.",
@@ -10371,11 +10368,17 @@
                   "business",
                   "other"
                 ],
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "website": {
                 "description": "The website for the business. Set to `website_not_available` if unavailable.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AccountBusinessDetails",
@@ -10391,128 +10394,182 @@
             "properties": {
               "fx_markup": {
                 "description": "FX markup is the XFlow markup over the mid-market FX rate.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "payout": {
                 "description": "Payout fee is the XFlow fee per payout.",
                 "properties": {
                   "fixed": {
                     "description": "Fixed payout fee details.",
-                    "maxItems": 1,
-                    "minItems": 1,
                     "items": {
                       "properties": {
                         "amount": {
                           "description": "Amount value that was charged by XFlow per payout.",
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                           "enum": [
                             "USD"
                           ],
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       }
                     },
-                    "type": "array"
+                    "type": [
+                      "array",
+                      "null"
+                    ]
                   },
                   "minimum": {
                     "description": "Minimum payout fee details.",
-                    "maxItems": 1,
-                    "minItems": 1,
                     "items": {
                       "properties": {
                         "amount": {
                           "description": "Amount value that was charged by XFlow per payout.",
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                           "enum": [
                             "USD"
                           ],
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       }
                     },
-                    "type": "array"
+                    "type": [
+                      "array",
+                      "null"
+                    ]
                   },
                   "variable": {
                     "description": "This is the percentage value that is used to calculate the XFlow fee per payout.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "title": "AccountFeesPayout",
-                "type": "object"
+                "type": [
+                  "object",
+                  "null"
+                ]
               }
             },
             "title": "AccountFees",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "fees_passthrough": {
             "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
             "properties": {
               "fx_markup": {
                 "description": "FX markup is the XFlow markup over the mid-market FX rate.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "payout": {
                 "description": "Payout fee is the XFlow fee per payout.",
                 "properties": {
                   "fixed": {
                     "description": "Fixed payout fee details.",
-                    "maxItems": 1,
-                    "minItems": 1,
+
                     "items": {
                       "properties": {
                         "amount": {
                           "description": "Amount value that was charged by XFlow per payout.",
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                           "enum": [
                             "USD"
                           ],
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       }
                     },
-                    "type": "array"
+                    "type": [
+                      "array",
+                      "null"
+                    ]
                   },
                   "minimum": {
                     "description": "Minimum payout fee details.",
-                    "maxItems": 1,
-                    "minItems": 1,
+
                     "items": {
                       "properties": {
                         "amount": {
                           "description": "Amount value that was charged by XFlow per payout.",
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         },
                         "currency": {
                           "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                           "enum": [
                             "USD"
                           ],
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       }
                     },
-                    "type": "array"
+                    "type": [
+                      "array",
+                      "null"
+                    ]
                   },
                   "variable": {
                     "description": "This is the percentage value that is used to calculate the XFlow fee per payout.",
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "title": "AccountFeesPassthroughPayout",
-                "type": "object"
+                "type": [
+                  "object",
+                  "null"
+                ]
               }
             },
             "title": "AccountFeesPassthrough",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -10520,15 +10577,24 @@
           },
           "link": {
             "description": "Not applicable",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "livemode": {
             "description": "Has the value `true` if the object exists in livemode, the value `false` if the object exists in testmode or `null` in the case of a direct user or a platform (a direct user is an XFlow account of `type=user` which is not connected to an account of `type=platform`).",
-            "type": "boolean"
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "logo_id": {
             "description": "A [file object identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id) which contains a logo for the user to customize communications with their customers.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "metadata": {
             "additionalProperties": {
@@ -10536,11 +10602,17 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "AccountMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "nickname": {
             "description": "Name for the account.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -10551,7 +10623,10 @@
           },
           "parent_account_id": {
             "description": "Unique identifier for the parent account object which created this particular account.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "payouts": {
             "description": "Payouts details.",
@@ -10574,11 +10649,17 @@
                 "format": "int64",
                 "maximum": 31,
                 "minimum": 1,
-                "type": "integer"
+                "type": [
+                  "integer",
+                  "null"
+                ]
               },
               "reason_code_not_enabled": {
                 "description": "The reason code if payouts are not enabled. Valid values include `account_not_activated`, `platform_hold` and `xflow_hold`.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "weekly_anchor": {
                 "description": "The day of the week funds will be paid out, of the style ‘monday’, ‘tuesday’, etc. Only applies if interval is `weekly`.",
@@ -10591,11 +10672,17 @@
                   "saturday",
                   "sunday"
                 ],
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AccountPayouts",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "processing_fee_indicator": {
             "description": "This is an account level setting which defines how fees associated with specific payment methods are split between the partner and the XFlow user. Valid values include `partner`, `shared` and `user`.",
@@ -10642,7 +10729,10 @@
               }
             },
             "title": "AccountProcessingFeeIndicator",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "supporting_documentation": {
             "description": "Details of the supporting documentation for the account.",
@@ -10653,7 +10743,10 @@
               }
             },
             "title": "AccountSupportingDocumentation",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "status": {
             "description": "Valid status types associated with an XFlow account.",
@@ -10671,20 +10764,32 @@
             "properties": {
               "ip": {
                 "description": "IP address of the account from which the terms of service were accepted.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "time": {
                 "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the terms of service was accepted.",
                 "format": "unix-time",
-                "type": "integer"
+                "type": [
+                  "integer",
+                  "null"
+                ]
               },
               "user_agent": {
                 "description": "The user agent of the browser from which the account representative accepted their service agreement",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "AccountTosAcceptance",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "type": {
             "description": "Account types. These can be `partner`, `platform` or `user`.",
