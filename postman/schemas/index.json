@@ -11621,7 +11621,10 @@
         "properties": {
           "account_id": {
             "description": "The identifier for the account to which the associated object that generated this event belongs.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "created": {
             "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the event object was created.",
@@ -11905,7 +11908,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "PaymentLinkMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -12023,7 +12029,10 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "livemode": {
             "description": "Has the value true if the object exists in `livemode` or the value false if the object exists in `testmode`.",
@@ -12038,8 +12047,18 @@
           },
           "payout_eligible_at": {
             "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the payment becomes eligible for payout. This is applicable only for Payment type `reconcile`.",
-            "format": "unix-time",
-            "type": "integer"
+            "oneOf": [
+              {
+                "format": "unix-time",
+                "type": "integer"
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
           },
           "to": {
             "description": "Details of the account & currency to which the funds are being transferred.",
@@ -12092,8 +12111,18 @@
           },
           "arrival_time": {
             "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the funds are expected to be credited at the specified address. Put another way, this is the date the the payout is expected to arrive in the bank. This factors in delays like weekends or bank holidays.",
-            "format": "unix-time",
-            "type": "integer"
+            "oneOf": [
+              {
+                "format": "unix-time",
+                "type": "integer"
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
           },
           "automatic": {
             "description": "Has the value `true` if automatic payouts are enabled and has the value `false` if manual payouts are enabled. Currently, XFlow supports automatic payouts only.",
@@ -12126,7 +12155,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "PayoutsMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -12151,11 +12183,17 @@
               }
             },
             "title": "PayoutPaymentMethodDetails",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "payout_confirmation": {
             "description": "File object providing details of the payout amount. E.g. - MT 103, Payment Advice.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "statement_descriptor": {
             "description": "Text which appears on the bank account statement.",
@@ -12201,7 +12239,10 @@
           },
           "full_name": {
             "description": "Full name (i.e first name followed by the last name) of the person.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -12255,7 +12296,10 @@
               }
             },
             "title": "PersonSupportingDocumentation",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "supporting_ids": {
             "description": "Details about identification documents.",
@@ -12266,7 +12310,10 @@
               }
             },
             "title": "PersonSupportingIds",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           }
         },
         "title": "Person",
@@ -12363,32 +12410,53 @@
         "description": "The receivable object represents an intent expressed by the user to accept funds from their partners. Typically, this intent is expressed by providing an underlying invoice for the desired inflow of funds.",
         "properties": {
           "account_id": {
-            "description": "",
-            "type": "string"
+            "description": "Unique identifier for the account object of `type=partner`.",
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_locked": {
             "description": "Amount value locked, unavailable for reconciliation. This is a calculated field and is returned by XFlow.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_maximum_reconcilable": {
             "description": "Maximum amount value that can be reconciled. This field can be edited by the user.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_reconcilable": {
             "description": "Amount value that is available for reconciliation. This field is a calculated field and is returned by XFlow. The formula to calculate this value is `amount_reconcilable` = `amount_maximum_reconcilable` - (`amount_locked` + `amount_reconciled`)",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_reconciled": {
             "description": "Amount value that has been reconciled. This is a calculated field and is returned by XFlow. The formula to calculate this value is `amount_reconciled` = `amount_reconciled_not_settled` + `amount_settled_payouts` + fees",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_reconciled_not_settled": {
             "description": "Amount value that has been reconciled but not paid out. This is a calculated field and is returned by XFlow.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount_settled_payouts": {
             "description": "Amount value that has been transferred for payout. This is a calculated field and is returned by XFlow.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "created": {
             "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the receivable object was created.",
@@ -12397,14 +12465,37 @@
           },
           "currency": {
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-            "enum": [
-              "USD"
-            ],
-            "type": "string"
+            "oneOf": [
+              {
+                "enum": [
+                  "USD"
+                ],
+                "type": "string"
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
+          },
+          "deposit_ids_amount_locked": {
+            "description": "Represents an array of deposit objects due to which amount is locked.",
+            "items": {
+              "type": "string"
+            },
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "description": {
             "description": "Represents an array of deposit objects due to which amount is locked.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -12415,31 +12506,52 @@
             "properties": {
               "amount": {
                 "description": "Total amount value on the invoice.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "creation_date": {
                 "description": "The date on which the invoice was created in YYYY-MM-DD format.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "document": {
                 "description": "Represents a file object with invoice details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "due_date": {
                 "description": "The date on which the invoice amount is due in YYYY-MM-DD format.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "reference_number": {
                 "description": "Unique identification number on the invoice.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "ReceivableInvoice",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "livemode": {
             "description": "Has the value true if the object exists in `livemode` or the value false if the object exists in `testmode`.",
@@ -12451,7 +12563,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "ReceivableMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -12466,7 +12581,10 @@
           },
           "purpose_code_description": {
             "description": "Description of the purpose code.",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "status": {
             "description": "Valid status for receivables.",
@@ -12483,13 +12601,10 @@
           },
           "system_message": {
             "description": "Details regarding issues with the receivable.",
-            "minItems": 1,
-            "maxItems": 1,
             "items": {
               "properties": {
                 "code": {
                   "description": "Unique code for the message provided.",
-                  "enum": [],
                   "type": "string"
                 },
                 "message": {
@@ -12498,7 +12613,10 @@
                 }
               }
             },
-            "type": "array"
+            "type": [
+              "array",
+              "null"
+            ]
           },
           "transaction_type": {
             "description": "Receivable transaction type.",
@@ -12541,15 +12659,24 @@
             "properties": {
               "account_id": {
                 "description": "Account identifier for the account from which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "string"
+                ]
               },
               "address_id": {
                 "description": "Address identifier of the account from which funds are being transferred. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "string"
+                ]
               }
             },
             "title": "TransferFrom",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -12565,7 +12692,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "TransferMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -12588,15 +12718,24 @@
             "properties": {
               "account_id": {
                 "description": "Account identifier for the account to which funds are being transferred. Refer [account object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "address_id": {
                 "description": "Address identifier of the account to which funds are being transferred. Refer [address object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more details.",
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "title": "TransferTo",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "user_declaration": {
             "description": "File object providing details of the reason for the transfer to be created. This is applicable only for transfers between two different partners (this is an XFlow-Ops driven process for now).",
@@ -12604,7 +12743,10 @@
           }
         },
         "title": "Transfer",
-        "type": "object"
+        "type": [
+          "object",
+          "null"
+        ]
       },
       "webhook_endpoint": {
         "description": "You can configure webhook endpoints via the API to be notified about events that happen in your XFlow platform account, their connected accounts or in direct users (the latter is an XFlow account of `type=user` which is not connected to an account of `type=platform`).",
@@ -12640,7 +12782,10 @@
             },
             "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
             "title": "WebhookEndpointMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
