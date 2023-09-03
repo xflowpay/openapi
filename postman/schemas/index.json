@@ -168,6 +168,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -198,6 +235,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -619,6 +693,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -629,6 +740,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -661,6 +809,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -671,6 +856,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1081,6 +1303,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1091,6 +1350,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1123,6 +1419,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1133,6 +1466,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1165,6 +1535,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1175,6 +1582,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1351,6 +1795,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1381,6 +1862,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1530,6 +2048,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1540,6 +2095,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1572,6 +2164,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1582,6 +2211,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1632,6 +2298,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1642,6 +2345,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1674,6 +2414,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1684,6 +2461,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1716,6 +2530,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1726,6 +2577,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1850,6 +2738,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1880,6 +2805,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1912,6 +2874,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1922,6 +2921,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2112,6 +3148,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2142,6 +3215,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2241,6 +3351,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2251,6 +3398,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2283,6 +3467,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2293,6 +3514,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2343,6 +3601,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2353,6 +3648,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2522,6 +3854,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2552,6 +3921,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2584,6 +3990,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2594,6 +4037,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2733,6 +4213,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2763,6 +4280,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2795,6 +4349,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2805,6 +4396,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2936,6 +4564,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2966,6 +4631,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2989,7 +4691,7 @@
               "schema": {
                 "properties": {
                   "file": {
-                    "description": "A file to upload. The file should follow the specifications of [RFC 2388](https://datatracker.ietf.org/doc/html/rfc2388) (which defines file transfers for the multipart/form-data protocol).            ",
+                    "description": "A file to upload. The file should follow the specifications of [RFC 2388](https://datatracker.ietf.org/doc/html/rfc2388) (which defines file transfers for the multipart/form-data protocol).",
                     "format": "binary",
                     "type": "string"
                   },
@@ -3001,22 +4703,29 @@
                     "title": "CreateFileRequestMetadata",
                     "type": "object"
                   },
-                  "purpose": {
-                    "description": "Purpose for uploading the file. The formats supported for all documents are of type `jpeg`, `pdf` and `png`. The maximum size allowed is 10MB. All documents are downloadable and never expire.",
-                    "enum": [
-                      "additional_verification",
-                      "finance_document",
-                      "identity_document",
-                      "logo",
-                      "payout_confirmation",
-                      "tax_document"
-                    ],
-                    "type": "string"
+                  "payload": {
+                    "properties": {
+                      "purpose": {
+                        "description": "Purpose for uploading the file. The formats supported for all documents are of type `jpeg`, `pdf` and `png`. The maximum size allowed is 10MB. All documents are downloadable and never expire.",
+                        "enum": [
+                          "additional_verification",
+                          "finance_document",
+                          "identity_document",
+                          "logo",
+                          "payout_confirmation",
+                          "tax_document"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "format": "binary",
+                    "title": "CreateFileRequestPayload",
+                    "type": "object"
                   }
                 },
                 "required": [
                   "file",
-                  "purpose"
+                  "payload"
                 ],
                 "title": "CreateFileRequest",
                 "type": "object"
@@ -3026,6 +4735,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3036,6 +4782,80 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3068,6 +4888,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3078,6 +4935,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3128,6 +5022,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3138,6 +5069,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3170,16 +5138,96 @@
         ],
         "responses": {
           "200": {
-            "content": {
-              "application/json": {
+            "headers": {
+              "Date": {
                 "schema": {
-                  "$ref": "#/components/schemas/file"
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "content-disposition": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "image/png": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
                 }
               }
             },
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3380,6 +5428,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3410,6 +5495,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3472,6 +5594,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3482,6 +5641,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3514,6 +5710,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3524,6 +5757,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3574,6 +5844,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3584,6 +5891,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3616,6 +5960,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3626,6 +6007,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3658,6 +6076,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3668,6 +6123,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3700,6 +6192,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3710,6 +6239,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3742,6 +6308,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3752,6 +6355,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3852,6 +6492,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3882,6 +6559,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3914,6 +6628,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3924,6 +6675,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4024,6 +6812,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4054,6 +6879,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4086,6 +6948,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4096,6 +6995,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4137,6 +7073,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4147,6 +7120,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4247,6 +7257,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4277,6 +7324,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4307,6 +7391,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4317,6 +7438,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4349,6 +7507,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4359,6 +7554,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4400,6 +7632,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4410,6 +7679,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4440,6 +7746,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4450,6 +7793,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4527,6 +7907,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4537,6 +7954,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4637,6 +8091,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4667,6 +8158,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4697,6 +8225,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4707,6 +8272,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4739,6 +8341,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4749,6 +8388,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4790,6 +8466,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4800,6 +8513,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4832,6 +8582,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4842,6 +8629,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4874,6 +8698,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4884,6 +8745,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4916,6 +8814,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4926,6 +8861,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5026,6 +8998,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5056,6 +9065,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5086,6 +9132,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5096,6 +9179,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5128,6 +9248,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5138,6 +9295,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5179,6 +9373,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5189,6 +9420,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5289,6 +9557,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5319,6 +9624,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5349,6 +9691,43 @@
         },
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5359,6 +9738,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5391,6 +9807,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5401,6 +9854,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5442,6 +9932,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5452,6 +9979,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5484,6 +10048,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5494,6 +10095,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5526,6 +10164,43 @@
         ],
         "responses": {
           "200": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5536,6 +10211,43 @@
             "description": "Successful response."
           },
           "default": {
+            "headers": {
+              "Date": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amzn-RequestId": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "xflow-request-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "x-amz-apigw-id": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Amzn-Trace-Id": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6605,7 +11317,10 @@
                   },
                   "description": "Additional information associated with the error in the form of key-value pairs.",
                   "title": "ErrorMetadata",
-                  "type": "object"
+                  "type": [
+                    "object",
+                    "null"
+                  ]
                 }
               }
             },
@@ -6835,7 +11550,10 @@
             },
             "description": "Additional information associated with the error in the form of key-value pairs.",
             "title": "FileMetadata",
-            "type": "object"
+            "type": [
+              "object",
+              "null"
+            ]
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
