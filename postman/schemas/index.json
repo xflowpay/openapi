@@ -13305,8 +13305,7 @@
         },
         "title": "Transfer",
         "type": [
-          "object",
-          "null"
+          "object"
         ]
       },
       "webhook_endpoint": {
