@@ -3467,7 +3467,7 @@
                     "required": [
                       "address_id"
                     ],
-                    "title": "DepositTo",
+                    "title": "CreateDepositRequestTo",
                     "type": "object"
                   }
                 },
