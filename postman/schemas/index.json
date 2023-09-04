@@ -13300,7 +13300,10 @@
           },
           "user_declaration": {
             "description": "File object providing details of the reason for the transfer to be created. This is applicable only for transfers between two different partners (this is an XFlow-Ops driven process for now).",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "title": "Transfer",
