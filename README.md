@@ -8,3 +8,5 @@ This repository contains [OpenAPI specifications][openapi] for XFlow's API.
 Files can be found in the `openapi/` directory:
 
 * `index.json` OpenAPI 3.1.0 spec matching the public Stripe API.
+
+[openapi]: https://www.openapis.org/
