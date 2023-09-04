@@ -2,5 +2,6 @@
 apis[] = {"apiId":"fc68e38a-9154-4e69-acad-6b79e69b75cd"}
 apis[] = {"apiId":"62752fb6-0323-4a72-a64c-c53ecf4943ca"}
 apis[] = {"apiId":"5efdbb27-05af-4ca4-90ba-943de28e9790"}
+apis[] = {"apiId":"b0a0be18-2416-4a0d-bc5b-b9981d82060f"}
 configVersion = 1.0.0
 type = api
