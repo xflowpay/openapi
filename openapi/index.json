@@ -11005,7 +11005,7 @@
                   "mid_market",
                   "inter_bank"
                 ],
-                "nullabe": true,
+                "nullable": true,
                 "type": "string"
               },
               "payout": {
@@ -11088,7 +11088,7 @@
                   "mid_market",
                   "inter_bank"
                 ],
-                "nullabe": true,
+                "nullable": true,
                 "type": "string"
               },
               "payout": {
