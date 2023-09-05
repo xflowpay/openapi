@@ -4958,14 +4958,6 @@
                     "format": "binary",
                     "type": "string"
                   },
-                  "metadata": {
-                    "additionalProperties": {
-                      "type": "string"
-                    },
-                    "description": "Additional information associated with the error in the form of key-value pairs.",
-                    "title": "CreateFileRequestMetadata",
-                    "type": "object"
-                  },
                   "payload": {
                     "properties": {
                       "purpose": {
