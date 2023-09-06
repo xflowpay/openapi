@@ -372,16 +372,8 @@ paths:
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the XFlow markup over the mid-market FX
                         rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
                       type: string
                     payout:
                       description: Payout fee is the XFlow fee per payout.
@@ -444,16 +436,8 @@ paths:
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the XFlow markup over the mid-market FX
                         rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
                       type: string
                     payout:
                       description: Payout fee is the XFlow fee per payout.
@@ -929,16 +913,8 @@ paths:
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the XFlow markup over the mid-market FX
                         rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
                       type: string
                     payout:
                       description: Payout fee is the XFlow fee per payout.
@@ -1001,16 +977,8 @@ paths:
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the XFlow markup over the mid-market FX
                         rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
                       type: string
                     payout:
                       description: Payout fee is the XFlow fee per payout.
@@ -7988,16 +7956,7 @@ components:
             indicate what XFlow will charge the account for money movement.
           properties:
             fx_markup:
-              description: FX markup is the XFlow markup over the reference FX rate.
-              nullable: true
-              type: string
-            fx_reference_rate:
-              description: >-
-                FX markup reference rate. This can be set to `mid_market` or
-                `inter_bank`.
-              enum:
-                - mid_market
-                - inter_bank
+              description: FX markup is the XFlow markup over the mid-market FX rate.
               nullable: true
               type: string
             payout:
@@ -8063,16 +8022,7 @@ components:
             creation.
           properties:
             fx_markup:
-              description: FX markup is the XFlow markup over the reference FX rate.
-              nullable: true
-              type: string
-            fx_reference_rate:
-              description: >-
-                FX markup reference rate. This can be set to `mid_market` or
-                `inter_bank`.
-              enum:
-                - mid_market
-                - inter_bank
+              description: FX markup is the XFlow markup over the mid-market FX rate.
               nullable: true
               type: string
             payout:
@@ -9145,17 +9095,10 @@ components:
         rate:
           description: Details of the sell amount and currency.
           properties:
-            inter_bank:
-              description: >-
-                For reference purposes only. This rate represents the inter-bank
-                rate.
-              nullable: true
-              type: string
             mid_market:
               description: >-
                 For reference purposes only. This rate represents the midpoint
                 of the current bid and ask price.
-              nullable: true
               type: string
             user:
               description: The returned FX quote.
@@ -9750,17 +9693,10 @@ components:
         rate:
           description: Details of the sell amount and currency.
           properties:
-            inter_bank:
-              description: >-
-                For reference purposes only. This rate represents the inter-bank
-                rate.
-              nullable: true
-              type: string
             mid_market:
               description: >-
                 For reference purposes only. This rate represents the midpoint
                 of the current bid and ask price.
-              nullable: true
               type: string
             user:
               description: The returned FX quote.
