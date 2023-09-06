@@ -30,7 +30,7 @@ jobs:
 
           # 🔧 A glob pattern to find OpenAPI files in your repository. Leave "" to match all OpenAPI specs in repository.
           # Examples of match: "openapi.yml" or "openapi.yml,other.yml" or "*.spec.yml"
-          additional_args: --match ""
+          additional_args: --match "index.yml"
 
           # 🔧 Uncomment next two lines if you generate your specs and don't track them in Git. Requires Optic cloud.
           # compare_from_pr: cloud:default
