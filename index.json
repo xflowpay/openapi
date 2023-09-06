@@ -7760,7 +7760,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "properties": {},
+                "properties": {
+                  "metadata": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "Set of [key-value pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
+                    "title": "UpdatePayoutRequestMetadata",
+                    "nullable": true,
+                    "type": "object"
+                  }
+                },
                 "title": "UpdatePayoutRequest",
                 "type": "object"
               }
