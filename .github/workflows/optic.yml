@@ -22,7 +22,7 @@ jobs:
           optic_token: ${{ secrets.OPTIC_TOKEN }}
 
           # A GitHub token with access to create comments on pull requests
-          github_token: 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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
           # 🔧 If true, standard check failures will cause this action to fail.
           # If false, standard check failures will show in PR comments and in Optic Cloud but will not cause the action to fail.
