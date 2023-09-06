@@ -43,6 +43,16 @@ paths:
               type: string
             type: array
         - description: >-
+            Bowow results where the `created` field is equal to the timestamp
+            value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: bowow
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
             Return results where the `created` field is equal to the timestamp
             value in seconds elapsed since [Unix epoch
             time](https://en.wikipedia.org/wiki/Unix_time).
