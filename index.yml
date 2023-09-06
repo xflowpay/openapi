@@ -6127,7 +6127,63 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                full_name:
+                  description: >-
+                    Full name (i.e first name followed by the last name) of the
+                    person.
+                  type: string
+                relationship:
+                  description: Relationship of the person with the account.
+                  properties:
+                    director:
+                      description: >-
+                        `true` if the person is the director of the account
+                        entity, `false` otherwise.
+                      type: boolean
+                    owner:
+                      description: >-
+                        `true` if the person is the owner of the account entity,
+                        `false` otherwise.
+                      type: boolean
+                    representative:
+                      description: >-
+                        `true` if the person is the representative of the
+                        account entity, `false` otherwise.
+                      type: boolean
+                  title: CreatePersonRequestRelationship
+                  type: object
+                supporting_documentation:
+                  description: >-
+                    Documents required to prove relationship of the person with
+                    the account.
+                  properties:
+                    id_document:
+                      description: >-
+                        File identifier of the document that identifies this
+                        person. This can be a tax document like a PAN card (set
+                        `file.purpose` to `identity_document` during file
+                        creation) or an alternate document like a passport (set
+                        `file.purpose` to `additional_verification`).
+                      type: string
+                  required:
+                    - id_document
+                  title: CreatePersonRequestSupportingDocumentation
+                  type: object
+                supporting_ids:
+                  description: Details about identification documents.
+                  properties:
+                    tax:
+                      description: >-
+                        Tax Identification Number (e.g. PAN for Indian
+                        individuals).
+                      type: string
+                  title: CreatePersonRequestSupportingIds
+                  type: object
+              required:
+                - relationship
+                - supporting_documentation
+                - type
               title: CreatePersonRequest
               type: object
       responses:
@@ -6289,7 +6345,59 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                full_name:
+                  description: >-
+                    Full name (i.e first name followed by the last name) of the
+                    person.
+                  type: string
+                relationship:
+                  description: Relationship of the person with the account.
+                  properties:
+                    director:
+                      description: >-
+                        `true` if the person is the director of the account
+                        entity, `false` otherwise.
+                      type: boolean
+                    owner:
+                      description: >-
+                        `true` if the person is the owner of the account entity,
+                        `false` otherwise.
+                      type: boolean
+                    representative:
+                      description: >-
+                        `true` if the person is the representative of the
+                        account entity, `false` otherwise.
+                      type: boolean
+                  title: UpdatePersonRequestRelationship
+                  type: object
+                supporting_documentation:
+                  description: >-
+                    Documents required to prove relationship of the person with
+                    the account.
+                  properties:
+                    id_document:
+                      description: >-
+                        File identifier of the document that identifies this
+                        person. This can be a tax document like a PAN card (set
+                        `file.purpose` to `identity_document` during file
+                        creation) or an alternate document like a passport (set
+                        `file.purpose` to `additional_verification`).
+                      type: string
+                  required:
+                    - id_document
+                  title: UpdatePersonRequestSupportingDocumentation
+                  type: object
+                supporting_ids:
+                  description: Details about identification documents.
+                  properties:
+                    tax:
+                      description: >-
+                        Tax Identification Number (e.g. PAN for Indian
+                        individuals).
+                      type: string
+                  title: UpdatePersonRequestSupportingIds
+                  type: object
               title: UpdatePersonRequest
               type: object
       responses:
@@ -6719,7 +6827,84 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                account_id:
+                  description: Unique identifier for the account object of `type=partner`.
+                  type: string
+                amount_maximum_reconcilable:
+                  description: >-
+                    Maximum amount value that can be reconciled. This field can
+                    be edited by the user.
+                  type: string
+                currency:
+                  description: >-
+                    The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                    3-digit code for the amount currency.
+                  enum:
+                    - USD
+                  type: string
+                description:
+                  description: >-
+                    Represents an array of deposit objects due to which amount
+                    is locked.
+                  type: string
+                invoice:
+                  description: Relationship of the person with the account.
+                  properties:
+                    amount:
+                      description: Total amount value on the invoice.
+                      type: string
+                    creation_date:
+                      description: >-
+                        The date on which the invoice was created in YYYY-MM-DD
+                        format.
+                      type: string
+                    currency:
+                      description: >-
+                        The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                        3-digit code for the amount currency.
+                      type: string
+                    document:
+                      description: Represents a file object with invoice details.
+                      type: string
+                    due_date:
+                      description: >-
+                        The date on which the invoice amount is due in
+                        YYYY-MM-DD format.
+                      type: string
+                    reference_number:
+                      description: Unique identification number on the invoice.
+                      type: string
+                  title: CreateReceivableRequestInvoice
+                  type: object
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: CreateReceivableRequestMetadata
+                  type: object
+                purpose_code:
+                  description: >-
+                    [Purpose
+                    codes](https://www.rbi.org.in/upload/notification/pdfs/52220.pdf)
+                    defined by the Financial Regulator for cross-border
+                    transactions.
+                  type: string
+                purpose_code_description:
+                  description: Description of the purpose code.
+                  type: string
+                transaction_type:
+                  description: Receivable transaction type.
+                  enum:
+                    - goods
+                    - services
+                    - software
+                  type: string
               title: CreateReceivableRequest
               type: object
       responses:
@@ -6881,7 +7066,84 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                account_id:
+                  description: Unique identifier for the account object of `type=partner`.
+                  type: string
+                amount_maximum_reconcilable:
+                  description: >-
+                    Maximum amount value that can be reconciled. This field can
+                    be edited by the user.
+                  type: string
+                currency:
+                  description: >-
+                    The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                    3-digit code for the amount currency.
+                  enum:
+                    - USD
+                  type: string
+                description:
+                  description: >-
+                    Represents an array of deposit objects due to which amount
+                    is locked.
+                  type: string
+                invoice:
+                  description: Relationship of the person with the account.
+                  properties:
+                    amount:
+                      description: Total amount value on the invoice.
+                      type: string
+                    creation_date:
+                      description: >-
+                        The date on which the invoice was created in YYYY-MM-DD
+                        format.
+                      type: string
+                    currency:
+                      description: >-
+                        The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                        3-digit code for the amount currency.
+                      type: string
+                    document:
+                      description: Represents a file object with invoice details.
+                      type: string
+                    due_date:
+                      description: >-
+                        The date on which the invoice amount is due in
+                        YYYY-MM-DD format.
+                      type: string
+                    reference_number:
+                      description: Unique identification number on the invoice.
+                      type: string
+                  title: UpdateReceivableRequestInvoice
+                  type: object
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: UpdateReceivableRequestMetadata
+                  type: object
+                purpose_code:
+                  description: >-
+                    [Purpose
+                    codes](https://www.rbi.org.in/upload/notification/pdfs/52220.pdf)
+                    defined by the Financial Regulator for cross-border
+                    transactions.
+                  type: string
+                purpose_code_description:
+                  description: Description of the purpose code.
+                  type: string
+                transaction_type:
+                  description: Receivable transaction type.
+                  enum:
+                    - goods
+                    - services
+                    - software
+                  type: string
               title: UpdateReceivableRequest
               type: object
       responses:
@@ -7364,7 +7626,85 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                amount:
+                  description: Amount value that will be deposited at the destination.
+                  type: string
+                currency:
+                  description: >-
+                    The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                    3-digit code for the amount currency.
+                  enum:
+                    - USD
+                  type: string
+                description:
+                  description: >-
+                    An arbitrary string attached to the object. Often useful for
+                    displaying to users.
+                  type: string
+                from:
+                  description: >-
+                    Details of the account and address from which the funds are
+                    being transferred.
+                  properties:
+                    account_id:
+                      description: >-
+                        Account identifier for the account from which funds are
+                        being transferred. Refer [account
+                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        for more details.
+                      type: string
+                    address_id:
+                      description: >-
+                        Address identifier of the account from which funds are
+                        being transferred. Refer [address
+                        object](https://docs.xflowpay.com/2023-04-12/api#addresses)
+                        for more details.
+                      type: string
+                  required:
+                    - account_id
+                  title: CreateTransferRequestFrom
+                  type: object
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: CreateTransferRequestMetadata
+                  type: object
+                to:
+                  description: >-
+                    Details of the account and address to which the transfer is
+                    being made.
+                  properties:
+                    account_id:
+                      description: >-
+                        Account identifier for the account to which funds are
+                        being transferred. Refer [account
+                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        for more details.
+                      type: string
+                    address_id:
+                      description: >-
+                        Address identifier of the account to which funds are
+                        being transferred. Refer [address
+                        object](https://docs.xflowpay.com/2023-04-12/api#addresses)
+                        for more details.
+                      type: string
+                  required:
+                    - account_id
+                  title: CreateTransferRequestTo
+                  type: object
+              required:
+                - amount
+                - currency
+                - fromt
+                - to
+                - type
               title: CreateTransferRequest
               type: object
       responses:
@@ -7526,7 +7866,23 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                description:
+                  description: >-
+                    An arbitrary string attached to the object. Often useful for
+                    displaying to users.
+                  type: string
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: CreateTransferRequestMetadata
+                  type: object
               title: UpdateTransferRequest
               type: object
       responses:
@@ -7775,7 +8131,43 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                description:
+                  description: >-
+                    An arbitrary string attached to the object. Often useful for
+                    displaying to users.
+                  type: string
+                enabled_events:
+                  description: >-
+                    The list of events to enable for this endpoint. [’*’]
+                    indicates that all events are enabled.
+                  maxItems: 1
+                  items:
+                    type: string
+                  type: array
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: CreateWebhookEndpointRequestMetadata
+                  type: object
+                platform:
+                  description: >-
+                    If `true`, the webhook endpoint will receive events for the
+                    platform. Else if `false`, the webhook endpoint will receive
+                    events for direct or connected users.
+                  type: boolean
+                url:
+                  description: The https URL of the webhook endpoint.
+                  type: string
+              required:
+                - enabled_events
+                - url
               title: CreateWebhookEndpointRequest
               type: object
       responses:
@@ -7937,7 +8329,40 @@ paths:
         content:
           application/json:
             schema:
-              properties: {}
+              properties:
+                description:
+                  description: >-
+                    An arbitrary string attached to the object. Often useful for
+                    displaying to users.
+                  type: string
+                enabled_events:
+                  description: >-
+                    The list of events to enable for this endpoint. [’*’]
+                    indicates that all events are enabled.
+                  maxItems: 1
+                  items:
+                    type: string
+                  type: array
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: UpdateWebhookEndpointRequestMetadata
+                  type: object
+                platform:
+                  description: >-
+                    If `true`, the webhook endpoint will receive events for the
+                    platform. Else if `false`, the webhook endpoint will receive
+                    events for direct or connected users.
+                  type: boolean
+                url:
+                  description: The https URL of the webhook endpoint.
+                  type: string
               title: UpdateWebhookEndpointRequest
               type: object
       responses:
