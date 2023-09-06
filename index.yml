@@ -22,7 +22,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account-2
+          name: XFlow-Account-3
           required: false
           schema:
             type: string
