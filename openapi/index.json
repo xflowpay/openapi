@@ -435,7 +435,15 @@
                     "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -499,7 +507,15 @@
                     "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -1076,7 +1092,15 @@
                     "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -1140,7 +1164,15 @@
                     "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -10963,7 +10995,16 @@
             "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
             "properties": {
               "fx_markup": {
-                "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                "description": "FX markup is the XFlow markup over the reference FX rate.",
+                "nullable": true,
+                "type": "string"
+              },
+              "fx_reference_rate": {
+                "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                "enum": [
+                  "mid_market",
+                  "inter_bank"
+                ],
                 "nullable": true,
                 "type": "string"
               },
@@ -11037,7 +11078,16 @@
             "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
             "properties": {
               "fx_markup": {
-                "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                "description": "FX markup is the XFlow markup over the reference FX rate.",
+                "nullable": true,
+                "type": "string"
+              },
+              "fx_reference_rate": {
+                "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                "enum": [
+                  "mid_market",
+                  "inter_bank"
+                ],
                 "nullable": true,
                 "type": "string"
               },
@@ -12111,8 +12161,14 @@
           "rate": {
             "description": "Details of the sell amount and currency.",
             "properties": {
+              "inter_bank": {
+                "description": "For reference purposes only. This rate represents the inter-bank rate.",
+                "nullable": true,
+                "type": "string"
+              },
               "mid_market": {
                 "description": "For reference purposes only. This rate represents the midpoint of the current bid and ask price.",
+                "nullable": true,
                 "type": "string"
               },
               "user": {
@@ -12691,8 +12747,14 @@
           "rate": {
             "description": "Details of the sell amount and currency.",
             "properties": {
+              "inter_bank": {
+                "description": "For reference purposes only. This rate represents the inter-bank rate.",
+                "nullable": true,
+                "type": "string"
+              },
               "mid_market": {
                 "description": "For reference purposes only. This rate represents the midpoint of the current bid and ask price.",
+                "nullable": true,
                 "type": "string"
               },
               "user": {
