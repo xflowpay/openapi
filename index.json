@@ -598,7 +598,15 @@
                     "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -662,7 +670,15 @@
                     "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -1402,7 +1418,15 @@
                     "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -1466,7 +1490,15 @@
                     "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
                     "properties": {
                       "fx_markup": {
-                        "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                        "description": "FX markup is the XFlow markup over the reference FX rate.",
+                        "type": "string"
+                      },
+                      "fx_reference_rate": {
+                        "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                        "enum": [
+                          "mid_market",
+                          "inter_bank"
+                        ],
                         "type": "string"
                       },
                       "payout": {
@@ -11858,7 +11890,16 @@
             "description": "XFlow fees which are set by XFlow for a platform. These fees indicate what XFlow will charge the account for money movement.",
             "properties": {
               "fx_markup": {
-                "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                "description": "FX markup is the XFlow markup over the reference FX rate.",
+                "nullable": true,
+                "type": "string"
+              },
+              "fx_reference_rate": {
+                "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                "enum": [
+                  "mid_market",
+                  "inter_bank"
+                ],
                 "nullable": true,
                 "type": "string"
               },
@@ -11932,7 +11973,16 @@
             "description": "XFlow fees which are set on account of `type=platform` and passed onto the connected user by default (the platform has the option to mark up these fees for their connected users) during connected user creation.",
             "properties": {
               "fx_markup": {
-                "description": "FX markup is the XFlow markup over the mid-market FX rate.",
+                "description": "FX markup is the XFlow markup over the reference FX rate.",
+                "nullable": true,
+                "type": "string"
+              },
+              "fx_reference_rate": {
+                "description": "FX markup reference rate. This can be set to `mid_market` or `inter_bank`.",
+                "enum": [
+                  "mid_market",
+                  "inter_bank"
+                ],
                 "nullable": true,
                 "type": "string"
               },
@@ -12947,7 +12997,7 @@
         "type": "object"
       },
       "exchange_rate": {
-        "description": "The ExchangeRate object models the details behind currency conversion. It transparently offers details like the buy and sell amounts, what the mid-market and the user-facing rates are and (if applicable) how long the rates are valid. The ExchangeRate object is always created by a payment object.",
+        "description": "The ExchangeRate object models the details behind currency conversion. It transparently offers details like the buy and sell amounts, what the reference and the user-facing rates are and (if applicable) how long the rates are valid. The ExchangeRate object is always created by a payment object.",
         "properties": {
           "buy": {
             "description": "Details of the buy amount and currency.",
