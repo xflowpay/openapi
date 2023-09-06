@@ -25,7 +25,7 @@
           {
             "description": "This header specifies the connected user's account on behalf of which the request is being made.",
             "in": "header",
-            "name": "XFlow-Account",
+            "name": "XFlow-Account-2",
             "required": false,
             "schema": {
               "type": "string"
