@@ -319,6 +319,41 @@
           "content": {
             "application/json": {
               "schema": {
+                "example": {
+                  "business_details": {
+                    "dba": "King Mathan",
+                    "email": "mathan-jeep-compass@xflowpay.com",
+                    "legal_name": "King Mathan Pvt. Ltd.",
+                    "ids": {
+                      "business": "U72900KA2021FTC149049",
+                      "tax_gst": "29AAACX3717G1Z9"
+                    },
+                    "physical_address": {
+                      "country": "IN"
+                    },
+                    "product_description": "This business is a test business which has been setup for testing runs",
+                    "type": "company",
+                    "website": "https://mathanownstheuniverse.com"
+                  },
+                  "fees": {
+                    "fx_markup": "2.00",
+                    "payout": {
+                      "fixed": [
+                        {
+                          "amount": "75",
+                          "currency": "USD"
+                        }
+                      ],
+                      "variable": null
+                    }
+                  },
+                  "tos_acceptance": {
+                    "ip": "237.33.96.93",
+                    "time": 1694079026,
+                    "user_agent": "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.3; Trident/4.1)"
+                  },
+                  "type": "user"
+                },
                 "properties": {
                   "business_details": {
                     "description": "Details about the business and activities that the account engages in.",
