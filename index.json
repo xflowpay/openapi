@@ -32,6 +32,15 @@
             }
           },
           {
+            "description": "This header specifies the connected user's account on behalf of which the request is being made.",
+            "in": "header",
+            "name": "XFlow-Account-2",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "description": "This parameter represents the state of the `xflow_receive` addresses associated with this account. The valid values include `deactivated`, `requested`, `processing` and `activated`.",
             "in": "query",
             "name": "address",
