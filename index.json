@@ -110,6 +110,14 @@
           },
           {
             "description": "A limit on the number of objects to be returned, between 1 and 10. If this parameter is not specified, a default value of 10 is assumed.",
+            "examples": {
+              "zero": {
+                "value": 0
+              },
+              "max": {
+                "value": 10
+              }
+            },
             "in": "query",
             "name": "limit",
             "required": false,
