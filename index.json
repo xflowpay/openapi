@@ -12997,7 +12997,7 @@
         "type": "object"
       },
       "exchange_rate": {
-        "description": "The ExchangeRate object models the details behind currency conversion. It transparently offers details like the buy and sell amounts, what the reference and the user-facing rates are and (if applicable) how long the rates are valid. The ExchangeRate object is always created by a payment object.",
+        "description": "The ExchangeRate object models the details behind currency conversion. It transparently offers details like the buy and sell amounts, what the mid-market (or inter-bank) and the user-facing rates are and (if applicable) how long the rates are valid. The ExchangeRate object is always created by a payment object.",
         "properties": {
           "buy": {
             "description": "Details of the buy amount and currency.",
