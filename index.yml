@@ -3510,6 +3510,7 @@ paths:
                 - address.status.activated
                 - address.status.deactivated
                 - deposit.status.completed
+                - payout.arrival_time.updated
                 - payout.status.initialized
                 - payout.status.processing
                 - payout.status.settled
@@ -9988,6 +9989,7 @@ components:
             - address.status.activated
             - address.status.deactivated
             - deposit.status.completed
+            - payout.arrival_time.updated
             - payout.status.initialized
             - payout.status.processing
             - payout.status.settled
