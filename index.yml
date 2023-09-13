@@ -3510,6 +3510,7 @@ paths:
                 - address.status.activated
                 - address.status.deactivated
                 - deposit.status.completed
+                - payout.arrival_time.updated
                 - payout.status.initialized
                 - payout.status.processing
                 - payout.status.settled
@@ -9885,6 +9886,7 @@ components:
                   - receivable_update_access_unauthorized
                   - request_body_invalid
                   - request_query_parameter_invalid
+                  - resource_locked
                   - secret_key_invalid
                   - secret_key_missing
                   - testmode_action_only
@@ -9987,6 +9989,7 @@ components:
             - address.status.activated
             - address.status.deactivated
             - deposit.status.completed
+            - payout.arrival_time.updated
             - payout.status.initialized
             - payout.status.processing
             - payout.status.settled
