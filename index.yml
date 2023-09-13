@@ -9829,7 +9829,6 @@ components:
                   - invalid_amount
                   - invoice_date_invalid
                   - invoice_due_date_invalid
-                  - lock_timeout
                   - metadata_count_exceeded
                   - metadata_key_max_length_invalid
                   - metadata_key_min_length_invalid
@@ -9886,6 +9885,7 @@ components:
                   - receivable_update_access_unauthorized
                   - request_body_invalid
                   - request_query_parameter_invalid
+                  - resource_locked
                   - secret_key_invalid
                   - secret_key_missing
                   - testmode_action_only
