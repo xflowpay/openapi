@@ -13689,7 +13689,7 @@
             "type": "string"
           },
           "amount_locked": {
-            "description": "Amount value locked, unavailable for reconciliation. This is a calculated field and is returned by Xflow.",
+            "description": "Amount value that is unavailable for reconciliation because XFlow is processing a payment of an equivalent amount. The value includes locks linked to payments being processed by XFlow and XFlow’s partner providers like PayPal. Locked value associated with XFlow-processed payments can be identified through the field `deposit_ids_amount_locked`.",
             "nullable": true,
             "type": "string"
           },
@@ -13704,7 +13704,7 @@
             "type": "string"
           },
           "amount_reconciled": {
-            "description": "Amount value that has been reconciled. This is a calculated field and is returned by Xflow. The formula to calculate this value is `amount_reconciled` = `amount_reconciled_not_settled` + `amount_settled_payouts` + fees",
+            "description": "Amount value that has been reconciled. This is a calculated field and is returned by XFlow. The value is inclusive of reconciliations linked to payments that have been or will be settled by XFlow, and XFlow’s partner providers like PayPal. Reconciled value for payments settled by XFlow can be calculated as `amount_reconciled_not_settled` + `amount_settled_payouts` + fees. Reconciled value linked to payments settled by other providers can be calculated as `amount_reconciled` - `amount_reconciled_not_settled` - `amount_settled_payouts` - fees.",
             "nullable": true,
             "type": "string"
           },
