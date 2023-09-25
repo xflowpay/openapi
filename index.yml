@@ -1897,7 +1897,7 @@ paths:
                 - wallet
               type: string
             type: array
-        - description: This can be `affirm`, `afterpay` or `klarna`.
+        - description: This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.
           in: query
           name: wallet.provider
           required: false
@@ -1907,6 +1907,7 @@ paths:
                 - affirm
                 - afterpay
                 - klarna
+                - paypal_external
               type: string
             type: array
       responses:
@@ -9442,11 +9443,12 @@ components:
               nullable: true
               type: string
             provider:
-              description: This can be `affirm`, `afterpay` or `klarna`.
+              description: This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.
               enum:
                 - affirm
                 - afterpay
                 - klarna
+                - paypal_external
               nullable: true
               type: string
           title: AddressWallet

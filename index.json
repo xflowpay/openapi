@@ -2217,7 +2217,7 @@
             }
           },
           {
-            "description": "This can be `affirm`, `afterpay` or `klarna`.",
+            "description": "This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.",
             "in": "query",
             "name": "wallet.provider",
             "required": false,
@@ -2226,7 +2226,8 @@
                 "enum": [
                   "affirm",
                   "afterpay",
-                  "klarna"
+                  "klarna",
+                  "paypal_external"
                 ],
                 "type": "string"
               },
@@ -12442,11 +12443,12 @@
                 "type": "string"
               },
               "provider": {
-                "description": "This can be `affirm`, `afterpay` or `klarna`.",
+                "description": "This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.",
                 "enum": [
                   "affirm",
                   "afterpay",
-                  "klarna"
+                  "klarna",
+                  "paypal_external"
                 ],
                 "nullable": true,
                 "type": "string"
