@@ -2,13 +2,13 @@ openapi: 3.0.0
 info:
   contact:
     email: support@xflowpay.com
-    name: XFlow Support
+    name: Xflow Support
     url: https://xflowpay.com
   description: >-
-    The XFlow REST API. Please see https://docs.xflowpay.com/2023-04-12/api for
+    The Xflow REST API. Please see https://docs.xflowpay.com/2023-04-12/api for
     more details.
   termsOfService: https://docs.xflowpay.com/platform-agreement
-  title: XFlow API
+  title: Xflow API
   version: '2023-04-12'
 servers:
   - url: https://api.xflowpay.com/
@@ -22,7 +22,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -113,9 +113,9 @@ paths:
           schema:
             type: integer
         - description: >-
-            Whether XFlow can send payouts to this account. This parameter can
-            be set by XFlow for a direct user or by the platform on behalf of a
-            connected user. The former is an XFlow account of `type=user` which
+            Whether Xflow can send payouts to this account. This parameter can
+            be set by Xflow for a direct user or by the platform on behalf of a
+            connected user. The former is an Xflow account of `type=user` which
             is not connected to an account of `type=platform`.
           in: query
           name: payouts.enabled
@@ -143,7 +143,7 @@ paths:
           required: false
           schema:
             type: string
-        - description: Valid status types associated with an XFlow account.
+        - description: Valid status types associated with an Xflow account.
           in: query
           name: status
           required: false
@@ -252,7 +252,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -529,13 +529,13 @@ paths:
                   type: object
                 fees:
                   description: >-
-                    XFlow fees which are set by XFlow for a platform. These fees
-                    indicate what XFlow will charge the account for money
+                    Xflow fees which are set by Xflow for a platform. These fees
+                    indicate what Xflow will charge the account for money
                     movement.
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the Xflow markup over the reference FX
                         rate.
                       type: string
                     fx_reference_rate:
@@ -547,7 +547,7 @@ paths:
                         - inter_bank
                       type: string
                     payout:
-                      description: Payout fee is the XFlow fee per payout.
+                      description: Payout fee is the Xflow fee per payout.
                       properties:
                         fixed:
                           description: Fixed payout fee details.
@@ -555,7 +555,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -575,7 +575,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -592,7 +592,7 @@ paths:
                         variable:
                           description: >-
                             This is the percentage value that is used to
-                            calculate the XFlow fee per payout.
+                            calculate the Xflow fee per payout.
                           type: string
                       title: CreateAccountRequestFeesPayout
                       type: object
@@ -600,14 +600,14 @@ paths:
                   type: object
                 fees_passthrough:
                   description: >-
-                    XFlow fees which are set on account of `type=platform` and
+                    Xflow fees which are set on account of `type=platform` and
                     passed onto the connected user by default (the platform has
                     the option to mark up these fees for their connected users)
                     during connected user creation.
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the Xflow markup over the reference FX
                         rate.
                       type: string
                     fx_reference_rate:
@@ -619,7 +619,7 @@ paths:
                         - inter_bank
                       type: string
                     payout:
-                      description: Payout fee is the XFlow fee per payout.
+                      description: Payout fee is the Xflow fee per payout.
                       properties:
                         fixed:
                           description: Fixed payout fee details.
@@ -627,7 +627,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -647,7 +647,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -664,7 +664,7 @@ paths:
                         variable:
                           description: >-
                             This is the percentage value that is used to
-                            calculate the XFlow fee per payout.
+                            calculate the Xflow fee per payout.
                           type: string
                       title: CreateAccountRequestFeesPassthroughPayout
                       type: object
@@ -696,10 +696,10 @@ paths:
                   properties:
                     enabled:
                       description: >-
-                        Whether XFlow can send payouts to this account. This
-                        parameter can be set by XFlow for a direct user or by
+                        Whether Xflow can send payouts to this account. This
+                        parameter can be set by Xflow for a direct user or by
                         the platform on behalf of a connected user. The former
-                        is an XFlow account of `type=user` which is not
+                        is an Xflow account of `type=user` which is not
                         connected to an account of `type=platform`.
                       type: boolean
                     interval:
@@ -747,7 +747,7 @@ paths:
                   description: >-
                     This is an account level setting which defines how fees
                     associated with specific payment methods are split between
-                    the partner and the XFlow user. Valid values include
+                    the partner and the Xflow user. Valid values include
                     `partner`, `shared` and `user`.
                   properties:
                     affirm:
@@ -896,7 +896,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -973,7 +973,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -1249,13 +1249,13 @@ paths:
                   type: object
                 fees:
                   description: >-
-                    XFlow fees which are set by XFlow for a platform. These fees
-                    indicate what XFlow will charge the account for money
+                    Xflow fees which are set by Xflow for a platform. These fees
+                    indicate what Xflow will charge the account for money
                     movement.
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the Xflow markup over the reference FX
                         rate.
                       type: string
                     fx_reference_rate:
@@ -1267,7 +1267,7 @@ paths:
                         - inter_bank
                       type: string
                     payout:
-                      description: Payout fee is the XFlow fee per payout.
+                      description: Payout fee is the Xflow fee per payout.
                       properties:
                         fixed:
                           description: Fixed payout fee details.
@@ -1275,7 +1275,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -1295,7 +1295,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -1312,7 +1312,7 @@ paths:
                         variable:
                           description: >-
                             This is the percentage value that is used to
-                            calculate the XFlow fee per payout.
+                            calculate the Xflow fee per payout.
                           type: string
                       title: UpdateAccountRequestFeesPayout
                       type: object
@@ -1320,14 +1320,14 @@ paths:
                   type: object
                 fees_passthrough:
                   description: >-
-                    XFlow fees which are set on account of `type=platform` and
+                    Xflow fees which are set on account of `type=platform` and
                     passed onto the connected user by default (the platform has
                     the option to mark up these fees for their connected users)
                     during connected user creation.
                   properties:
                     fx_markup:
                       description: >-
-                        FX markup is the XFlow markup over the reference FX
+                        FX markup is the Xflow markup over the reference FX
                         rate.
                       type: string
                     fx_reference_rate:
@@ -1339,7 +1339,7 @@ paths:
                         - inter_bank
                       type: string
                     payout:
-                      description: Payout fee is the XFlow fee per payout.
+                      description: Payout fee is the Xflow fee per payout.
                       properties:
                         fixed:
                           description: Fixed payout fee details.
@@ -1347,7 +1347,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -1367,7 +1367,7 @@ paths:
                             properties:
                               amount:
                                 description: >-
-                                  Amount value that was charged by XFlow per
+                                  Amount value that was charged by Xflow per
                                   payout.
                                 type: string
                               currency:
@@ -1384,7 +1384,7 @@ paths:
                         variable:
                           description: >-
                             This is the percentage value that is used to
-                            calculate the XFlow fee per payout.
+                            calculate the Xflow fee per payout.
                           type: string
                       title: UpdateAccountRequestFeesPassthroughPayout
                       type: object
@@ -1416,10 +1416,10 @@ paths:
                   properties:
                     enabled:
                       description: >-
-                        Whether XFlow can send payouts to this account. This
-                        parameter can be set by XFlow for a direct user or by
+                        Whether Xflow can send payouts to this account. This
+                        parameter can be set by Xflow for a direct user or by
                         the platform on behalf of a connected user. The former
-                        is an XFlow account of `type=user` which is not
+                        is an Xflow account of `type=user` which is not
                         connected to an account of `type=platform`.
                       type: boolean
                     interval:
@@ -1467,7 +1467,7 @@ paths:
                   description: >-
                     This is an account level setting which defines how fees
                     associated with specific payment methods are split between
-                    the partner and the XFlow user. Valid values include
+                    the partner and the Xflow user. Valid values include
                     `partner`, `shared` and `user`.
                   properties:
                     affirm:
@@ -1606,7 +1606,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -1684,7 +1684,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -1762,7 +1762,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -1772,7 +1772,7 @@ paths:
           required: false
           schema:
             type: string
-        - description: XFlow categorization of destination (for a store of value).
+        - description: Xflow categorization of destination (for a store of value).
           in: query
           name: category
           required: false
@@ -1897,7 +1897,7 @@ paths:
                 - wallet
               type: string
             type: array
-        - description: This can be `affirm`, `afterpay` or `klarna`.
+        - description: This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.
           in: query
           name: wallet.provider
           required: false
@@ -1907,6 +1907,7 @@ paths:
                 - affirm
                 - afterpay
                 - klarna
+                - paypal_external
               type: string
             type: array
       responses:
@@ -1994,7 +1995,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2055,7 +2056,7 @@ paths:
                   title: CreateAddressRequestBillingDetails
                   type: object
                 category:
-                  description: XFlow categorization of destination (for a store of value).
+                  description: Xflow categorization of destination (for a store of value).
                   enum:
                     - partner_payment
                     - user_payout
@@ -2184,7 +2185,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2261,7 +2262,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2357,7 +2358,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2438,7 +2439,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2519,7 +2520,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2710,7 +2711,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -2788,7 +2789,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3046,7 +3047,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3057,7 +3058,7 @@ paths:
               properties:
                 amount:
                   description: >-
-                    Amount value that was deposited in XFlow. This value is
+                    Amount value that was deposited in Xflow. This value is
                     negative in case of a dispute.
                   type: string
                 currency:
@@ -3201,7 +3202,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3278,7 +3279,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3374,7 +3375,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3612,7 +3613,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3690,7 +3691,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3893,7 +3894,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -3971,7 +3972,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4170,7 +4171,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4278,7 +4279,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4355,7 +4356,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4451,7 +4452,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4533,7 +4534,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4800,7 +4801,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4914,7 +4915,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -4991,7 +4992,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5087,7 +5088,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5165,7 +5166,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5243,7 +5244,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5321,7 +5322,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5399,7 +5400,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5570,7 +5571,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5648,7 +5649,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5819,7 +5820,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5896,7 +5897,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -5993,7 +5994,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6163,7 +6164,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6298,7 +6299,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6375,7 +6376,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6581,7 +6582,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6693,7 +6694,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -6863,7 +6864,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7019,7 +7020,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7096,7 +7097,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7258,7 +7259,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7336,7 +7337,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7414,7 +7415,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7492,7 +7493,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7662,7 +7663,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7819,7 +7820,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7896,7 +7897,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -7997,7 +7998,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -8167,7 +8168,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -8282,7 +8283,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -8359,7 +8360,7 @@ paths:
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
-          name: XFlow-Account
+          name: Xflow-Account
           required: false
           schema:
             type: string
@@ -8612,7 +8613,7 @@ components:
   schemas:
     account:
       description: >-
-        Account objects are fundamental to XFlow and model entities like direct
+        Account objects are fundamental to Xflow and model entities like direct
         users, connected users, partners and platforms. Depending on whether you
         are setup as a direct user or platform, you can create new accounts,
         retrieve existing accounts to see it’s properties or take action on
@@ -8909,11 +8910,11 @@ components:
           type: integer
         fees:
           description: >-
-            XFlow fees which are set by XFlow for a platform. These fees
-            indicate what XFlow will charge the account for money movement.
+            Xflow fees which are set by Xflow for a platform. These fees
+            indicate what Xflow will charge the account for money movement.
           properties:
             fx_markup:
-              description: FX markup is the XFlow markup over the reference FX rate.
+              description: FX markup is the Xflow markup over the reference FX rate.
               nullable: true
               type: string
             fx_reference_rate:
@@ -8926,7 +8927,7 @@ components:
               nullable: true
               type: string
             payout:
-              description: Payout fee is the XFlow fee per payout.
+              description: Payout fee is the Xflow fee per payout.
               nullable: true
               properties:
                 fixed:
@@ -8934,7 +8935,7 @@ components:
                   items:
                     properties:
                       amount:
-                        description: Amount value that was charged by XFlow per payout.
+                        description: Amount value that was charged by Xflow per payout.
                         nullable: true
                         type: string
                       currency:
@@ -8954,7 +8955,7 @@ components:
                   items:
                     properties:
                       amount:
-                        description: Amount value that was charged by XFlow per payout.
+                        description: Amount value that was charged by Xflow per payout.
                         nullable: true
                         type: string
                       currency:
@@ -8972,7 +8973,7 @@ components:
                 variable:
                   description: >-
                     This is the percentage value that is used to calculate the
-                    XFlow fee per payout.
+                    Xflow fee per payout.
                   nullable: true
                   type: string
               title: AccountFeesPayout
@@ -8982,13 +8983,13 @@ components:
           type: object
         fees_passthrough:
           description: >-
-            XFlow fees which are set on account of `type=platform` and passed
+            Xflow fees which are set on account of `type=platform` and passed
             onto the connected user by default (the platform has the option to
             mark up these fees for their connected users) during connected user
             creation.
           properties:
             fx_markup:
-              description: FX markup is the XFlow markup over the reference FX rate.
+              description: FX markup is the Xflow markup over the reference FX rate.
               nullable: true
               type: string
             fx_reference_rate:
@@ -9001,7 +9002,7 @@ components:
               nullable: true
               type: string
             payout:
-              description: Payout fee is the XFlow fee per payout.
+              description: Payout fee is the Xflow fee per payout.
               nullable: true
               properties:
                 fixed:
@@ -9009,7 +9010,7 @@ components:
                   items:
                     properties:
                       amount:
-                        description: Amount value that was charged by XFlow per payout.
+                        description: Amount value that was charged by Xflow per payout.
                         nullable: true
                         type: string
                       currency:
@@ -9029,7 +9030,7 @@ components:
                   items:
                     properties:
                       amount:
-                        description: Amount value that was charged by XFlow per payout.
+                        description: Amount value that was charged by Xflow per payout.
                         nullable: true
                         type: string
                       currency:
@@ -9047,7 +9048,7 @@ components:
                 variable:
                   description: >-
                     This is the percentage value that is used to calculate the
-                    XFlow fee per payout.
+                    Xflow fee per payout.
                   nullable: true
                   type: string
               title: AccountFeesPassthroughPayout
@@ -9066,7 +9067,7 @@ components:
           description: >-
             Has the value `true` if the object exists in livemode, the value
             `false` if the object exists in testmode or `null` in the case of a
-            direct user or a platform (a direct user is an XFlow account of
+            direct user or a platform (a direct user is an Xflow account of
             `type=user` which is not connected to an account of
             `type=platform`).
           nullable: true
@@ -9112,9 +9113,9 @@ components:
           properties:
             enabled:
               description: >-
-                Whether XFlow can send payouts to this account. This parameter
-                can be set by XFlow for a direct user or by the platform on
-                behalf of a connected user. The former is an XFlow account of
+                Whether Xflow can send payouts to this account. This parameter
+                can be set by Xflow for a direct user or by the platform on
+                behalf of a connected user. The former is an Xflow account of
                 `type=user` which is not connected to an account of
                 `type=platform`.
               type: boolean
@@ -9164,7 +9165,7 @@ components:
           description: >-
             This is an account level setting which defines how fees associated
             with specific payment methods are split between the partner and the
-            XFlow user. Valid values include `partner`, `shared` and `user`.
+            Xflow user. Valid values include `partner`, `shared` and `user`.
           properties:
             affirm:
               enum:
@@ -9213,7 +9214,7 @@ components:
           nullable: true
           type: object
         status:
-          description: Valid status types associated with an XFlow account.
+          description: Valid status types associated with an Xflow account.
           enum:
             - draft
             - verifying
@@ -9259,7 +9260,7 @@ components:
     address:
       description: >-
         Address objects represent a destination (for a store of value), which is
-        usually an XFlow account.
+        usually an Xflow account.
       properties:
         account_id:
           description: Unique identifier of an account object associated with this address.
@@ -9347,7 +9348,7 @@ components:
           nullable: true
           type: object
         category:
-          description: XFlow categorization of destination (for a store of value).
+          description: Xflow categorization of destination (for a store of value).
           enum:
             - partner_payment
             - user_payout
@@ -9442,11 +9443,12 @@ components:
               nullable: true
               type: string
             provider:
-              description: This can be `affirm`, `afterpay` or `klarna`.
+              description: This can be `affirm`, `afterpay`, `klarna` or `paypal_external`.
               enum:
                 - affirm
                 - afterpay
                 - klarna
+                - paypal_external
               nullable: true
               type: string
           title: AddressWallet
@@ -9457,7 +9459,7 @@ components:
     balance:
       description: >-
         The balance object represents a snapshot of the user's balance within
-        XFlow.
+        Xflow.
       properties:
         account_id:
           description: >-
@@ -9466,7 +9468,7 @@ components:
           type: string
         available:
           description: >-
-            Funds that are available to the user within XFlow. For example, this
+            Funds that are available to the user within Xflow. For example, this
             could be funds which have been reconciled, but have not yet been
             picked up for reconciliation.
           items:
@@ -9488,7 +9490,7 @@ components:
         fee_advance:
           description: >-
             Funds that have been transferred by the user to maintain balance
-            within XFlow to enable connected users to have fees lower than the
+            within Xflow to enable connected users to have fees lower than the
             passthrough fees. This is `[]` for non-platform users.
           items:
             properties:
@@ -9519,7 +9521,7 @@ components:
             - balance
           type: string
         payout_processing:
-          description: Funds that are being processed for payouts by XFlow.
+          description: Funds that are being processed for payouts by Xflow.
           items:
             properties:
               amount:
@@ -9538,7 +9540,7 @@ components:
           type: array
         pending:
           description: >-
-            Funds that are not yet available to the user within XFlow. For
+            Funds that are not yet available to the user within Xflow. For
             example, this could be funds which have been received against a
             particular account identifier but have not yet been reconciled.
           items:
@@ -9570,7 +9572,7 @@ components:
           type: string
         category:
           description: >-
-            XFlow categorization of BalanceTransactions. This can be
+            Xflow categorization of BalanceTransactions. This can be
             `available`, `fee_advance`, `payout_processing` and `pending`.
           enum:
             - available
@@ -9616,12 +9618,12 @@ components:
       type: object
     deposit:
       description: >-
-        Deposit objects are created by XFlow whenever funds are deposited into
-        an XFlow account.
+        Deposit objects are created by Xflow whenever funds are deposited into
+        an Xflow account.
       properties:
         amount:
           description: >-
-            Amount value that was deposited in XFlow. This value is negative in
+            Amount value that was deposited in Xflow. This value is negative in
             case of a dispute.
           type: string
         created:
@@ -9761,12 +9763,12 @@ components:
       type: object
     error_object:
       description: >-
-        XFlow uses conventional HTTP response codes to indicate the success or
+        Xflow uses conventional HTTP response codes to indicate the success or
         failure of an API request. In general: Codes in the `2xx` range indicate
         success. Codes in the `4xx` range indicate an error that failed given
         the information provided (e.g., a required parameter was omitted, a
         payment failed, etc.). Codes in the `5xx` range indicate an error with
-        XFlow’s servers (these are rare).
+        Xflow’s servers (these are rare).
       properties:
         errors:
           description: An array of errors. Each element is a specific error.
@@ -9776,7 +9778,7 @@ components:
             properties:
               code:
                 description: >-
-                  Enum value specific to the error. All XFlow error codes are
+                  Enum value specific to the error. All Xflow error codes are
                   defined [here](https://docs.xflowpay.com/latest/errors).
                 enum:
                   - account_activation_failed_missing_payout_address
@@ -9927,7 +9929,7 @@ components:
       type: object
     event:
       description: >-
-        Events are XFlow's way of letting you know when something interesting
+        Events are Xflow's way of letting you know when something interesting
         happens in your account. When an interesting event occurs, we create a
         new event object. For example, when a deposit is received, we create a
         `deposit.status.completed event`. Note that many API requests may cause
@@ -10188,7 +10190,7 @@ components:
       type: object
     payment_link:
       description: >-
-        A PaymentLink object enables a XFlow user to send a payment link to a
+        A PaymentLink object enables a Xflow user to send a payment link to a
         partner to collect money.
       properties:
         account_id:
@@ -10266,10 +10268,10 @@ components:
     payment:
       description: >-
         The Payment object models real-world money movement into, within and out
-        of XFlow. Payments lead to movement of money from source to destination
+        of Xflow. Payments lead to movement of money from source to destination
         and result in the creation of BalanceTransactions. Payments between
         different types of currencies will result in the creation of an
-        ExchangeRate object. XFlow models fees as distinct payments as well.
+        ExchangeRate object. Xflow models fees as distinct payments as well.
       properties:
         created:
           description: >-
@@ -10415,8 +10417,8 @@ components:
       type: object
     payout:
       description: >-
-        Payout objects are created by XFlow whenever funds are moved out of an
-        XFlow account into a real-world destination (for a store of value).
+        Payout objects are created by Xflow whenever funds are moved out of an
+        Xflow account into a real-world destination (for a store of value).
       properties:
         amount:
           description: Amount value associated with the payout.
@@ -10434,7 +10436,7 @@ components:
         automatic:
           description: >-
             Has the value `true` if automatic payouts are enabled and has the
-            value `false` if manual payouts are enabled. Currently, XFlow
+            value `false` if manual payouts are enabled. Currently, Xflow
             supports automatic payouts only.
           type: boolean
         created:
@@ -10539,7 +10541,7 @@ components:
       type: object
     person:
       description: >-
-        A person object represents an individual associated with an XFlow
+        A person object represents an individual associated with an Xflow
         account.
       properties:
         created:
@@ -10713,8 +10715,12 @@ components:
           type: string
         amount_locked:
           description: >-
-            Amount value locked, unavailable for reconciliation. This is a
-            calculated field and is returned by XFlow.
+            Amount value that is unavailable for reconciliation because XFlow is
+            processing a payment of an equivalent amount. The value includes
+            locks linked to payments being processed by XFlow and XFlow’s
+            partner providers like PayPal. Locked value associated with
+            XFlow-processed payments can be identified through the field
+            `deposit_ids_amount_locked`.
           nullable: true
           type: string
         amount_maximum_reconcilable:
@@ -10726,7 +10732,7 @@ components:
         amount_reconcilable:
           description: >-
             Amount value that is available for reconciliation. This field is a
-            calculated field and is returned by XFlow. The formula to calculate
+            calculated field and is returned by Xflow. The formula to calculate
             this value is `amount_reconcilable` = `amount_maximum_reconcilable`
             - (`amount_locked` + `amount_reconciled`)
           nullable: true
@@ -10734,21 +10740,26 @@ components:
         amount_reconciled:
           description: >-
             Amount value that has been reconciled. This is a calculated field
-            and is returned by XFlow. The formula to calculate this value is
-            `amount_reconciled` = `amount_reconciled_not_settled` +
-            `amount_settled_payouts` + fees
+            and is returned by XFlow. The value is inclusive of reconciliations
+            linked to payments that have been or will be settled by XFlow, and
+            XFlow’s partner providers like PayPal. Reconciled value for payments
+            settled by XFlow can be calculated as
+            `amount_reconciled_not_settled` + `amount_settled_payouts` + fees.
+            Reconciled value linked to payments settled by other providers can
+            be calculated as `amount_reconciled` -
+            `amount_reconciled_not_settled` - `amount_settled_payouts` - fees.
           nullable: true
           type: string
         amount_reconciled_not_settled:
           description: >-
             Amount value that has been reconciled but not paid out. This is a
-            calculated field and is returned by XFlow.
+            calculated field and is returned by Xflow.
           nullable: true
           type: string
         amount_settled_payouts:
           description: >-
             Amount value that has been transferred for payout. This is a
-            calculated field and is returned by XFlow.
+            calculated field and is returned by Xflow.
           nullable: true
           type: string
         created:
@@ -10888,7 +10899,7 @@ components:
       title: Receivable
       type: object
     transfer:
-      description: A transfer object models money movement within XFlow.
+      description: A transfer object models money movement within Xflow.
       properties:
         amount:
           description: Amount value that will be deposited at the destination.
@@ -10997,7 +11008,7 @@ components:
           description: >-
             File object providing details of the reason for the transfer to be
             created. This is applicable only for transfers between two different
-            partners (this is an XFlow-Ops driven process for now).
+            partners (this is an Xflow-Ops driven process for now).
           nullable: true
           type: string
       title: Transfer
@@ -11005,8 +11016,8 @@ components:
     webhook_endpoint:
       description: >-
         You can configure webhook endpoints via the API to be notified about
-        events that happen in your XFlow platform account, their connected
-        accounts or in direct users (the latter is an XFlow account of
+        events that happen in your Xflow platform account, their connected
+        accounts or in direct users (the latter is an Xflow account of
         `type=user` which is not connected to an account of `type=platform`).
       properties:
         created:
