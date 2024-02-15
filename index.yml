@@ -1837,6 +1837,16 @@ paths:
             format: unix-time
             type: integer
         - description: >-
+            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
+            for the amount currency.
+          in: query
+          name: currency
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: >-
             A cursor for use in pagination. `ending_before` is an object
             identifier that defines your place in the list. For instance, if you
             make a list request and receive 5 objects, starting with `obj_bar`,
@@ -2517,6 +2527,22 @@ paths:
       operationId: ListBalanceTransactions
       parameters:
         - description: >-
+            Xflow categorization of BalanceTransactions. This can be
+            `available`, `fee_advance`, `payout_processing` and `pending`.
+          in: query
+          name: category
+          required: false
+          schema:
+            items:
+              enum:
+                - available
+                - fee_advance
+                - payout_processing
+                - pending
+                - processing
+              type: string
+            type: array
+        - description: >-
             This header specifies the connected user's account on behalf of
             which the request is being made.
           in: header
@@ -2843,6 +2869,16 @@ paths:
           schema:
             format: unix-time
             type: integer
+        - description: >-
+            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
+            for the amount currency.
+          in: query
+          name: currency
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
         - description: >-
             A cursor for use in pagination. `ending_before` is an object
             identifier that defines your place in the list. For instance, if you
@@ -3515,6 +3551,7 @@ paths:
                 - payout.status.initialized
                 - payout.status.processing
                 - payout.status.settled
+                - payout.status.hold
                 - payout.status.failed
                 - payout.payment_confirmation.updated
                 - receivable.amount_reconciled.updated
@@ -3525,6 +3562,7 @@ paths:
                 - receivable.status.hold
                 - receivable.status.input_required
                 - receivable.status.verifying
+                - transfer.status.completed
               type: string
             type: array
       responses:
@@ -5466,6 +5504,14 @@ paths:
           schema:
             type: string
         - description: >-
+            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
+            for the from amount currency.
+          in: query
+          name: from.currency
+          required: false
+          schema:
+            type: string
+        - description: >-
             A limit on the number of objects to be returned, between 1 and 10.
             If this parameter is not specified, a default value of 10 is
             assumed.
@@ -5474,6 +5520,16 @@ paths:
           required: false
           schema:
             type: integer
+        - description: >-
+            Unique identifier for the object that created this underlying
+            payment object.
+          in: query
+          name: linked_id
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
         - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
@@ -5485,6 +5541,40 @@ paths:
           required: false
           schema:
             type: string
+        - description: >-
+            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
+            for the to amount currency.
+          in: query
+          name: to.currency
+          required: false
+          schema:
+            type: string
+        - description: >-
+            This is the
+            [type](https://docs.xflowpay.com/2023-04-12/api#payment_object_type)
+            of the linked payment.
+          in: query
+          name: type
+          required: false
+          schema:
+            items:
+              enum:
+                - adjustment_negative
+                - adjustment_positive
+                - fee_advance_debit
+                - funds_credit
+                - funds_debit
+                - fx_fee
+                - payout
+                - payout_failure
+                - payout_fee
+                - platform_partner_debit
+                - processing_fee
+                - reconcile
+                - reconcile_paypal
+                - transfer
+              type: string
+            type: array
       responses:
         '200':
           headers:
@@ -5731,6 +5821,40 @@ paths:
             to fetch the next page of the list.
           in: query
           name: starting_after
+          required: false
+          schema:
+            type: string
+        - description: Valid status for payouts.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - initialized
+                - processing
+                - settled
+                - failed
+                - hold
+              type: string
+            type: array
+        - description: >-
+            Account identifier for the account to which funds are being
+            deposited. Refer [account
+            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            details.
+          in: query
+          name: to.account_id
+          required: false
+          schema:
+            type: string
+        - description: >-
+            Address identifier of the account to which funds are being
+            deposited. Refer [address
+            object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more
+            details.
+          in: query
+          name: to.address_id
           required: false
           schema:
             type: string
@@ -6069,6 +6193,30 @@ paths:
           schema:
             type: integer
         - description: >-
+            `true` if the person is the director of the account entity, `false`
+            otherwise.
+          in: query
+          name: relationship.director
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            `true` if the person is the owner of the account entity, `false`
+            otherwise.
+          in: query
+          name: relationship.owner
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            `true` if the person is the representative of the account entity,
+            `false` otherwise.
+          in: query
+          name: relationship.representative
+          required: false
+          schema:
+            type: boolean
+        - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
             make a list request and receive 5 objects, ending with `obj_bar`,
@@ -6079,6 +6227,18 @@ paths:
           required: false
           schema:
             type: string
+        - description: Valid status for persons.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - pending
+                - verified
+                - unverified
+              type: string
+            type: array
       responses:
         '200':
           headers:
@@ -6749,6 +6909,16 @@ paths:
             format: unix-time
             type: integer
         - description: >-
+            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
+            for the currency.
+          in: query
+          name: currency
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: >-
             A cursor for use in pagination. `ending_before` is an object
             identifier that defines your place in the list. For instance, if you
             make a list request and receive 5 objects, starting with `obj_bar`,
@@ -6779,6 +6949,22 @@ paths:
           required: false
           schema:
             type: string
+        - description: Valid status for receivables.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - draft
+                - verifying
+                - activated
+                - completed
+                - cancelled
+                - hold
+                - input_required
+              type: string
+            type: array
       responses:
         '200':
           headers:
@@ -7559,6 +7745,18 @@ paths:
           schema:
             type: string
         - description: >-
+            Account identifier for the account from which funds are being
+            transferred. Refer [account
+            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            details.
+          in: query
+          name: from.account_id
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: >-
             A limit on the number of objects to be returned, between 1 and 10.
             If this parameter is not specified, a default value of 10 is
             assumed.
@@ -7578,6 +7776,43 @@ paths:
           required: false
           schema:
             type: string
+        - description: Valid status for transfers.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - initialized
+                - processing
+                - completed
+              type: string
+            type: array
+        - description: >-
+            Account identifier for the account to which funds are being
+            transferred. Refer [account
+            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            details.
+          in: query
+          name: to.account_id
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Valid types of transfers.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - internal_transfer
+                - platform_credit
+                - platform_debit
+                - platform_fee_payout
+              type: string
+            type: array
       responses:
         '200':
           headers:
@@ -8073,6 +8308,15 @@ paths:
           schema:
             type: integer
         - description: >-
+            If `true`, the response will contain webhook endpoints for
+            platforms. Else if `false`, the response will contain webhook
+            endpoints for direct users or connected users.
+          in: query
+          name: platform
+          required: false
+          schema:
+            type: boolean
+        - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
             make a list request and receive 5 objects, ending with `obj_bar`,
@@ -8083,6 +8327,17 @@ paths:
           required: false
           schema:
             type: string
+        - description: Valid status for WebhookEndpoints.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - activated
+                - deactivated
+              type: string
+            type: array
       responses:
         '200':
           headers:
@@ -9793,6 +10048,7 @@ components:
                   - account_partner_deactivate_disallowed
                   - account_platform_activate_disallowed
                   - account_platform_create_disallowed
+                  - account_setting_parameter_not_editable
                   - account_status_invalid
                   - account_type_invalid
                   - account_update_access_unauthorized
@@ -9801,6 +10057,7 @@ components:
                   - action_invalid
                   - action_not_enabled
                   - action_unauthorized
+                  - address_cannot_be_deactivated
                   - address_category_mismatch
                   - address_category_not_allowed
                   - address_domestic_credit_invalid
@@ -9819,7 +10076,9 @@ components:
                   - deposit_account_id_mismatch
                   - deposit_parameter_not_editable
                   - duplicate_currencies_not_supported
+                  - duplicate_values_found
                   - event_type_invalid
+                  - fee_plan_parameter_not_editable
                   - file_name_invalid
                   - file_name_length_invalid
                   - file_parameter_not_editable
@@ -9837,6 +10096,8 @@ components:
                   - metadata_key_min_length_invalid
                   - metadata_value_max_length_invalid
                   - metadata_value_min_length_invalid
+                  - multiple_xflow_receive_same_category_not_allowed
+                  - minimum_required_values_not_present
                   - object_not_found
                   - parameter_address_invalid
                   - parameter_character_invalid
@@ -9857,6 +10118,7 @@ components:
                   - payment_link_non_us_account_non_usd_currency
                   - payment_link_parameter_not_editable
                   - payment_link_receivable_count_exceed
+                  - payment_link_receivable_status_invalid
                   - payout_parameter_not_editable
                   - person_delete_not_allowed
                   - person_parameter_not_editable
@@ -9893,6 +10155,7 @@ components:
                   - secret_key_missing
                   - testmode_action_only
                   - timestamp_invalid
+                  - transfer_failed
                   - transfer_parameter_not_editable
                   - transfer_type_invalid
                   - url_invalid
@@ -10351,6 +10614,7 @@ components:
                   - platform_partner_debit
                   - processing_fee
                   - reconcile
+                  - reconcile_paypal
                   - transfer
                 type: string
             title: PaymentLinkedPayments
