@@ -319,7 +319,6 @@ paths:
                           enum:
                             - AD
                             - AE
-                            - AF
                             - AG
                             - AI
                             - AL
@@ -421,7 +420,6 @@ paths:
                             - MD
                             - ME
                             - MG
-                            - ML
                             - MN
                             - MO
                             - MR
@@ -460,8 +458,6 @@ paths:
                             - SL
                             - SM
                             - SN
-                            - SO
-                            - SS
                             - SZ
                             - TD
                             - TG
@@ -474,7 +470,6 @@ paths:
                             - TT
                             - TW
                             - TZ
-                            - UA
                             - UG
                             - US
                             - UY
@@ -1046,7 +1041,6 @@ paths:
                           enum:
                             - AD
                             - AE
-                            - AF
                             - AG
                             - AI
                             - AL
@@ -1148,7 +1142,6 @@ paths:
                             - MD
                             - ME
                             - MG
-                            - ML
                             - MN
                             - MO
                             - MR
@@ -1187,8 +1180,6 @@ paths:
                             - SL
                             - SM
                             - SN
-                            - SO
-                            - SS
                             - SZ
                             - TD
                             - TG
@@ -1201,7 +1192,6 @@ paths:
                             - TT
                             - TW
                             - TZ
-                            - UA
                             - UG
                             - US
                             - UY
@@ -8949,7 +8939,6 @@ components:
                   enum:
                     - AD
                     - AE
-                    - AF
                     - AG
                     - AI
                     - AL
@@ -9051,7 +9040,6 @@ components:
                     - MD
                     - ME
                     - MG
-                    - ML
                     - MN
                     - MO
                     - MR
@@ -9090,8 +9078,6 @@ components:
                     - SL
                     - SM
                     - SN
-                    - SO
-                    - SS
                     - SZ
                     - TD
                     - TG
@@ -9104,7 +9090,6 @@ components:
                     - TT
                     - TW
                     - TZ
-                    - UA
                     - UG
                     - US
                     - UY
