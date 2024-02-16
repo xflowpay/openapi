@@ -4391,7 +4391,7 @@
             }
           },
           {
-            "description": "The type of the object that generated this event. This can be one of `account`, `address`, `deposit`, `receivable` or `payout`.",
+            "description": "The type of the object that generated this event.",
             "in": "query",
             "name": "linked_object",
             "required": false,
@@ -13241,7 +13241,7 @@
             "type": "string"
           },
           "linked_object": {
-            "description": "The type of the object that generated this event. This can be one of `account`, `address`, `deposit`, `receivable` or `payout`.",
+            "description": "The type of the object that generated this event.",
             "enum": [
               "account",
               "address",
