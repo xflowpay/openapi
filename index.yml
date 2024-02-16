@@ -2020,9 +2020,6 @@ paths:
                     number:
                       description: Unique bank account number.
                       type: string
-                  required:
-                    - domestic_credit
-                    - number
                   title: CreateAddressRequestBankAccount
                   type: object
                 billing_details:
@@ -2051,17 +2048,12 @@ paths:
                     state:
                       description: State details in the official address.
                       type: string
-                  required:
-                    - country
                   title: CreateAddressRequestBillingDetails
                   type: object
                 category:
                   description: Xflow categorization of destination (for a store of value).
                   enum:
-                    - partner_payment
                     - user_payout
-                    - xflow_checkout
-                    - xflow_fee_advance
                     - xflow_receive
                   type: string
                 currency:
@@ -2070,6 +2062,19 @@ paths:
                     3-digit code for the amount currency.
                   enum:
                     - INR
+                    - AED
+                    - AUD
+                    - CAD
+                    - CHF
+                    - CZK
+                    - DKK
+                    - EUR
+                    - GBP
+                    - HKD
+                    - NOK
+                    - PLN
+                    - SEK
+                    - SGD
                     - USD
                   type: string
                 metadata:
@@ -2109,12 +2114,8 @@ paths:
                   type: string
               required:
                 - account_id
-                - bank_account
-                - billing_details
                 - category
                 - currency
-                - name
-                - type
               title: CreateAddressRequest
               type: object
       responses:

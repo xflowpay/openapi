@@ -2392,10 +2392,6 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "domestic_credit",
-                      "number"
-                    ],
                     "title": "CreateAddressRequestBankAccount",
                     "type": "object"
                   },
@@ -2430,19 +2426,13 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "country"
-                    ],
                     "title": "CreateAddressRequestBillingDetails",
                     "type": "object"
                   },
                   "category": {
                     "description": "Xflow categorization of destination (for a store of value).",
                     "enum": [
-                      "partner_payment",
                       "user_payout",
-                      "xflow_checkout",
-                      "xflow_fee_advance",
                       "xflow_receive"
                     ],
                     "type": "string"
@@ -2451,6 +2441,19 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "INR",
+                      "AED",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CZK",
+                      "DKK",
+                      "EUR",
+                      "GBP",
+                      "HKD",
+                      "NOK",
+                      "PLN",
+                      "SEK",
+                      "SGD",
                       "USD"
                     ],
                     "type": "string"
@@ -2488,12 +2491,8 @@
                 },
                 "required": [
                   "account_id",
-                  "bank_account",
-                  "billing_details",
                   "category",
-                  "currency",
-                  "name",
-                  "type"
+                  "currency"
                 ],
                 "title": "CreateAddressRequest",
                 "type": "object"
