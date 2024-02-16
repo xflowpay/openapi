@@ -9719,6 +9719,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
+                  - EUR
+                  - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalanceAvailable
@@ -9740,6 +9753,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
+                  - EUR
+                  - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalanceFeeAdvance
@@ -9770,6 +9796,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
+                  - EUR
+                  - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalancePayoutProcessing
@@ -9791,9 +9830,57 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
+                  - EUR
+                  - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalancePending
+            type: object
+          nullable: true
+          type: array
+        processing:
+          description: >-
+            Funds that are being processed by Xflow. This is an intermediate
+            state. For example, transfers may result in the funds being in the
+            processing compartment momentarily, before they reach the
+            destination compartment.
+          items:
+            properties:
+              amount:
+                description: Balance amount.
+                type: string
+              currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the amount currency.
+                enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
+                  - EUR
+                  - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
+                  - USD
+                type: string
+            title: BalanceProcessing
             type: object
           nullable: true
           type: array
