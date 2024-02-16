@@ -14248,6 +14248,18 @@
             "nullable": true,
             "type": "object"
           },
+          "type": {
+            "description": "Transfer type.",
+            "enum": [
+              "fee_advance_transfer",
+              "internal_transfer",
+              "platform_credit",
+              "platform_debit",
+              "platform_fee_payout"
+            ],
+            "nullable": false,
+            "type": "string"
+          },
           "user_declaration": {
             "description": "File object providing details of the reason for the transfer to be created. This is applicable only for transfers between two different partners (this is an Xflow-Ops driven process for now).",
             "nullable": true,

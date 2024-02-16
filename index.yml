@@ -3492,8 +3492,7 @@ paths:
             items:
               type: string
             type: array
-        - description: >-
-            The type of the object that generated this event.
+        - description: The type of the object that generated this event.
           in: query
           name: linked_object
           required: false
@@ -10202,8 +10201,7 @@ components:
           description: The identifier of the object that generated this event.
           type: string
         linked_object:
-          description: >-
-            The type of the object that generated this event.
+          description: The type of the object that generated this event.
           enum:
             - account
             - address
@@ -11251,6 +11249,16 @@ components:
           title: TransferTo
           nullable: true
           type: object
+        type:
+          description: Transfer type.
+          enum:
+            - fee_advance_transfer
+            - internal_transfer
+            - platform_credit
+            - platform_debit
+            - platform_fee_payout
+          nullable: false
+          type: string
         user_declaration:
           description: >-
             File object providing details of the reason for the transfer to be
