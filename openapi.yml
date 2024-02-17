@@ -7906,8 +7906,6 @@ paths:
           name: sell.currency
           required: true
           schema:
-            enum:
-              - USD
             type: string
         - description: Valid quote types.
           in: query
