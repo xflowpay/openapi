@@ -5,11 +5,11 @@ info:
     name: Xflow Support
     url: https://xflowpay.com
   description: >-
-    The Xflow REST API. Please see https://docs.xflowpay.com/2023-04-12/api for
+    The Xflow REST API. Please see https://docs.xflowpay.com/2024-02-05/api for
     more details.
   termsOfService: https://docs.xflowpay.com/platform-agreement
   title: Xflow API
-  version: '2023-04-12'
+  version: '2024-02-05'
 servers:
   - url: https://api.xflowpay.com/
 paths:
@@ -112,26 +112,6 @@ paths:
           required: false
           schema:
             type: integer
-        - description: >-
-            Whether Xflow can send payouts to this account. This parameter can
-            be set by Xflow for a direct user or by the platform on behalf of a
-            connected user. The former is an Xflow account of `type=user` which
-            is not connected to an account of `type=platform`.
-          in: query
-          name: payouts.enabled
-          required: false
-          schema:
-            type: boolean
-        - description: >-
-            The reason code if payouts are not enabled. Valid values include
-            `account_not_activated`, `platform_hold` and `xflow_hold`.
-          in: query
-          name: payouts.reason_code_not_enabled
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
         - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
@@ -522,153 +502,10 @@ paths:
                     - type
                   title: CreateAccountRequestBusinessDetails
                   type: object
-                fees:
-                  description: >-
-                    Xflow fees which are set by Xflow for a platform. These fees
-                    indicate what Xflow will charge the account for money
-                    movement.
-                  properties:
-                    fx_markup:
-                      description: >-
-                        FX markup is the Xflow markup over the reference FX
-                        rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
-                      type: string
-                    payout:
-                      description: Payout fee is the Xflow fee per payout.
-                      properties:
-                        fixed:
-                          description: Fixed payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: CreateAccountRequestFeesPayoutFixed
-                            type: object
-                          type: array
-                        minimum:
-                          description: Minimum payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: CreateAccountRequestFeesPayoutMinimum
-                            type: object
-                          type: array
-                        variable:
-                          description: >-
-                            This is the percentage value that is used to
-                            calculate the Xflow fee per payout.
-                          type: string
-                      title: CreateAccountRequestFeesPayout
-                      type: object
-                  title: CreateAccountRequestFees
-                  type: object
-                fees_passthrough:
-                  description: >-
-                    Xflow fees which are set on account of `type=platform` and
-                    passed onto the connected user by default (the platform has
-                    the option to mark up these fees for their connected users)
-                    during connected user creation.
-                  properties:
-                    fx_markup:
-                      description: >-
-                        FX markup is the Xflow markup over the reference FX
-                        rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
-                      type: string
-                    payout:
-                      description: Payout fee is the Xflow fee per payout.
-                      properties:
-                        fixed:
-                          description: Fixed payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: CreateAccountRequestFeesPassthroughPayoutFixed
-                            type: object
-                          type: array
-                        minimum:
-                          description: Minimum payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: CreateAccountRequestFeesPassthroughPayoutMinimum
-                            type: object
-                          type: array
-                        variable:
-                          description: >-
-                            This is the percentage value that is used to
-                            calculate the Xflow fee per payout.
-                          type: string
-                      title: CreateAccountRequestFeesPassthroughPayout
-                      type: object
-                  title: CreateAccountRequestFeesPassthrough
-                  type: object
                 logo_id:
                   description: >-
                     A [file object
-                    identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                    identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                     which contains a logo for the user to customize
                     communications with their customers.
                   type: string
@@ -677,7 +514,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -686,104 +523,13 @@ paths:
                 nickname:
                   description: Name for the account.
                   type: string
-                payouts:
-                  description: Payouts details.
-                  properties:
-                    enabled:
-                      description: >-
-                        Whether Xflow can send payouts to this account. This
-                        parameter can be set by Xflow for a direct user or by
-                        the platform on behalf of a connected user. The former
-                        is an Xflow account of `type=user` which is not
-                        connected to an account of `type=platform`.
-                      type: boolean
-                    interval:
-                      description: >-
-                        How frequently funds will be paid out. One of `daily`,
-                        `weekly`, or `monthly`.
-                      enum:
-                        - daily
-                        - weekly
-                        - monthly
-                      type: string
-                    monthly_anchor:
-                      description: >-
-                        The day of the month funds will be paid out. Only
-                        applies if interval is monthly. Payouts scheduled
-                        between the 29th and 31st of the month are sent on the
-                        last day of shorter months.
-                      format: int64
-                      maximum: 31
-                      minimum: 1
-                      type: integer
-                    reason_code_not_enabled:
-                      description: >-
-                        The reason code if payouts are not enabled. Valid values
-                        include `account_not_activated`, `platform_hold` and
-                        `xflow_hold`.
-                      type: string
-                    weekly_anchor:
-                      description: >-
-                        The day of the week funds will be paid out, of the style
-                        ‘monday’, ‘tuesday’, etc. Only applies if interval is
-                        `weekly`.
-                      enum:
-                        - monday
-                        - tuesday
-                        - wednesday
-                        - thursday
-                        - friday
-                        - saturday
-                        - sunday
-                      type: string
-                  title: CreateAccountRequestPayouts
-                  type: object
-                processing_fee_indicator:
-                  description: >-
-                    This is an account level setting which defines how fees
-                    associated with specific payment methods are split between
-                    the partner and the Xflow user. Valid values include
-                    `partner`, `shared` and `user`.
-                  properties:
-                    affirm:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    afterpay:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    check:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    domestic_debit:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    klarna:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                  title: CreateAccountRequestProcessingFeeIndicator
-                  type: object
                 supporting_documentation:
                   description: Details of the supporting documentation for the account.
                   properties:
                     id_document:
                       description: >-
                         A [file object
-                        identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                        identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                         which references a document that proves the authenticity
                         of the account.
                       type: string
@@ -1237,153 +983,10 @@ paths:
                       type: string
                   title: UpdateAccountRequestBusinessDetails
                   type: object
-                fees:
-                  description: >-
-                    Xflow fees which are set by Xflow for a platform. These fees
-                    indicate what Xflow will charge the account for money
-                    movement.
-                  properties:
-                    fx_markup:
-                      description: >-
-                        FX markup is the Xflow markup over the reference FX
-                        rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
-                      type: string
-                    payout:
-                      description: Payout fee is the Xflow fee per payout.
-                      properties:
-                        fixed:
-                          description: Fixed payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: UpdateAccountRequestFeesPayoutFixed
-                            type: object
-                          type: array
-                        minimum:
-                          description: Minimum payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: UpdateAccountRequestFeesPayoutMinimum
-                            type: object
-                          type: array
-                        variable:
-                          description: >-
-                            This is the percentage value that is used to
-                            calculate the Xflow fee per payout.
-                          type: string
-                      title: UpdateAccountRequestFeesPayout
-                      type: object
-                  title: UpdateAccountRequestFees
-                  type: object
-                fees_passthrough:
-                  description: >-
-                    Xflow fees which are set on account of `type=platform` and
-                    passed onto the connected user by default (the platform has
-                    the option to mark up these fees for their connected users)
-                    during connected user creation.
-                  properties:
-                    fx_markup:
-                      description: >-
-                        FX markup is the Xflow markup over the reference FX
-                        rate.
-                      type: string
-                    fx_reference_rate:
-                      description: >-
-                        FX markup reference rate. This can be set to
-                        `mid_market` or `inter_bank`.
-                      enum:
-                        - mid_market
-                        - inter_bank
-                      type: string
-                    payout:
-                      description: Payout fee is the Xflow fee per payout.
-                      properties:
-                        fixed:
-                          description: Fixed payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: UpdateAccountRequestFeesPassthroughPayoutFixed
-                            type: object
-                          type: array
-                        minimum:
-                          description: Minimum payout fee details.
-                          items:
-                            properties:
-                              amount:
-                                description: >-
-                                  Amount value that was charged by Xflow per
-                                  payout.
-                                type: string
-                              currency:
-                                description: >-
-                                  The [ISO
-                                  4217](https://en.wikipedia.org/wiki/ISO_4217)
-                                  3-digit code for the amount currency.
-                                enum:
-                                  - USD
-                                type: string
-                            title: UpdateAccountRequestFeesPassthroughPayoutMinimum
-                            type: object
-                          type: array
-                        variable:
-                          description: >-
-                            This is the percentage value that is used to
-                            calculate the Xflow fee per payout.
-                          type: string
-                      title: UpdateAccountRequestFeesPassthroughPayout
-                      type: object
-                  title: UpdateAccountRequestFeesPassthrough
-                  type: object
                 logo_id:
                   description: >-
                     A [file object
-                    identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                    identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                     which contains a logo for the user to customize
                     communications with their customers.
                   type: string
@@ -1392,7 +995,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -1401,104 +1004,13 @@ paths:
                 nickname:
                   description: Name for the account.
                   type: string
-                payouts:
-                  description: Payouts details.
-                  properties:
-                    enabled:
-                      description: >-
-                        Whether Xflow can send payouts to this account. This
-                        parameter can be set by Xflow for a direct user or by
-                        the platform on behalf of a connected user. The former
-                        is an Xflow account of `type=user` which is not
-                        connected to an account of `type=platform`.
-                      type: boolean
-                    interval:
-                      description: >-
-                        How frequently funds will be paid out. One of `daily`,
-                        `weekly`, or `monthly`.
-                      enum:
-                        - daily
-                        - weekly
-                        - monthly
-                      type: string
-                    monthly_anchor:
-                      description: >-
-                        The day of the month funds will be paid out. Only
-                        applies if interval is monthly. Payouts scheduled
-                        between the 29th and 31st of the month are sent on the
-                        last day of shorter months.
-                      format: int64
-                      maximum: 31
-                      minimum: 1
-                      type: integer
-                    reason_code_not_enabled:
-                      description: >-
-                        The reason code if payouts are not enabled. Valid values
-                        include `account_not_activated`, `platform_hold` and
-                        `xflow_hold`.
-                      type: string
-                    weekly_anchor:
-                      description: >-
-                        The day of the week funds will be paid out, of the style
-                        ‘monday’, ‘tuesday’, etc. Only applies if interval is
-                        `weekly`.
-                      enum:
-                        - monday
-                        - tuesday
-                        - wednesday
-                        - thursday
-                        - friday
-                        - saturday
-                        - sunday
-                      type: string
-                  title: UpdateAccountRequestPayouts
-                  type: object
-                processing_fee_indicator:
-                  description: >-
-                    This is an account level setting which defines how fees
-                    associated with specific payment methods are split between
-                    the partner and the Xflow user. Valid values include
-                    `partner`, `shared` and `user`.
-                  properties:
-                    affirm:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    afterpay:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    check:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    domestic_debit:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                    klarna:
-                      enum:
-                        - partner
-                        - shared
-                        - user
-                      type: string
-                  title: UpdateAccountRequestProcessingFeeIndicator
-                  type: object
                 supporting_documentation:
                   description: Details of the supporting documentation for the account.
                   properties:
                     id_document:
                       description: >-
                         A [file object
-                        identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                        identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                         which references a document that proves the authenticity
                         of the account.
                       type: string
@@ -1743,6 +1255,896 @@ paths:
           description: Error response.
       tags:
         - Accounts
+  /v1/accounts/{account}/activate_address:
+    post:
+      description: Activate address of `category=xflow_receive` associated with an account.
+      operationId: ActivateAccountAddress
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: account
+          required: true
+          schema:
+            type: string
+          style: simple
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/account'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - Accounts
+  /v1/accounts/{account}/deactivate_address:
+    post:
+      description: >-
+        Deactivate address of `category=xflow_receive` associated with an
+        account.
+      operationId: DeactivateAccountAddress
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: account
+          required: true
+          schema:
+            type: string
+          style: simple
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/account'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - Accounts
+  /v1/account_settings:
+    get:
+      description: >-
+        This endpoint returns all AccountSettings (filtered by the applied below
+        query parameters) associated with the platform, connected user or direct
+        user in question.
+      operationId: ListAccountSettings
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - description: >-
+            This parameter represents the account object with which the
+            AccountSetting object is associated.
+          in: query
+          name: account_id
+          required: false
+          schema:
+            items:
+              enum:
+                - draft
+                - verifying
+                - activated
+                - deactivated
+                - hold
+              type: string
+            type: array
+        - description: >-
+            Indicates whether an address is available by default for a connected
+            user.
+          in: query
+          name: address.connected_user
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            Indicates whether an address is available by default for a connected
+            user's partner.
+          in: query
+          name: address.connected_user_partner
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a partner.
+          in: query
+          name: address.partner
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a platform.
+          in: query
+          name: address.platform
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a user.
+          in: query
+          name: address.user
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            Return results where the `created` field is equal to the timestamp
+            value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.eq
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            A cursor for use in pagination. `ending_before` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, starting with `obj_bar`,
+            your subsequent call can include `ending_before=obj_bar` in order to
+            fetch the previous page of the list.
+          in: query
+          name: ending_before
+          required: false
+          schema:
+            type: string
+        - description: >-
+            A limit on the number of objects to be returned, between 1 and 10.
+            If this parameter is not specified, a default value of 10 is
+            assumed.
+          in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+        - description: >-
+            Whether Xflow can send payouts to this account. This parameter can
+            be set by Xflow for a direct user or by the platform on behalf of a
+            connected user. The former is an Xflow account of `type=user` which
+            is not connected to an account of `type=platform`.
+          in: query
+          name: payouts.enabled
+          required: false
+          schema:
+            type: boolean
+        - description: The reason code if payouts are not enabled.
+          in: query
+          name: payouts.reason_code_not_enabled
+          required: false
+          schema:
+            items:
+              enum:
+                - account_not_activated
+                - platform_hold
+                - xflow_hold
+              type: string
+            type: array
+        - description: >-
+            A cursor for use in pagination. `starting_after` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, ending with `obj_bar`,
+            your subsequent call can include `starting_after=obj_bar` in order
+            to fetch the next page of the list.
+          in: query
+          name: starting_after
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/account_setting'
+                    type: array
+                  has_next:
+                    description: >-
+                      True if this list has another page of items after this one
+                      that can be fetched.
+                    type: boolean
+                  object:
+                    description: >-
+                      String representing the object's type. Objects of the same
+                      type share the same value. Always has the value `list`.
+                    enum:
+                      - list
+                    type: string
+                title: ListAccountSettingsResponse
+                type: object
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - AccountSettings
+  /v1/account_settings/connected:
+    get:
+      description: >-
+        This endpoint returns all AccountSettings (filtered by the applied below
+        query parameters) associated with the connected users of a platform.
+      operationId: ListAccountSettingsConnected
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - description: >-
+            This parameter represents the account object with which the
+            AccountSetting object is associated.
+          in: query
+          name: account_id
+          required: false
+          schema:
+            items:
+              enum:
+                - draft
+                - verifying
+                - activated
+                - deactivated
+                - hold
+              type: string
+            type: array
+        - description: >-
+            Indicates whether an address is available by default for a connected
+            user.
+          in: query
+          name: address.connected_user
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            Indicates whether an address is available by default for a connected
+            user's partner.
+          in: query
+          name: address.connected_user_partner
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a partner.
+          in: query
+          name: address.partner
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a platform.
+          in: query
+          name: address.platform
+          required: false
+          schema:
+            type: boolean
+        - description: Indicates whether an address is available by default for a user.
+          in: query
+          name: address.user
+          required: false
+          schema:
+            type: boolean
+        - description: >-
+            Return results where the `created` field is equal to the timestamp
+            value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.eq
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            A cursor for use in pagination. `ending_before` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, starting with `obj_bar`,
+            your subsequent call can include `ending_before=obj_bar` in order to
+            fetch the previous page of the list.
+          in: query
+          name: ending_before
+          required: false
+          schema:
+            type: string
+        - description: >-
+            A limit on the number of objects to be returned, between 1 and 10.
+            If this parameter is not specified, a default value of 10 is
+            assumed.
+          in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+        - description: >-
+            Whether Xflow can send payouts to this account. This parameter can
+            be set by Xflow for a direct user or by the platform on behalf of a
+            connected user. The former is an Xflow account of `type=user` which
+            is not connected to an account of `type=platform`.
+          in: query
+          name: payouts.enabled
+          required: false
+          schema:
+            type: boolean
+        - description: The reason code if payouts are not enabled.
+          in: query
+          name: payouts.reason_code_not_enabled
+          required: false
+          schema:
+            items:
+              enum:
+                - account_not_activated
+                - platform_hold
+                - xflow_hold
+              type: string
+            type: array
+        - description: >-
+            A cursor for use in pagination. `starting_after` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, ending with `obj_bar`,
+            your subsequent call can include `starting_after=obj_bar` in order
+            to fetch the next page of the list.
+          in: query
+          name: starting_after
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/account_setting'
+                    type: array
+                  has_next:
+                    description: >-
+                      True if this list has another page of items after this one
+                      that can be fetched.
+                    type: boolean
+                  object:
+                    description: >-
+                      String representing the object's type. Objects of the same
+                      type share the same value. Always has the value `list`.
+                    enum:
+                      - list
+                    type: string
+                title: ListAccountSettingsConnectedResponse
+                type: object
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - AccountSettings
+  /v1/account_settings/{account_setting}:
+    get:
+      description: Retrieves the details of an AccountSetting.
+      operationId: RetrieveAccountSetting
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: account_setting
+          required: true
+          schema:
+            type: string
+          style: simple
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/account_setting'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - AccountSettings
+    post:
+      description: Update the details of an AccountSetting.
+      operationId: UpdateAccountSetting
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: account_setting
+          required: true
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                address:
+                  description: >-
+                    Default values for address of category `xflow_receive`
+                    availability for different types of accounts.
+                  properties:
+                    connected_user:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a connected user.
+                      type: boolean
+                    connected_user_partner:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a connected user's partner.
+                      type: boolean
+                    partner:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a partner.
+                      type: boolean
+                  title: UpdateAccountSettingRequestAddress
+                  type: object
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: UpdateAccountSettingRequestMetadata
+                  type: object
+                payouts:
+                  description: Payouts details.
+                  properties:
+                    enabled:
+                      description: >-
+                        Whether Xflow can send payouts to this account. This
+                        parameter can be set by Xflow for a direct user or by
+                        the platform on behalf of a connected user. The former
+                        is an Xflow account of `type=user` which is not
+                        connected to an account of `type=platform`.
+                      type: boolean
+                    interval:
+                      description: >-
+                        How frequently funds will be paid out. One of `daily`,
+                        `weekly`, or `monthly`.
+                      enum:
+                        - daily
+                        - weekly
+                        - monthly
+                      type: string
+                    monthly_anchor:
+                      description: >-
+                        The day of the month funds will be paid out. Only
+                        applies if interval is monthly. Payouts scheduled
+                        between the 29th and 31st of the month are sent on the
+                        last day of shorter months.
+                      format: int64
+                      maximum: 31
+                      minimum: 1
+                      type: integer
+                    weekly_anchor:
+                      description: >-
+                        The day of the week funds will be paid out, of the style
+                        ‘monday’, ‘tuesday’, etc. Only applies if interval is
+                        `weekly`.
+                      enum:
+                        - monday
+                        - tuesday
+                        - wednesday
+                        - thursday
+                        - friday
+                        - saturday
+                        - sunday
+                      type: string
+                  title: UpdateAccountSettingPayouts
+                  type: object
+              title: UpdateAccountSettingRequest
+              type: object
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/account_setting'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - AccountSettings
   /v1/addresses:
     get:
       description: Returns a list of addresses.
@@ -1753,12 +2155,6 @@ paths:
             which the request is being made.
           in: header
           name: Xflow-Account
-          required: false
-          schema:
-            type: string
-        - description: Unique identifier of an account object associated with this address.
-          in: query
-          name: account_id
           required: false
           schema:
             type: string
@@ -1862,6 +2258,12 @@ paths:
           required: false
           schema:
             type: integer
+        - description: Unique identifier of an account object associated with this address.
+          in: query
+          name: linked_id
+          required: false
+          schema:
+            type: string
         - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
@@ -2004,11 +2406,6 @@ paths:
           application/json:
             schema:
               properties:
-                account_id:
-                  description: >-
-                    Unique identifier of an account object associated with this
-                    address.
-                  type: string
                 bank_account:
                   description: Bank account details.
                   properties:
@@ -2063,12 +2460,24 @@ paths:
                     - INR
                     - USD
                   type: string
+                linked_id:
+                  description: >-
+                    Unique identifier of an account object associated with this
+                    address.
+                  type: string
+                linked_object:
+                  description: >-
+                    The type of object that this address object is associated
+                    with. This can only be `account` for now.
+                  enum:
+                    - account
+                  type: string
                 metadata:
                   additionalProperties:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -2085,7 +2494,7 @@ paths:
                     id_document:
                       description: >-
                         A [file object
-                        identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                        identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                         which references a document that identifies this
                         destination (for a store of value).
                       type: string
@@ -2099,11 +2508,12 @@ paths:
                     - bank_account
                   type: string
               required:
-                - account_id
                 - bank_account
                 - billing_details
                 - category
                 - currency
+                - linked_id
+                - linked_object
                 - name
                 - type
               title: CreateAddressRequest
@@ -2273,7 +2683,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -2874,7 +3284,7 @@ paths:
         - description: >-
             Account identifier for the account from which funds are being
             deposited. Refer [account
-            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#accounts) for more
             details.
           in: query
           name: from.account_id
@@ -2884,7 +3294,7 @@ paths:
         - description: >-
             Address identifier of the account from which funds are being
             deposited. Refer [address
-            object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#addresses) for more
             details.
           in: query
           name: from.address_id
@@ -2962,7 +3372,7 @@ paths:
         - description: >-
             Account identifier for the account to which funds are being
             deposited. Refer [account
-            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#accounts) for more
             details.
           in: query
           name: to.account_id
@@ -2972,7 +3382,7 @@ paths:
         - description: >-
             Address identifier of the account to which funds are being
             deposited. Refer [address
-            object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#addresses) for more
             details.
           in: query
           name: to.address_id
@@ -3083,6 +3493,8 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - EUR
+                    - GBP
                     - USD
                   type: string
                 from:
@@ -3094,7 +3506,7 @@ paths:
                       description: >-
                         Account identifier for the account from which funds are
                         being deposited. Refer [account
-                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        object](https://docs.xflowpay.com/2024-02-05/api#accounts)
                         for more details.
                       type: string
                   title: CreateDepositRequestFrom
@@ -3104,7 +3516,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -3130,14 +3542,14 @@ paths:
                       description: >-
                         Account identifier for the account to which funds are
                         being deposited. Refer [account
-                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        object](https://docs.xflowpay.com/2024-02-05/api#accounts)
                         for more details.
                       type: string
                     address_id:
                       description: >-
                         Address identifier of the account to which funds are
                         being deposited. Refer [address
-                        object](https://docs.xflowpay.com/2023-04-12/api#addresses)
+                        object](https://docs.xflowpay.com/2024-02-05/api#addresses)
                         for more details.
                       type: string
                   required:
@@ -3316,7 +3728,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -3483,7 +3895,9 @@ paths:
             items:
               type: string
             type: array
-        - description: The type of the object that generated this event.
+        - description: >-
+            The type of the object that generated this event. This can be one of
+            `account`, `address`, `deposit`, `receivable` or `payout`.
           in: query
           name: linked_object
           required: false
@@ -3511,7 +3925,7 @@ paths:
         - description: >-
             Description of the event (e.g., `deposit.status.completed`). You can
             find the full list of event types
-            [here](https://docs.xflowpay.com/2023-04-12/api#types-of-events).
+            [here](https://docs.xflowpay.com/2024-02-05/api#types-of-events).
           in: query
           name: type
           required: false
@@ -3980,6 +4394,746 @@ paths:
           description: Error response.
       tags:
         - ExchangeRates
+  /v1/fee_plans:
+    get:
+      description: Returns a list of FeePlans.
+      operationId: ListFeePlans
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - description: >-
+            Return results where the `created` field is equal to the timestamp
+            value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.eq
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is greater than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.gte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `created` field is lesser than or equal to
+            the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: created.lte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            A cursor for use in pagination. `ending_before` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, starting with `obj_bar`,
+            your subsequent call can include `ending_before=obj_bar` in order to
+            fetch the previous page of the list.
+          in: query
+          name: ending_before
+          required: false
+          schema:
+            type: string
+        - description: >-
+            A limit on the number of objects to be returned, between 1 and 10.
+            If this parameter is not specified, a default value of 10 is
+            assumed.
+          in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+        - description: Unique identifier of an account object associated with this FeePlan.
+          in: query
+          name: linked_id
+          required: false
+          schema:
+            items:
+              enum:
+                - account
+              type: string
+            type: array
+        - description: >-
+            A cursor for use in pagination. `starting_after` is an object
+            identifier that defines your place in the list. For instance, if you
+            make a list request and receive 5 objects, ending with `obj_bar`,
+            your subsequent call can include `starting_after=obj_bar` in order
+            to fetch the next page of the list.
+          in: query
+          name: starting_after
+          required: false
+          schema:
+            type: string
+        - description: The status of the FeePlan.
+          in: query
+          name: status
+          required: false
+          schema:
+            items:
+              enum:
+                - activated
+                - deactivated
+              type: string
+            type: array
+        - description: The type of FeePlan.
+          in: query
+          name: type
+          required: false
+          schema:
+            enum:
+              - account_fees
+              - account_fees_passthrough
+            type: string
+        - description: >-
+            Return results where the `validity.from` field is equal to the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.from.eq
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.from` field is greater than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.from.gt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.from` field is greater than or
+            equal to the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.from.gte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.from` field is lesser than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.from.lt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.from` field is lesser than or
+            equal to the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.from.lte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.to` field is equal to the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.to.eq
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.to` field is greater than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.to.gt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.to` field is greater than or
+            equal to the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.to.gte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.to` field is lesser than the
+            timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.to.lt
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+        - description: >-
+            Return results where the `validity.to` field is lesser than or equal
+            to the timestamp value in seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time).
+          in: query
+          name: validity.to.lte
+          required: false
+          schema:
+            format: unix-time
+            type: integer
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/fee_plan'
+                    type: array
+                  has_next:
+                    description: >-
+                      True if this list has another page of items after this one
+                      that can be fetched.
+                    type: boolean
+                  object:
+                    description: >-
+                      String representing the object's type. Objects of the same
+                      type share the same value. Always has the value `list`.
+                    enum:
+                      - list
+                    type: string
+                title: ListFeePlansResponse
+                type: object
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - FeePlans
+    post:
+      description: Create a FeePlan.
+      operationId: CreateFeePlan
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                deposit:
+                  description: Deposit fee details.
+                  items:
+                    properties:
+                      currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the amount currency.
+                        type: string
+                      enabled:
+                        description: >-
+                          This represents whether the payment method is enabled
+                          or not.
+                        type: boolean
+                      payment_method_name:
+                        description: This represents the name of the payment method.
+                        enum:
+                          - affirm
+                          - afterpay
+                          - check
+                          - ach_debit
+                          - klarna
+                        type: string
+                      payment_method_type:
+                        description: This represents the name of the payment method type.
+                        enum:
+                          - buy_now_pay_later
+                          - check
+                          - domestic_debit
+                        type: string
+                      processing_fee_indicator:
+                        description: >-
+                          This is an account level setting which defines how
+                          fees associated with specific payment methods are
+                          split between the partner and the Xflow user.
+                        enum:
+                          - partner
+                          - shared
+                          - user
+                        type: string
+                      variable:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee.
+                        type: string
+                    title: CreateFeePlanDeposit
+                    type: object
+                  type: array
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: CreateFeePlanRequestMetadata
+                  type: object
+                linked_id:
+                  description: >-
+                    Unique identifier of an account object associated with this
+                    FeePlan.
+                  type: string
+                linked_object:
+                  description: >-
+                    The type of object that this FeePlan object is associated
+                    with. This can only be `account` for now.
+                  enum:
+                    - account
+                  type: string
+                payout:
+                  description: Payout fee details.
+                  items:
+                    properties:
+                      destination_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the destination amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      fixed:
+                        description: Fixed payout fee amount.
+                        type: string
+                      minimum:
+                        description: Minimum payout fee amount.
+                        type: string
+                      source_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the source amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      variable:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee.
+                        type: string
+                    title: CreateFeePlanPayout
+                    type: object
+                  type: array
+                payout_fx:
+                  description: Payout FX fee details.
+                  items:
+                    properties:
+                      destination_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the destination amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      reference_rate:
+                        description: >-
+                          FX markup reference rate. This can be set to
+                          `mid_market` for all currency pairs or `inter_bank`
+                          for `source_currency=USD` and
+                          `destination_currency=INR`.
+                        enum:
+                          - inter_bank
+                          - mid_market
+                        type: string
+                      source_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the source amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      variable:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee.
+                        type: string
+                    title: CreateFeePlanPayoutFX
+                    type: object
+                  type: array
+                transfer_fx:
+                  description: Transfer FX fee details.
+                  items:
+                    properties:
+                      destination_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the destination amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      reference_rate:
+                        description: >-
+                          FX markup reference rate. This can be set to
+                          `mid_market`.
+                        enum:
+                          - mid_market
+                        type: string
+                      source_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the source amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      variable:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee.
+                        type: string
+                      variable_off_hours:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee when the transfer is initiated outside of
+                          market hours.
+                        type: string
+                    title: CreateFeePlanTransferFX
+                    type: object
+                  type: array
+                type:
+                  description: The type of FeePlan.
+                  enum:
+                    - account_fees
+                    - account_fees_passthrough
+                  type: string
+              required:
+                - linked_id
+                - linked_object
+                - type
+              title: CreateFeePlanRequest
+              type: object
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fee_plan'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - FeePlans
+  /v1/fee_plans/{fee_plan}:
+    get:
+      description: Retrieves the details of an account.
+      operationId: RetrieveFeePlan
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: fee_plan
+          required: true
+          schema:
+            type: string
+          style: simple
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fee_plan'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - FeePlans
+    post:
+      description: Update the details of a FeePlan.
+      operationId: UpdateFeePlan
+      parameters:
+        - description: >-
+            This header specifies the connected user's account on behalf of
+            which the request is being made.
+          in: header
+          name: Xflow-Account
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: fee_plan
+          required: true
+          schema:
+            type: string
+          style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                metadata:
+                  additionalProperties:
+                    type: string
+                  description: >-
+                    Set of [key-value
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
+                    that you can attach to an object. This can be useful for
+                    storing additional information about the object in a
+                    structured format.
+                  title: UpdateFeePlanRequestMetadata
+                  type: object
+              title: UpdateFeePlanRequest
+              type: object
+      responses:
+        '200':
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fee_plan'
+          description: Successful response.
+        default:
+          headers:
+            Date:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            Connection:
+              schema:
+                type: string
+            x-amzn-RequestId:
+              schema:
+                type: string
+            xflow-request-id:
+              schema:
+                type: string
+            x-amz-apigw-id:
+              schema:
+                type: string
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error_object'
+          description: Error response.
+      tags:
+        - FeePlans
   /v1/files:
     get:
       description: Returns a list of files.
@@ -4393,7 +5547,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -4837,7 +5991,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -5029,7 +6183,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -5530,7 +6684,7 @@ paths:
             type: string
         - description: >-
             This is the
-            [type](https://docs.xflowpay.com/2023-04-12/api#payment_object_type)
+            [type](https://docs.xflowpay.com/2024-02-05/api#payment_object_type)
             of the linked payment.
           in: query
           name: type
@@ -5820,7 +6974,7 @@ paths:
         - description: >-
             Account identifier for the account to which funds are being
             deposited. Refer [account
-            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#accounts) for more
             details.
           in: query
           name: to.account_id
@@ -5830,7 +6984,7 @@ paths:
         - description: >-
             Address identifier of the account to which funds are being
             deposited. Refer [address
-            object](https://docs.xflowpay.com/2023-04-12/api#addresses) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#addresses) for more
             details.
           in: query
           name: to.address_id
@@ -6020,7 +7174,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -6752,8 +7906,6 @@ paths:
           name: sell.currency
           required: true
           schema:
-            enum:
-              - USD
             type: string
         - description: Valid quote types.
           in: query
@@ -7049,6 +8201,8 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - EUR
+                    - GBP
                     - USD
                   type: string
                 description:
@@ -7090,7 +8244,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -7288,6 +8442,8 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - EUR
+                    - GBP
                     - USD
                   type: string
                 description:
@@ -7329,7 +8485,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -7724,7 +8880,7 @@ paths:
         - description: >-
             Account identifier for the account from which funds are being
             transferred. Refer [account
-            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#accounts) for more
             details.
           in: query
           name: from.account_id
@@ -7768,7 +8924,7 @@ paths:
         - description: >-
             Account identifier for the account to which funds are being
             transferred. Refer [account
-            object](https://docs.xflowpay.com/2023-04-12/api#accounts) for more
+            object](https://docs.xflowpay.com/2024-02-05/api#accounts) for more
             details.
           in: query
           name: to.account_id
@@ -7884,16 +9040,6 @@ paths:
           application/json:
             schema:
               properties:
-                amount:
-                  description: Amount value that will be deposited at the destination.
-                  type: string
-                currency:
-                  description: >-
-                    The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
-                    3-digit code for the amount currency.
-                  enum:
-                    - USD
-                  type: string
                 description:
                   description: >-
                     An arbitrary string attached to the object. Often useful for
@@ -7908,15 +9054,20 @@ paths:
                       description: >-
                         Account identifier for the account from which funds are
                         being transferred. Refer [account
-                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        object](https://docs.xflowpay.com/2024-02-05/api#accounts)
                         for more details.
                       type: string
-                    address_id:
+                    amount:
+                      description: Amount value that will be debited from source.
+                      type: string
+                    currency:
                       description: >-
-                        Address identifier of the account from which funds are
-                        being transferred. Refer [address
-                        object](https://docs.xflowpay.com/2023-04-12/api#addresses)
-                        for more details.
+                        The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                        3-digit code for the amount currency.
+                      enum:
+                        - EUR
+                        - GBP
+                        - USD
                       type: string
                   required:
                     - account_id
@@ -7927,7 +9078,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -7942,15 +9093,17 @@ paths:
                       description: >-
                         Account identifier for the account to which funds are
                         being transferred. Refer [account
-                        object](https://docs.xflowpay.com/2023-04-12/api#accounts)
+                        object](https://docs.xflowpay.com/2024-02-05/api#accounts)
                         for more details.
                       type: string
-                    address_id:
+                    currency:
                       description: >-
-                        Address identifier of the account to which funds are
-                        being transferred. Refer [address
-                        object](https://docs.xflowpay.com/2023-04-12/api#addresses)
-                        for more details.
+                        The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                        3-digit code for the amount currency.
+                      enum:
+                        - EUR
+                        - GBP
+                        - USD
                       type: string
                   required:
                     - account_id
@@ -8134,7 +9287,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -8427,7 +9580,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -8625,7 +9778,7 @@ paths:
                     type: string
                   description: >-
                     Set of [key-value
-                    pairs](https://docs.xflowpay.com/2023-04-12/api#metadata)
+                    pairs](https://docs.xflowpay.com/2024-02-05/api#metadata)
                     that you can attach to an object. This can be useful for
                     storing additional information about the object in a
                     structured format.
@@ -9135,154 +10288,6 @@ components:
             was created.
           format: unix-time
           type: integer
-        fees:
-          description: >-
-            Xflow fees which are set by Xflow for a platform. These fees
-            indicate what Xflow will charge the account for money movement.
-          properties:
-            fx_markup:
-              description: FX markup is the Xflow markup over the reference FX rate.
-              nullable: true
-              type: string
-            fx_reference_rate:
-              description: >-
-                FX markup reference rate. This can be set to `mid_market` or
-                `inter_bank`.
-              enum:
-                - mid_market
-                - inter_bank
-              nullable: true
-              type: string
-            payout:
-              description: Payout fee is the Xflow fee per payout.
-              nullable: true
-              properties:
-                fixed:
-                  description: Fixed payout fee details.
-                  items:
-                    properties:
-                      amount:
-                        description: Amount value that was charged by Xflow per payout.
-                        nullable: true
-                        type: string
-                      currency:
-                        description: >-
-                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
-                          3-digit code for the amount currency.
-                        enum:
-                          - USD
-                        nullable: true
-                        type: string
-                    title: AccountFeesPayoutFixed
-                    type: object
-                  nullable: true
-                  type: array
-                minimum:
-                  description: Minimum payout fee details.
-                  items:
-                    properties:
-                      amount:
-                        description: Amount value that was charged by Xflow per payout.
-                        nullable: true
-                        type: string
-                      currency:
-                        description: >-
-                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
-                          3-digit code for the amount currency.
-                        enum:
-                          - USD
-                        nullable: true
-                        type: string
-                    title: AccountFeesPayoutMinimum
-                    type: object
-                  nullable: true
-                  type: array
-                variable:
-                  description: >-
-                    This is the percentage value that is used to calculate the
-                    Xflow fee per payout.
-                  nullable: true
-                  type: string
-              title: AccountFeesPayout
-              type: object
-          title: AccountFees
-          nullable: true
-          type: object
-        fees_passthrough:
-          description: >-
-            Xflow fees which are set on account of `type=platform` and passed
-            onto the connected user by default (the platform has the option to
-            mark up these fees for their connected users) during connected user
-            creation.
-          properties:
-            fx_markup:
-              description: FX markup is the Xflow markup over the reference FX rate.
-              nullable: true
-              type: string
-            fx_reference_rate:
-              description: >-
-                FX markup reference rate. This can be set to `mid_market` or
-                `inter_bank`.
-              enum:
-                - mid_market
-                - inter_bank
-              nullable: true
-              type: string
-            payout:
-              description: Payout fee is the Xflow fee per payout.
-              nullable: true
-              properties:
-                fixed:
-                  description: Fixed payout fee details.
-                  items:
-                    properties:
-                      amount:
-                        description: Amount value that was charged by Xflow per payout.
-                        nullable: true
-                        type: string
-                      currency:
-                        description: >-
-                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
-                          3-digit code for the amount currency.
-                        enum:
-                          - USD
-                        nullable: true
-                        type: string
-                    title: AccountPassthroughFeesPayoutFixed
-                    type: object
-                  nullable: true
-                  type: array
-                minimum:
-                  description: Minimum payout fee details.
-                  items:
-                    properties:
-                      amount:
-                        description: Amount value that was charged by Xflow per payout.
-                        nullable: true
-                        type: string
-                      currency:
-                        description: >-
-                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
-                          3-digit code for the amount currency.
-                        enum:
-                          - USD
-                        nullable: true
-                        type: string
-                    title: AccountPassthroughFeesPayoutMinimum
-                    type: object
-                  nullable: true
-                  type: array
-                variable:
-                  description: >-
-                    This is the percentage value that is used to calculate the
-                    Xflow fee per payout.
-                  nullable: true
-                  type: string
-              title: AccountFeesPassthroughPayout
-              type: object
-          title: AccountFeesPassthrough
-          nullable: true
-          type: object
         id:
           description: Unique identifier for the object.
           type: string
@@ -9302,7 +10307,7 @@ components:
         logo_id:
           description: >-
             A [file object
-            identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+            identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
             which contains a logo for the user to customize communications with
             their customers.
           nullable: true
@@ -9312,7 +10317,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: AccountMetadata
@@ -9334,6 +10339,144 @@ components:
             Unique identifier for the parent account object which created this
             particular account.
           nullable: true
+          type: string
+        supporting_documentation:
+          description: Details of the supporting documentation for the account.
+          properties:
+            id_document:
+              description: >-
+                A [file object
+                identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
+                which references a document that proves the authenticity of the
+                account.
+              type: string
+          title: AccountSupportingDocumentation
+          nullable: true
+          type: object
+        status:
+          description: Valid status types associated with an Xflow account.
+          enum:
+            - draft
+            - verifying
+            - activated
+            - deactivated
+            - hold
+          type: string
+        tos_acceptance:
+          description: Details of account accepting terms of service (tos).
+          properties:
+            ip:
+              description: >-
+                IP address of the account from which the terms of service were
+                accepted.
+              nullable: true
+              type: string
+            time:
+              description: >-
+                The seconds elapsed since [Unix epoch
+                time](https://en.wikipedia.org/wiki/Unix_time) at which the
+                terms of service was accepted.
+              format: unix-time
+              nullable: true
+              type: integer
+            user_agent:
+              description: >-
+                The user agent of the browser from which the account
+                representative accepted their service agreement
+              nullable: true
+              type: string
+          title: AccountTosAcceptance
+          nullable: true
+          type: object
+        type:
+          description: Account types. These can be `partner`, `platform` or `user`.
+          enum:
+            - partner
+            - platform
+            - user
+          type: string
+      title: Account
+      type: object
+    account_setting:
+      description: >-
+        Account objects are fundamental to Xflow and model entities like direct
+        users, connected users, partners and platforms. Depending on whether you
+        are setup as a direct user or platform, you can create new accounts,
+        retrieve existing accounts to see it’s properties or take action on
+        accounts to accept funds on their behalf.
+      properties:
+        address:
+          description: >-
+            Default values for address of category `xflow_receive` availability
+            for different types of accounts.
+          properties:
+            connected_user:
+              description: >-
+                Indicates whether an address is available by default for a
+                connected user. This is set to `null` for a connected user and a
+                direct user AccountSetting.
+              type: boolean
+            connected_user_partner:
+              description: >-
+                Indicates whether an address is available by default for a
+                connected user's partner. This is set to `null` for a direct
+                user AccountSetting.
+              type: boolean
+            partner:
+              description: >-
+                Indicates whether an address is available by default for a
+                partner.
+              type: boolean
+            platform:
+              description: >-
+                Indicates whether an address is available by default for a
+                platform. This is set to `null` for a connected user and a
+                direct user AccountSetting.
+              type: boolean
+            user:
+              description: >-
+                Indicates whether an address is available by default for a user.
+                This is set to `null` for a platform AccountSetting.
+              type: boolean
+          title: AccountSettingAddress
+          nullable: true
+          type: object
+        created:
+          description: >-
+            The seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time) at which the account
+            was created.
+          format: unix-time
+          type: integer
+        id:
+          description: Unique identifier for the object.
+          type: string
+        livemode:
+          description: >-
+            Has the value `true` if the object exists in livemode, the value
+            `false` if the object exists in testmode or `null` in the case of a
+            direct user or a platform (a direct user is an Xflow account of
+            `type=user` which is not connected to an account of
+            `type=platform`).
+          nullable: true
+          type: boolean
+        metadata:
+          additionalProperties:
+            type: string
+          description: >-
+            Set of [key-value
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
+            can attach to an object. This can be useful for storing additional
+            information about the object in a structured format.
+          title: AccountSettingMetadata
+          nullable: true
+          type: object
+        object:
+          description: >-
+            String representing the object's type. Objects of the same type
+            share the same value.
+          enum:
+            - account_setting
           type: string
         payouts:
           description: Payouts details.
@@ -9385,113 +10528,16 @@ components:
                 - sunday
               nullable: true
               type: string
-          title: AccountPayouts
+          title: AccountSettingPayouts
           nullable: true
           type: object
-        processing_fee_indicator:
-          description: >-
-            This is an account level setting which defines how fees associated
-            with specific payment methods are split between the partner and the
-            Xflow user. Valid values include `partner`, `shared` and `user`.
-          properties:
-            affirm:
-              enum:
-                - partner
-                - shared
-                - user
-              type: string
-            afterpay:
-              enum:
-                - partner
-                - shared
-                - user
-              type: string
-            check:
-              enum:
-                - partner
-                - shared
-                - user
-              type: string
-            domestic_debit:
-              enum:
-                - partner
-                - shared
-                - user
-              type: string
-            klarna:
-              enum:
-                - partner
-                - shared
-                - user
-              type: string
-          title: AccountProcessingFeeIndicator
-          nullable: true
-          type: object
-        supporting_documentation:
-          description: Details of the supporting documentation for the account.
-          properties:
-            id_document:
-              description: >-
-                A [file object
-                identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
-                which references a document that proves the authenticity of the
-                account.
-              type: string
-          title: AccountSupportingDocumentation
-          nullable: true
-          type: object
-        status:
-          description: Valid status types associated with an Xflow account.
-          enum:
-            - draft
-            - verifying
-            - activated
-            - deactivated
-            - hold
-          type: string
-        tos_acceptance:
-          description: Details of account accepting terms of service (tos).
-          properties:
-            ip:
-              description: >-
-                IP address of the account from which the terms of service were
-                accepted.
-              nullable: true
-              type: string
-            time:
-              description: >-
-                The seconds elapsed since [Unix epoch
-                time](https://en.wikipedia.org/wiki/Unix_time) at which the
-                terms of service was accepted.
-              format: unix-time
-              nullable: true
-              type: integer
-            user_agent:
-              description: >-
-                The user agent of the browser from which the account
-                representative accepted their service agreement
-              nullable: true
-              type: string
-          title: AccountTosAcceptance
-          nullable: true
-          type: object
-        type:
-          description: Account types. These can be `partner`, `platform` or `user`.
-          enum:
-            - partner
-            - platform
-            - user
-          type: string
-      title: Account
+      title: AccountSetting
       type: object
     address:
       description: >-
         Address objects represent a destination (for a store of value), which is
         usually an Xflow account.
       properties:
-        account_id:
-          description: Unique identifier of an account object associated with this address.
-          type: string
         bank_account:
           description: Bank account details.
           properties:
@@ -9538,6 +10584,7 @@ components:
               description: Unique bank account number.
               type: string
           title: AddressBankAccount
+          nullable: true
           type: object
         billing_details:
           description: Billing address.
@@ -9571,6 +10618,7 @@ components:
               nullable: true
               type: string
           title: AddressBillingDetails
+          nullable: true
           type: object
         category:
           description: Xflow categorization of destination (for a store of value).
@@ -9602,6 +10650,16 @@ components:
         is_reusable:
           description: Indicates whether the address is reusable for ACH debit.
           type: boolean
+        linked_id:
+          description: Unique identifier of an account object associated with this address.
+          type: string
+        linked_object:
+          description: >-
+            The type of object that this address object is associated with. This
+            can only be `account` for now.
+          enum:
+            - account
+          type: string
         livemode:
           description: >-
             Has the value true if the object exists in `livemode` or the value
@@ -9612,7 +10670,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: AddressMetadata
@@ -9620,6 +10678,7 @@ components:
           type: object
         name:
           description: Name on the destination (for a store of value).
+          nullable: true
           type: string
         object:
           description: >-
@@ -9644,7 +10703,7 @@ components:
             id_document:
               description: >-
                 A [file object
-                identifier](https://docs.xflowpay.com/2023-04-12/api#file_object_id)
+                identifier](https://docs.xflowpay.com/2024-02-05/api#file_object_id)
                 which references a document that identifies this destination
                 (for a store of value).
               type: string
@@ -9705,6 +10764,8 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - EUR
+                  - GBP
                   - USD
                 type: string
             title: BalanceAvailable
@@ -9726,6 +10787,8 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - EUR
+                  - GBP
                   - USD
                 type: string
             title: BalanceFeeAdvance
@@ -9756,6 +10819,8 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - EUR
+                  - GBP
                   - USD
                 type: string
             title: BalancePayoutProcessing
@@ -9777,6 +10842,8 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - EUR
+                  - GBP
                   - USD
                 type: string
             title: BalancePending
@@ -9799,6 +10866,8 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - EUR
+                  - GBP
                   - USD
                 type: string
             title: BalanceProcessing
@@ -9838,6 +10907,8 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - EUR
+            - GBP
             - USD
           type: string
         id:
@@ -9884,6 +10955,8 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - EUR
+            - GBP
             - USD
           type: string
         from:
@@ -9895,14 +10968,14 @@ components:
               description: >-
                 Account identifier for the account from which funds are being
                 deposited. Refer [account
-                object](https://docs.xflowpay.com/2023-04-12/api#accounts) for
+                object](https://docs.xflowpay.com/2024-02-05/api#accounts) for
                 more details.
               type: string
             address_id:
               description: >-
                 Address identifier of the account from which funds are being
                 deposited. Refer [address
-                object](https://docs.xflowpay.com/2023-04-12/api#addresses) for
+                object](https://docs.xflowpay.com/2024-02-05/api#addresses) for
                 more details.
               nullable: true
               type: string
@@ -9921,7 +10994,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: DepositMetadata
@@ -9993,14 +11066,14 @@ components:
               description: >-
                 Account identifier for the account to which funds are being
                 deposited. Refer [account
-                object](https://docs.xflowpay.com/2023-04-12/api#accounts) for
+                object](https://docs.xflowpay.com/2024-02-05/api#accounts) for
                 more details.
               type: string
             address_id:
               description: >-
                 Address identifier of the account to which funds are being
                 deposited. Refer [address
-                object](https://docs.xflowpay.com/2023-04-12/api#addresses) for
+                object](https://docs.xflowpay.com/2024-02-05/api#addresses) for
                 more details.
               type: string
           title: DepositTo
@@ -10232,7 +11305,7 @@ components:
           description: >-
             Description of the event (e.g., `deposit.status.completed`). You can
             find the full list of event types
-            [here](https://docs.xflowpay.com/2023-04-12/api#types-of-events).
+            [here](https://docs.xflowpay.com/2024-02-05/api#types-of-events).
           enum:
             - account.address.activated
             - account.payouts_enabled.updated
@@ -10296,8 +11369,6 @@ components:
             `buy.amount` was specified, then `buy.currency`; else,
             `sell.currency` (in 3-letter [ISO
             4217](https://en.wikipedia.org/wiki/ISO_4217) format).
-          enum:
-            - USD
           type: string
         id:
           description: Unique identifier for the object.
@@ -10356,8 +11427,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
-              enum:
-                - USD
               type: string
           title: ExchangeRateSell
           type: object
@@ -10369,6 +11438,227 @@ components:
             - lock
           type: string
       title: ExchangeRate
+      type: object
+    fee_plan:
+      description: >-
+        The FeePlan object models the different fees for a platform, direct user
+        and connected user.
+      properties:
+        created:
+          description: >-
+            The seconds elapsed since [Unix epoch
+            time](https://en.wikipedia.org/wiki/Unix_time) at which the FeePlan
+            was created.
+          format: unix-time
+          type: integer
+        deposit:
+          description: Deposit fee details.
+          items:
+            properties:
+              currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the amount currency.
+                type: string
+              enabled:
+                description: This represents whether the payment method is enabled or not.
+                type: boolean
+              payment_method_name:
+                description: This represents the name of the payment method.
+                enum:
+                  - affirm
+                  - afterpay
+                  - check
+                  - ach_debit
+                  - klarna
+                type: string
+              payment_method_type:
+                description: This represents the name of the payment method type.
+                enum:
+                  - buy_now_pay_later
+                  - check
+                  - domestic_debit
+                type: string
+              processing_fee_indicator:
+                description: >-
+                  This is an account level setting which defines how fees
+                  associated with specific payment methods are split between the
+                  partner and the Xflow user.
+                enum:
+                  - partner
+                  - shared
+                  - user
+                type: string
+              variable:
+                description: >-
+                  This is the percentage value that is used to calculate the
+                  fee.
+                type: string
+            title: FeePlanDeposit
+            type: object
+          nullable: true
+          type: array
+        id:
+          description: Unique identifier for the object.
+          type: string
+        linked_id:
+          description: Unique identifier of an account object associated with this FeePlan.
+          type: string
+        linked_object:
+          description: >-
+            The type of object that this FeePlan object is associated with. This
+            can only be `account` for now.
+          enum:
+            - account
+          type: string
+        livemode:
+          description: >-
+            Has the value true if the object exists in `livemode` or the value
+            false if the object exists in `testmode`.
+          type: boolean
+        metadata:
+          additionalProperties:
+            type: string
+          description: >-
+            Additional information associated with the error in the form of
+            key-value pairs.
+          title: FeePlanMetadata
+          nullable: true
+          type: object
+        object:
+          description: >-
+            String representing the object's type. Objects of the same type
+            share the same value.
+          enum:
+            - fee_plan
+          type: string
+        payout:
+          description: Payout fee details.
+          items:
+            properties:
+              destination_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the destination amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              fixed:
+                description: Fixed payout fee amount.
+                type: string
+              minimum:
+                description: Minimum payout fee amount.
+                type: string
+              source_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the source amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              variable:
+                description: >-
+                  This is the percentage value that is used to calculate the
+                  fee.
+                type: string
+            title: FeePlanPayout
+            type: object
+          type: array
+        payout_fx:
+          description: Payout FX fee details.
+          items:
+            properties:
+              destination_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the destination amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              reference_rate:
+                description: >-
+                  FX markup reference rate. This can be set to `mid_market` for
+                  all currency pairs or `inter_bank` for `source_currency=USD`
+                  and `destination_currency=INR`.
+                enum:
+                  - inter_bank
+                  - mid_market
+                type: string
+              source_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the source amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              variable:
+                description: >-
+                  This is the percentage value that is used to calculate the
+                  fee.
+                type: string
+            title: FeePlanPayoutFX
+            type: object
+          type: array
+        status:
+          description: The status of the FeePlan.
+          enum:
+            - activated
+            - deactivated
+          type: string
+        transfer_fx:
+          description: Transfer FX fee details.
+          items:
+            properties:
+              destination_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the destination amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              reference_rate:
+                description: FX markup reference rate. This can be set to `mid_market`.
+                enum:
+                  - mid_market
+                type: string
+              source_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the source amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              variable:
+                description: >-
+                  This is the percentage value that is used to calculate the
+                  fee.
+                type: string
+              variable_off_hours:
+                description: >-
+                  This is the percentage value that is used to calculate the fee
+                  when the transfer is initiated outside of market hours.
+                type: string
+            title: FeePlanTransferFX
+            type: object
+          type: array
+        type:
+          description: The type of FeePlan.
+          enum:
+            - account_fees
+            - account_fees_passthrough
+          type: string
+        validity:
+          description: Validity of the FeePlan.
+          properties:
+            from:
+              description: The time from when the FeePlan is valid.
+              format: unix-time
+              type: integer
+            to:
+              description: The time to when the FeePlan is valid.
+              format: unix-time
+              type: integer
+      title: FeePlan
       type: object
     file_object:
       description: >-
@@ -10477,7 +11767,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: PaymentLinkMetadata
@@ -10529,6 +11819,11 @@ components:
             object was created.
           format: unix-time
           type: integer
+        fee_plan_id:
+          description: >-
+            Unique identifier for the FeePlan object associated with this
+            payment. This parameter is non-null for fees related payments.
+          type: string
         from:
           description: >-
             Details of the account & currency from which the funds are being
@@ -10541,8 +11836,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the currency.
-              enum:
-                - USD
               type: string
           title: PaymentFrom
           type: object
@@ -10585,7 +11878,7 @@ components:
               payment_type:
                 description: >-
                   This is the
-                  [type](https://docs.xflowpay.com/2023-04-12/api#payment_object_type)
+                  [type](https://docs.xflowpay.com/2024-02-05/api#payment_object_type)
                   of the linked payment.
                 enum:
                   - adjustment_negative
@@ -10714,7 +12007,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: PayoutsMetadata
@@ -10772,14 +12065,14 @@ components:
               description: >-
                 Account identifier for the account to which funds are being paid
                 out. Refer [account
-                object](https://docs.xflowpay.com/2023-04-12/api#accounts) for
+                object](https://docs.xflowpay.com/2024-02-05/api#accounts) for
                 more details.
               type: string
             address_id:
               description: >-
                 Address identifier of the account to which funds are being paid
                 out. Refer [address
-                object](https://docs.xflowpay.com/2023-04-12/api#addresses) for
+                object](https://docs.xflowpay.com/2024-02-05/api#addresses) for
                 more details.
               type: string
           title: PayoutTo
@@ -10898,8 +12191,6 @@ components:
             `buy.amount` was specified, then `buy.currency`; else,
             `sell.currency` (in 3-letter [ISO
             4217](https://en.wikipedia.org/wiki/ISO_4217) format).
-          enum:
-            - USD
           type: string
         livemode:
           description: >-
@@ -10936,8 +12227,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
-              enum:
-                - USD
               type: string
           title: QuoteSell
           type: object
@@ -11019,6 +12308,8 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - EUR
+            - GBP
             - USD
           nullable: true
           type: string
@@ -11083,7 +12374,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: ReceivableMetadata
@@ -11146,9 +12437,6 @@ components:
     transfer:
       description: A transfer object models money movement within Xflow.
       properties:
-        amount:
-          description: Amount value that will be deposited at the destination.
-          type: string
         created:
           description: >-
             The seconds elapsed since [Unix epoch
@@ -11156,13 +12444,6 @@ components:
             was created.
           format: unix-time
           type: integer
-        currency:
-          description: >-
-            The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
-            for the amount currency.
-          enum:
-            - USD
-          type: string
         description:
           description: >-
             An arbitrary string attached to the object. Often useful for
@@ -11177,17 +12458,21 @@ components:
               description: >-
                 Account identifier for the account from which funds are being
                 transferred. Refer [account
-                object](https://docs.xflowpay.com/2023-04-12/api#accounts) for
+                object](https://docs.xflowpay.com/2024-02-05/api#accounts) for
                 more details.
               nullable: true
               type: string
-            address_id:
+            amount:
+              description: Amount value that will be debited from source.
+              type: string
+            currency:
               description: >-
-                Address identifier of the account from which funds are being
-                transferred. Refer [address
-                object](https://docs.xflowpay.com/2023-04-12/api#addresses) for
-                more details.
-              nullable: true
+                The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                code for the amount currency.
+              enum:
+                - EUR
+                - GBP
+                - USD
               type: string
           title: TransferFrom
           nullable: true
@@ -11205,7 +12490,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: TransferMetadata
@@ -11234,17 +12519,21 @@ components:
               description: >-
                 Account identifier for the account to which funds are being
                 transferred. Refer [account
-                object](https://docs.xflowpay.com/2023-04-12/api#accounts) for
+                object](https://docs.xflowpay.com/2024-02-05/api#accounts) for
                 more details.
               nullable: true
               type: string
-            address_id:
+            amount:
+              description: Amount value that will be deposited at the destination.
+              type: string
+            currency:
               description: >-
-                Address identifier of the account to which funds are being
-                transferred. Refer [address
-                object](https://docs.xflowpay.com/2023-04-12/api#addresses) for
-                more details.
-              nullable: true
+                The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                code for the amount currency.
+              enum:
+                - EUR
+                - GBP
+                - USD
               type: string
           title: TransferTo
           nullable: true
@@ -11252,17 +12541,11 @@ components:
         type:
           description: Transfer type.
           enum:
+            - fee_advance_transfer
             - internal_transfer
             - platform_credit
             - platform_debit
             - platform_fee_payout
-          type: string
-        user_declaration:
-          description: >-
-            File object providing details of the reason for the transfer to be
-            created. This is applicable only for transfers between two different
-            partners (this is an Xflow-Ops driven process for now).
-          nullable: true
           type: string
       title: Transfer
       type: object
@@ -11306,7 +12589,7 @@ components:
             type: string
           description: >-
             Set of [key-value
-            pairs](https://docs.xflowpay.com/2023-04-12/api#metadata) that you
+            pairs](https://docs.xflowpay.com/2024-02-05/api#metadata) that you
             can attach to an object. This can be useful for storing additional
             information about the object in a structured format.
           title: WebhookEndpointMetadata
@@ -11328,7 +12611,7 @@ components:
         secret:
           description: >-
             The endpoint’s
-            [secret](https://docs.xflowpay.com/2023-04-12/guide#determining-the-expected-signature),
+            [secret](https://docs.xflowpay.com/2024-02-05/guide#determining-the-expected-signature),
             used to generate webhook signatures. In livemode, the secret is
             returned only as part of the create response and in testmode, the
             secret is always available on the object.
