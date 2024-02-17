@@ -2432,8 +2432,7 @@
                   "category": {
                     "description": "Xflow categorization of destination (for a store of value).",
                     "enum": [
-                      "user_payout",
-                      "xflow_receive"
+                      "user_payout"
                     ],
                     "type": "string"
                   },
@@ -2441,19 +2440,6 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "INR",
-                      "AED",
-                      "AUD",
-                      "CAD",
-                      "CHF",
-                      "CZK",
-                      "DKK",
-                      "EUR",
-                      "GBP",
-                      "HKD",
-                      "NOK",
-                      "PLN",
-                      "SEK",
-                      "SGD",
                       "USD"
                     ],
                     "type": "string"
@@ -2491,8 +2477,12 @@
                 },
                 "required": [
                   "account_id",
+                  "bank_account",
+                  "billing_details",
                   "category",
-                  "currency"
+                  "currency",
+                  "name",
+                  "type"
                 ],
                 "title": "CreateAddressRequest",
                 "type": "object"
@@ -8927,9 +8917,6 @@
             "name": "buy.currency",
             "required": true,
             "schema": {
-              "enum": [
-                "INR"
-              ],
               "type": "string"
             }
           },
@@ -12589,7 +12576,6 @@
               }
             },
             "title": "AddressBankAccount",
-            "nullable": true,
             "type": "object"
           },
           "billing_details": {
@@ -12629,7 +12615,6 @@
               }
             },
             "title": "AddressBillingDetails",
-            "nullable": true,
             "type": "object"
           },
           "category": {
@@ -12679,7 +12664,6 @@
           },
           "name": {
             "description": "Name on the destination (for a store of value).",
-            "nullable": true,
             "type": "string"
           },
           "object": {
@@ -12765,19 +12749,6 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
-                    "AED",
-                    "AUD",
-                    "CAD",
-                    "CHF",
-                    "CZK",
-                    "DKK",
-                    "EUR",
-                    "GBP",
-                    "HKD",
-                    "NOK",
-                    "PLN",
-                    "SEK",
-                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -12800,19 +12771,6 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
-                    "AED",
-                    "AUD",
-                    "CAD",
-                    "CHF",
-                    "CZK",
-                    "DKK",
-                    "EUR",
-                    "GBP",
-                    "HKD",
-                    "NOK",
-                    "PLN",
-                    "SEK",
-                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -12846,19 +12804,6 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
-                    "AED",
-                    "AUD",
-                    "CAD",
-                    "CHF",
-                    "CZK",
-                    "DKK",
-                    "EUR",
-                    "GBP",
-                    "HKD",
-                    "NOK",
-                    "PLN",
-                    "SEK",
-                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -12881,19 +12826,6 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
-                    "AED",
-                    "AUD",
-                    "CAD",
-                    "CHF",
-                    "CZK",
-                    "DKK",
-                    "EUR",
-                    "GBP",
-                    "HKD",
-                    "NOK",
-                    "PLN",
-                    "SEK",
-                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -12916,19 +12848,6 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
-                    "AED",
-                    "AUD",
-                    "CAD",
-                    "CHF",
-                    "CZK",
-                    "DKK",
-                    "EUR",
-                    "GBP",
-                    "HKD",
-                    "NOK",
-                    "PLN",
-                    "SEK",
-                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -13203,7 +13122,6 @@
                     "metadata_key_min_length_invalid",
                     "metadata_value_max_length_invalid",
                     "metadata_value_min_length_invalid",
-                    "multiple_xflow_receive_same_category_not_allowed",
                     "minimum_required_values_not_present",
                     "object_not_found",
                     "parameter_address_invalid",
@@ -13392,9 +13310,6 @@
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                "enum": [
-                  "INR"
-                ],
                 "type": "string"
               }
             },
@@ -13745,10 +13660,6 @@
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the currency.",
-                "enum": [
-                  "INR",
-                  "USD"
-                ],
                 "type": "string"
               }
             },
@@ -13986,9 +13897,6 @@
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
-                "enum": [
-                  "INR"
-                ],
                 "type": "string"
               }
             },
@@ -14337,13 +14245,11 @@
           "type": {
             "description": "Transfer type.",
             "enum": [
-              "fee_advance_transfer",
               "internal_transfer",
               "platform_credit",
               "platform_debit",
               "platform_fee_payout"
             ],
-            "nullable": false,
             "type": "string"
           },
           "user_declaration": {

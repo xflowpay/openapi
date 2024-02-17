@@ -2054,7 +2054,6 @@ paths:
                   description: Xflow categorization of destination (for a store of value).
                   enum:
                     - user_payout
-                    - xflow_receive
                   type: string
                 currency:
                   description: >-
@@ -2062,19 +2061,6 @@ paths:
                     3-digit code for the amount currency.
                   enum:
                     - INR
-                    - AED
-                    - AUD
-                    - CAD
-                    - CHF
-                    - CZK
-                    - DKK
-                    - EUR
-                    - GBP
-                    - HKD
-                    - NOK
-                    - PLN
-                    - SEK
-                    - SGD
                     - USD
                   type: string
                 metadata:
@@ -2114,8 +2100,12 @@ paths:
                   type: string
               required:
                 - account_id
+                - bank_account
+                - billing_details
                 - category
                 - currency
+                - name
+                - type
               title: CreateAddressRequest
               type: object
       responses:
@@ -6748,8 +6738,6 @@ paths:
           name: buy.currency
           required: true
           schema:
-            enum:
-              - INR
             type: string
         - description: Sell amount value.
           in: query
@@ -9550,7 +9538,6 @@ components:
               description: Unique bank account number.
               type: string
           title: AddressBankAccount
-          nullable: true
           type: object
         billing_details:
           description: Billing address.
@@ -9584,7 +9571,6 @@ components:
               nullable: true
               type: string
           title: AddressBillingDetails
-          nullable: true
           type: object
         category:
           description: Xflow categorization of destination (for a store of value).
@@ -9634,7 +9620,6 @@ components:
           type: object
         name:
           description: Name on the destination (for a store of value).
-          nullable: true
           type: string
         object:
           description: >-
@@ -9720,19 +9705,6 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
-                  - AED
-                  - AUD
-                  - CAD
-                  - CHF
-                  - CZK
-                  - DKK
-                  - EUR
-                  - GBP
-                  - HKD
-                  - NOK
-                  - PLN
-                  - SEK
-                  - SGD
                   - USD
                 type: string
             title: BalanceAvailable
@@ -9754,19 +9726,6 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
-                  - AED
-                  - AUD
-                  - CAD
-                  - CHF
-                  - CZK
-                  - DKK
-                  - EUR
-                  - GBP
-                  - HKD
-                  - NOK
-                  - PLN
-                  - SEK
-                  - SGD
                   - USD
                 type: string
             title: BalanceFeeAdvance
@@ -9797,19 +9756,6 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
-                  - AED
-                  - AUD
-                  - CAD
-                  - CHF
-                  - CZK
-                  - DKK
-                  - EUR
-                  - GBP
-                  - HKD
-                  - NOK
-                  - PLN
-                  - SEK
-                  - SGD
                   - USD
                 type: string
             title: BalancePayoutProcessing
@@ -9831,19 +9777,6 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
-                  - AED
-                  - AUD
-                  - CAD
-                  - CHF
-                  - CZK
-                  - DKK
-                  - EUR
-                  - GBP
-                  - HKD
-                  - NOK
-                  - PLN
-                  - SEK
-                  - SGD
                   - USD
                 type: string
             title: BalancePending
@@ -9866,19 +9799,6 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
-                  - AED
-                  - AUD
-                  - CAD
-                  - CHF
-                  - CZK
-                  - DKK
-                  - EUR
-                  - GBP
-                  - HKD
-                  - NOK
-                  - PLN
-                  - SEK
-                  - SGD
                   - USD
                 type: string
             title: BalanceProcessing
@@ -10167,7 +10087,6 @@ components:
                   - metadata_key_min_length_invalid
                   - metadata_value_max_length_invalid
                   - metadata_value_min_length_invalid
-                  - multiple_xflow_receive_same_category_not_allowed
                   - minimum_required_values_not_present
                   - object_not_found
                   - parameter_address_invalid
@@ -10358,8 +10277,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
-              enum:
-                - INR
               type: string
           title: ExchangeRateBuy
           type: object
@@ -10723,9 +10640,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the currency.
-              enum:
-                - INR
-                - USD
               type: string
           title: PaymentTo
           type: object
@@ -10972,8 +10886,6 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
-              enum:
-                - INR
               type: string
           title: QuoteBuy
           type: object
@@ -11340,12 +11252,10 @@ components:
         type:
           description: Transfer type.
           enum:
-            - fee_advance_transfer
             - internal_transfer
             - platform_credit
             - platform_debit
             - platform_fee_payout
-          nullable: false
           type: string
         user_declaration:
           description: >-
