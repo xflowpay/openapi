@@ -1479,6 +1479,46 @@ paths:
           required: false
           schema:
             type: boolean
+        - description: Indicates the default currency for a connected user.
+          in: query
+          name: address_currency.connected_user
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a connected user's partner.
+          in: query
+          name: address_currency.connected_user_partner
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a partner.
+          in: query
+          name: address_currency.partner
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a platform.
+          in: query
+          name: address_currency.platform
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a user.
+          in: query
+          name: address_currency.user
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
         - description: >-
             Return results where the `created` field is equal to the timestamp
             value in seconds elapsed since [Unix epoch
@@ -1724,6 +1764,46 @@ paths:
           required: false
           schema:
             type: boolean
+        - description: Indicates the default currency for a connected user.
+          in: query
+          name: address_currency.connected_user
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a connected user's partner.
+          in: query
+          name: address_currency.connected_user_partner
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a partner.
+          in: query
+          name: address_currency.partner
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a platform.
+          in: query
+          name: address_currency.platform
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Indicates the default currency for a user.
+          in: query
+          name: address_currency.user
+          required: false
+          schema:
+            items:
+              type: string
+            type: array
         - description: >-
             Return results where the `created` field is equal to the timestamp
             value in seconds elapsed since [Unix epoch
@@ -2026,6 +2106,41 @@ paths:
                         a partner.
                       type: boolean
                   title: UpdateAccountSettingRequestAddress
+                  type: object
+                address_currency:
+                  description: >-
+                    Default values for address of category `xflow_receive`
+                    availability for different types of accounts.
+                  properties:
+                    connected_user:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a connected user.
+                      items:
+                        type: string
+                      type: array
+                    connected_user_partner:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a connected user's partner.
+                      items:
+                        type: string
+                      type: array
+                    partner:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a partner.
+                      items:
+                        type: string
+                      type: array
+                    user:
+                      description: >-
+                        Indicates whether an address is available by default for
+                        a user.
+                      items:
+                        type: string
+                      type: array
+                  title: UpdateAccountSettingRequestAddressCurrency
                   type: object
                 metadata:
                   additionalProperties:
@@ -2451,6 +2566,7 @@ paths:
                   description: Xflow categorization of destination (for a store of value).
                   enum:
                     - user_payout
+                    - xflow_receive
                   type: string
                 currency:
                   description: >-
@@ -2458,6 +2574,19 @@ paths:
                     3-digit code for the amount currency.
                   enum:
                     - INR
+                    - AED
+                    - AUD
+                    - CAD
+                    - CHF
+                    - CZK
+                    - DKK
+                    - EUR
+                    - GBP
+                    - HKD
+                    - NOK
+                    - PLN
+                    - SEK
+                    - SGD
                     - USD
                   type: string
                 linked_id:
@@ -2508,14 +2637,10 @@ paths:
                     - bank_account
                   type: string
               required:
-                - bank_account
-                - billing_details
                 - category
                 - currency
                 - linked_id
                 - linked_object
-                - name
-                - type
               title: CreateAddressRequest
               type: object
       responses:
@@ -3493,8 +3618,19 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - AED
+                    - AUD
+                    - CAD
+                    - CHF
+                    - CZK
+                    - DKK
                     - EUR
                     - GBP
+                    - HKD
+                    - NOK
+                    - PLN
+                    - SEK
+                    - SGD
                     - USD
                   type: string
                 from:
@@ -7892,6 +8028,8 @@ paths:
           name: buy.currency
           required: true
           schema:
+            enum:
+              - INR
             type: string
         - description: Sell amount value.
           in: query
@@ -8201,8 +8339,19 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - AED
+                    - AUD
+                    - CAD
+                    - CHF
+                    - CZK
+                    - DKK
                     - EUR
                     - GBP
+                    - HKD
+                    - NOK
+                    - PLN
+                    - SEK
+                    - SGD
                     - USD
                   type: string
                 description:
@@ -8442,8 +8591,19 @@ paths:
                     The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                     3-digit code for the amount currency.
                   enum:
+                    - AED
+                    - AUD
+                    - CAD
+                    - CHF
+                    - CZK
+                    - DKK
                     - EUR
                     - GBP
+                    - HKD
+                    - NOK
+                    - PLN
+                    - SEK
+                    - SGD
                     - USD
                   type: string
                 description:
@@ -9065,8 +9225,19 @@ paths:
                         The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                         3-digit code for the amount currency.
                       enum:
+                        - AED
+                        - AUD
+                        - CAD
+                        - CHF
+                        - CZK
+                        - DKK
                         - EUR
                         - GBP
+                        - HKD
+                        - NOK
+                        - PLN
+                        - SEK
+                        - SGD
                         - USD
                       type: string
                   required:
@@ -9101,8 +9272,19 @@ paths:
                         The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
                         3-digit code for the amount currency.
                       enum:
+                        - AED
+                        - AUD
+                        - CAD
+                        - CHF
+                        - CZK
+                        - DKK
                         - EUR
                         - GBP
+                        - HKD
+                        - NOK
+                        - PLN
+                        - SEK
+                        - SGD
                         - USD
                       type: string
                   required:
@@ -10441,6 +10623,47 @@ components:
           title: AccountSettingAddress
           nullable: true
           type: object
+        address_currency:
+          description: >-
+            Default values for the currency for address of category
+            `xflow_receive` for different types of accounts.
+          properties:
+            connected_user:
+              description: >-
+                Indicates the default currency for a connected user. This is set
+                to `null` for a connected user and a direct user AccountSetting.
+              items:
+                type: string
+              type: array
+            connected_user_partner:
+              description: >-
+                Indicates the default currency for a connected user's partner.
+                This is set to `null` for a direct user AccountSetting.
+              items:
+                type: string
+              type: array
+            partner:
+              description: Indicates the default currency for a partner.
+              items:
+                type: string
+              type: array
+            platform:
+              description: >-
+                Indicates the default currency for a platform. This is set to
+                `null` for a connected user and a direct user AccountSetting.
+              items:
+                type: string
+              type: array
+            user:
+              description: >-
+                Indicates the default currency for a user. This is set to `null`
+                for a platform AccountSetting.
+              items:
+                type: string
+              type: array
+          title: AccountSettingAddressCurrency
+          nullable: true
+          type: object
         created:
           description: >-
             The seconds elapsed since [Unix epoch
@@ -10642,6 +10865,19 @@ components:
             for the amount currency.
           enum:
             - INR
+            - AED
+            - AUD
+            - CAD
+            - CHF
+            - CZK
+            - DKK
+            - EUR
+            - GBP
+            - HKD
+            - NOK
+            - PLN
+            - SEK
+            - SGD
             - USD
           type: string
         id:
@@ -10764,8 +11000,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
                   - EUR
                   - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalanceAvailable
@@ -10787,8 +11034,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
                   - EUR
                   - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalanceFeeAdvance
@@ -10819,8 +11077,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
                   - EUR
                   - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalancePayoutProcessing
@@ -10842,8 +11111,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
                   - EUR
                   - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalancePending
@@ -10866,8 +11146,19 @@ components:
                   The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                   code for the amount currency.
                 enum:
+                  - AED
+                  - AUD
+                  - CAD
+                  - CHF
+                  - CZK
+                  - DKK
                   - EUR
                   - GBP
+                  - HKD
+                  - NOK
+                  - PLN
+                  - SEK
+                  - SGD
                   - USD
                 type: string
             title: BalanceProcessing
@@ -10907,8 +11198,19 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - AED
+            - AUD
+            - CAD
+            - CHF
+            - CZK
+            - DKK
             - EUR
             - GBP
+            - HKD
+            - NOK
+            - PLN
+            - SEK
+            - SGD
             - USD
           type: string
         id:
@@ -10955,8 +11257,19 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - AED
+            - AUD
+            - CAD
+            - CHF
+            - CZK
+            - DKK
             - EUR
             - GBP
+            - HKD
+            - NOK
+            - PLN
+            - SEK
+            - SGD
             - USD
           type: string
         from:
@@ -11160,6 +11473,7 @@ components:
                   - metadata_key_min_length_invalid
                   - metadata_value_max_length_invalid
                   - metadata_value_min_length_invalid
+                  - multiple_xflow_receive_same_category_not_allowed
                   - minimum_required_values_not_present
                   - object_not_found
                   - parameter_address_invalid
@@ -11350,6 +11664,8 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
+              enum:
+                - INR
               type: string
           title: ExchangeRateBuy
           type: object
@@ -12179,6 +12495,8 @@ components:
               description: >-
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
+              enum:
+                - INR
               type: string
           title: QuoteBuy
           type: object
@@ -12308,8 +12626,19 @@ components:
             The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code
             for the amount currency.
           enum:
+            - AED
+            - AUD
+            - CAD
+            - CHF
+            - CZK
+            - DKK
             - EUR
             - GBP
+            - HKD
+            - NOK
+            - PLN
+            - SEK
+            - SGD
             - USD
           nullable: true
           type: string
@@ -12470,8 +12799,19 @@ components:
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
               enum:
+                - AED
+                - AUD
+                - CAD
+                - CHF
+                - CZK
+                - DKK
                 - EUR
                 - GBP
+                - HKD
+                - NOK
+                - PLN
+                - SEK
+                - SGD
                 - USD
               type: string
           title: TransferFrom
@@ -12531,8 +12871,19 @@ components:
                 The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
                 code for the amount currency.
               enum:
+                - AED
+                - AUD
+                - CAD
+                - CHF
+                - CZK
+                - DKK
                 - EUR
                 - GBP
+                - HKD
+                - NOK
+                - PLN
+                - SEK
+                - SGD
                 - USD
               type: string
           title: TransferTo

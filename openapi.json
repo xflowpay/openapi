@@ -1882,6 +1882,66 @@
             }
           },
           {
+            "description": "Indicates the default currency for a connected user.",
+            "in": "query",
+            "name": "address_currency.connected_user",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a connected user's partner.",
+            "in": "query",
+            "name": "address_currency.connected_user_partner",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a partner.",
+            "in": "query",
+            "name": "address_currency.partner",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a platform.",
+            "in": "query",
+            "name": "address_currency.platform",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a user.",
+            "in": "query",
+            "name": "address_currency.user",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
             "description": "Return results where the `created` field is equal to the timestamp value in seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).",
             "in": "query",
             "name": "created.eq",
@@ -2182,6 +2242,66 @@
             "required": false,
             "schema": {
               "type": "boolean"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a connected user.",
+            "in": "query",
+            "name": "address_currency.connected_user",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a connected user's partner.",
+            "in": "query",
+            "name": "address_currency.connected_user_partner",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a partner.",
+            "in": "query",
+            "name": "address_currency.partner",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a platform.",
+            "in": "query",
+            "name": "address_currency.platform",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "Indicates the default currency for a user.",
+            "in": "query",
+            "name": "address_currency.user",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
             }
           },
           {
@@ -2578,6 +2698,41 @@
                       }
                     },
                     "title": "UpdateAccountSettingRequestAddress",
+                    "type": "object"
+                  },
+                  "address_currency": {
+                    "description": "Default values for address of category `xflow_receive` availability for different types of accounts.",
+                    "properties": {
+                      "connected_user": {
+                        "description": "Indicates whether an address is available by default for a connected user.",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "connected_user_partner": {
+                        "description": "Indicates whether an address is available by default for a connected user's partner.",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "partner": {
+                        "description": "Indicates whether an address is available by default for a partner.",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "user": {
+                        "description": "Indicates whether an address is available by default for a user.",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "title": "UpdateAccountSettingRequestAddressCurrency",
                     "type": "object"
                   },
                   "metadata": {
@@ -3120,7 +3275,8 @@
                   "category": {
                     "description": "Xflow categorization of destination (for a store of value).",
                     "enum": [
-                      "user_payout"
+                      "user_payout",
+                      "xflow_receive"
                     ],
                     "type": "string"
                   },
@@ -3128,6 +3284,19 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "INR",
+                      "AED",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CZK",
+                      "DKK",
+                      "EUR",
+                      "GBP",
+                      "HKD",
+                      "NOK",
+                      "PLN",
+                      "SEK",
+                      "SGD",
                       "USD"
                     ],
                     "type": "string"
@@ -3175,14 +3344,10 @@
                   }
                 },
                 "required": [
-                  "bank_account",
-                  "billing_details",
                   "category",
                   "currency",
                   "linked_id",
-                  "linked_object",
-                  "name",
-                  "type"
+                  "linked_object"
                 ],
                 "title": "CreateAddressRequest",
                 "type": "object"
@@ -4539,9 +4704,20 @@
                   "currency": {
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
+                      "AED",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CZK",
+                      "DKK",
                       "EUR",
                       "GBP",
-                      "USD"        
+                      "HKD",
+                      "NOK",
+                      "PLN",
+                      "SEK",
+                      "SGD",
+                      "USD"
                     ],
                     "type": "string"
                   },
@@ -10546,6 +10722,9 @@
             "name": "buy.currency",
             "required": true,
             "schema": {
+              "enum": [
+                "INR"
+              ],
               "type": "string"
             }
           },
@@ -10956,9 +11135,20 @@
                   "currency": {
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
+                      "AED",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CZK",
+                      "DKK",
                       "EUR",
                       "GBP",
-                      "USD"        
+                      "HKD",
+                      "NOK",
+                      "PLN",
+                      "SEK",
+                      "SGD",
+                      "USD"
                     ],
                     "type": "string"
                   },
@@ -11293,9 +11483,20 @@
                   "currency": {
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
+                      "AED",
+                      "AUD",
+                      "CAD",
+                      "CHF",
+                      "CZK",
+                      "DKK",
                       "EUR",
                       "GBP",
-                      "USD"        
+                      "HKD",
+                      "NOK",
+                      "PLN",
+                      "SEK",
+                      "SGD",
+                      "USD"
                     ],
                     "type": "string"
                   },
@@ -12150,9 +12351,20 @@
                       "currency": {
                         "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                         "enum": [
+                          "AED",
+                          "AUD",
+                          "CAD",
+                          "CHF",
+                          "CZK",
+                          "DKK",
                           "EUR",
                           "GBP",
-                          "USD"        
+                          "HKD",
+                          "NOK",
+                          "PLN",
+                          "SEK",
+                          "SGD",
+                          "USD"
                         ],
                         "type": "string"
                       }    
@@ -12181,9 +12393,20 @@
                       "currency": {
                         "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                         "enum": [
+                          "AED",
+                          "AUD",
+                          "CAD",
+                          "CHF",
+                          "CZK",
+                          "DKK",
                           "EUR",
                           "GBP",
-                          "USD"        
+                          "HKD",
+                          "NOK",
+                          "PLN",
+                          "SEK",
+                          "SGD",
+                          "USD"
                         ],
                         "type": "string"
                       }
@@ -13928,6 +14151,49 @@
             "nullable": true,
             "type": "object"
           },
+          "address_currency": {
+            "description": "Default values for the currency for address of category `xflow_receive` for different types of accounts.",
+            "properties": {
+              "connected_user": {
+                "description": "Indicates the default currency for a connected user. This is set to `null` for a connected user and a direct user AccountSetting.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "connected_user_partner": {
+                "description": "Indicates the default currency for a connected user's partner. This is set to `null` for a direct user AccountSetting.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "partner": {
+                "description": "Indicates the default currency for a partner.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "platform": {
+                "description": "Indicates the default currency for a platform. This is set to `null` for a connected user and a direct user AccountSetting.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "user": {
+                "description": "Indicates the default currency for a user. This is set to `null` for a platform AccountSetting.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "title": "AccountSettingAddressCurrency",
+            "nullable": true,
+            "type": "object"
+          },
           "created": {
             "description": "The seconds elapsed since [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) at which the account was created.",
             "format": "unix-time",
@@ -14119,6 +14385,19 @@
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
               "INR",
+              "AED",
+              "AUD",
+              "CAD",
+              "CHF",
+              "CZK",
+              "DKK",
+              "EUR",
+              "GBP",
+              "HKD",
+              "NOK",
+              "PLN",
+              "SEK",
+              "SGD",
               "USD"
             ],
             "type": "string"
@@ -14243,8 +14522,19 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
+                    "AED",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CZK",
+                    "DKK",
                     "EUR",
                     "GBP",
+                    "HKD",
+                    "NOK",
+                    "PLN",
+                    "SEK",
+                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -14267,8 +14557,19 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
+                    "AED",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CZK",
+                    "DKK",
                     "EUR",
                     "GBP",
+                    "HKD",
+                    "NOK",
+                    "PLN",
+                    "SEK",
+                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -14302,8 +14603,19 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
+                    "AED",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CZK",
+                    "DKK",
                     "EUR",
                     "GBP",
+                    "HKD",
+                    "NOK",
+                    "PLN",
+                    "SEK",
+                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -14326,8 +14638,19 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
+                    "AED",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CZK",
+                    "DKK",
                     "EUR",
                     "GBP",
+                    "HKD",
+                    "NOK",
+                    "PLN",
+                    "SEK",
+                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -14350,8 +14673,19 @@
                 "currency": {
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
+                    "AED",
+                    "AUD",
+                    "CAD",
+                    "CHF",
+                    "CZK",
+                    "DKK",
                     "EUR",
                     "GBP",
+                    "HKD",
+                    "NOK",
+                    "PLN",
+                    "SEK",
+                    "SGD",
                     "USD"
                   ],
                   "type": "string"
@@ -14392,8 +14726,19 @@
           "currency": {
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
+              "AED",
+              "AUD",
+              "CAD",
+              "CHF",
+              "CZK",
+              "DKK",
               "EUR",
               "GBP",
+              "HKD",
+              "NOK",
+              "PLN",
+              "SEK",
+              "SGD",
               "USD"
             ],
             "type": "string"
@@ -14436,8 +14781,19 @@
           "currency": {
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
+              "AED",
+              "AUD",
+              "CAD",
+              "CHF",
+              "CZK",
+              "DKK",
               "EUR",
               "GBP",
+              "HKD",
+              "NOK",
+              "PLN",
+              "SEK",
+              "SGD",
               "USD"
             ],
             "type": "string"
@@ -14630,6 +14986,7 @@
                     "metadata_key_min_length_invalid",
                     "metadata_value_max_length_invalid",
                     "metadata_value_min_length_invalid",
+                    "multiple_xflow_receive_same_category_not_allowed",
                     "minimum_required_values_not_present",
                     "object_not_found",
                     "parameter_address_invalid",
@@ -14818,6 +15175,9 @@
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
+                "enum": [
+                  "INR"
+                ],
                 "type": "string"
               }
             },
@@ -15623,6 +15983,9 @@
               },
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
+                "enum": [
+                  "INR"
+                ],
                 "type": "string"
               }
             },
@@ -15735,8 +16098,19 @@
           "currency": {
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
+              "AED",
+              "AUD",
+              "CAD",
+              "CHF",
+              "CZK",
+              "DKK",
               "EUR",
               "GBP",
+              "HKD",
+              "NOK",
+              "PLN",
+              "SEK",
+              "SGD",
               "USD"
             ],
             "nullable": true,
@@ -15899,9 +16273,20 @@
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                 "enum": [
+                  "AED",
+                  "AUD",
+                  "CAD",
+                  "CHF",
+                  "CZK",
+                  "DKK",
                   "EUR",
                   "GBP",
-                  "USD"    
+                  "HKD",
+                  "NOK",
+                  "PLN",
+                  "SEK",
+                  "SGD",
+                  "USD"
                 ],
                 "type": "string"
               }
@@ -15958,9 +16343,20 @@
               "currency": {
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                 "enum": [
+                  "AED",
+                  "AUD",
+                  "CAD",
+                  "CHF",
+                  "CZK",
+                  "DKK",
                   "EUR",
                   "GBP",
-                  "USD"    
+                  "HKD",
+                  "NOK",
+                  "PLN",
+                  "SEK",
+                  "SGD",
+                  "USD"
                 ],
                 "type": "string"
               }
