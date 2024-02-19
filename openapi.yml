@@ -1479,46 +1479,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - description: Indicates the default currency for a connected user.
-          in: query
-          name: address_currency.connected_user
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a connected user's partner.
-          in: query
-          name: address_currency.connected_user_partner
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a partner.
-          in: query
-          name: address_currency.partner
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a platform.
-          in: query
-          name: address_currency.platform
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a user.
-          in: query
-          name: address_currency.user
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
         - description: >-
             Return results where the `created` field is equal to the timestamp
             value in seconds elapsed since [Unix epoch
@@ -1764,46 +1724,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - description: Indicates the default currency for a connected user.
-          in: query
-          name: address_currency.connected_user
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a connected user's partner.
-          in: query
-          name: address_currency.connected_user_partner
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a partner.
-          in: query
-          name: address_currency.partner
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a platform.
-          in: query
-          name: address_currency.platform
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
-        - description: Indicates the default currency for a user.
-          in: query
-          name: address_currency.user
-          required: false
-          schema:
-            items:
-              type: string
-            type: array
         - description: >-
             Return results where the `created` field is equal to the timestamp
             value in seconds elapsed since [Unix epoch
