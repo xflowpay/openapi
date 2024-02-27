@@ -3165,8 +3165,7 @@
                     "enum": [
                       "INR",
                       "AED",
-                      "AUD",
-                      "CAD",
+                      "AUD",                      
                       "CHF",
                       "CZK",
                       "DKK",
@@ -4585,8 +4584,7 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "AED",
-                      "AUD",
-                      "CAD",
+                      "AUD",                      
                       "CHF",
                       "CZK",
                       "DKK",
@@ -11016,8 +11014,7 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "AED",
-                      "AUD",
-                      "CAD",
+                      "AUD",                      
                       "CHF",
                       "CZK",
                       "DKK",
@@ -11364,8 +11361,7 @@
                     "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                     "enum": [
                       "AED",
-                      "AUD",
-                      "CAD",
+                      "AUD",                      
                       "CHF",
                       "CZK",
                       "DKK",
@@ -12232,8 +12228,7 @@
                         "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                         "enum": [
                           "AED",
-                          "AUD",
-                          "CAD",
+                          "AUD",                          
                           "CHF",
                           "CZK",
                           "DKK",
@@ -12274,8 +12269,7 @@
                         "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                         "enum": [
                           "AED",
-                          "AUD",
-                          "CAD",
+                          "AUD",                          
                           "CHF",
                           "CZK",
                           "DKK",
@@ -14266,8 +14260,7 @@
             "enum": [
               "INR",
               "AED",
-              "AUD",
-              "CAD",
+              "AUD",              
               "CHF",
               "CZK",
               "DKK",
@@ -14403,8 +14396,7 @@
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
                     "AED",
-                    "AUD",
-                    "CAD",
+                    "AUD",                    
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14438,8 +14430,7 @@
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
                     "AED",
-                    "AUD",
-                    "CAD",
+                    "AUD",                    
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14484,8 +14475,7 @@
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
                     "AED",
-                    "AUD",
-                    "CAD",
+                    "AUD",                    
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14519,8 +14509,7 @@
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
                     "AED",
-                    "AUD",
-                    "CAD",
+                    "AUD",                    
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14554,8 +14543,7 @@
                   "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                   "enum": [
                     "AED",
-                    "AUD",
-                    "CAD",
+                    "AUD",                    
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14607,8 +14595,7 @@
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
               "AED",
-              "AUD",
-              "CAD",
+              "AUD",              
               "CHF",
               "CZK",
               "DKK",
@@ -14662,8 +14649,7 @@
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
               "AED",
-              "AUD",
-              "CAD",
+              "AUD",              
               "CHF",
               "CZK",
               "DKK",
@@ -15979,8 +15965,7 @@
             "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
             "enum": [
               "AED",
-              "AUD",
-              "CAD",
+              "AUD",              
               "CHF",
               "CZK",
               "DKK",
@@ -16154,8 +16139,7 @@
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                 "enum": [
                   "AED",
-                  "AUD",
-                  "CAD",
+                  "AUD",                  
                   "CHF",
                   "CZK",
                   "DKK",
@@ -16224,8 +16208,7 @@
                 "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the amount currency.",
                 "enum": [
                   "AED",
-                  "AUD",
-                  "CAD",
+                  "AUD",                  
                   "CHF",
                   "CZK",
                   "DKK",
