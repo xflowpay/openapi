@@ -3166,6 +3166,7 @@
                       "INR",
                       "AED",
                       "AUD",
+                      "CAD",
                       "CHF",
                       "CZK",
                       "DKK",
@@ -4585,6 +4586,7 @@
                     "enum": [
                       "AED",
                       "AUD",
+                      "CAD",
                       "CHF",
                       "CZK",
                       "DKK",
@@ -11015,6 +11017,7 @@
                     "enum": [
                       "AED",
                       "AUD",
+                      "CAD",
                       "CHF",
                       "CZK",
                       "DKK",
@@ -11362,6 +11365,7 @@
                     "enum": [
                       "AED",
                       "AUD",
+                      "CAD",
                       "CHF",
                       "CZK",
                       "DKK",
@@ -12229,6 +12233,7 @@
                         "enum": [
                           "AED",
                           "AUD",
+                          "CAD",
                           "CHF",
                           "CZK",
                           "DKK",
@@ -12270,6 +12275,7 @@
                         "enum": [
                           "AED",
                           "AUD",
+                          "CAD",
                           "CHF",
                           "CZK",
                           "DKK",
@@ -14261,6 +14267,7 @@
               "INR",
               "AED",
               "AUD",
+              "CAD",
               "CHF",
               "CZK",
               "DKK",
@@ -14397,6 +14404,7 @@
                   "enum": [
                     "AED",
                     "AUD",
+                    "CAD",
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14431,6 +14439,7 @@
                   "enum": [
                     "AED",
                     "AUD",
+                    "CAD",
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14476,6 +14485,7 @@
                   "enum": [
                     "AED",
                     "AUD",
+                    "CAD",
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14510,6 +14520,7 @@
                   "enum": [
                     "AED",
                     "AUD",
+                    "CAD",
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14544,6 +14555,7 @@
                   "enum": [
                     "AED",
                     "AUD",
+                    "CAD",
                     "CHF",
                     "CZK",
                     "DKK",
@@ -14596,6 +14608,7 @@
             "enum": [
               "AED",
               "AUD",
+              "CAD",
               "CHF",
               "CZK",
               "DKK",
@@ -14650,6 +14663,7 @@
             "enum": [
               "AED",
               "AUD",
+              "CAD",
               "CHF",
               "CZK",
               "DKK",
@@ -15967,6 +15981,7 @@
             "enum": [
               "AED",
               "AUD",
+              "CAD",
               "CHF",
               "CZK",
               "DKK",
@@ -16141,6 +16156,7 @@
                 "enum": [
                   "AED",
                   "AUD",
+                  "CAD",
                   "CHF",
                   "CZK",
                   "DKK",
@@ -16210,6 +16226,7 @@
                 "enum": [
                   "AED",
                   "AUD",
+                  "CAD",
                   "CHF",
                   "CZK",
                   "DKK",

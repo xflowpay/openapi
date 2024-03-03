@@ -2496,6 +2496,7 @@ paths:
                     - INR
                     - AED
                     - AUD
+                    - CAD
                     - CHF
                     - CZK
                     - DKK
@@ -3539,6 +3540,7 @@ paths:
                   enum:
                     - AED
                     - AUD
+                    - CAD
                     - CHF
                     - CZK
                     - DKK
@@ -8259,6 +8261,7 @@ paths:
                   enum:
                     - AED
                     - AUD
+                    - CAD
                     - CHF
                     - CZK
                     - DKK
@@ -8510,6 +8513,7 @@ paths:
                   enum:
                     - AED
                     - AUD
+                    - CAD
                     - CHF
                     - CZK
                     - DKK
@@ -9143,6 +9147,7 @@ paths:
                       enum:
                         - AED
                         - AUD
+                        - CAD
                         - CHF
                         - CZK
                         - DKK
@@ -9189,6 +9194,7 @@ paths:
                       enum:
                         - AED
                         - AUD
+                        - CAD
                         - CHF
                         - CZK
                         - DKK
@@ -10781,6 +10787,7 @@ components:
             - INR
             - AED
             - AUD
+            - CAD
             - CHF
             - CZK
             - DKK
@@ -10915,6 +10922,7 @@ components:
                 enum:
                   - AED
                   - AUD
+                  - CAD
                   - CHF
                   - CZK
                   - DKK
@@ -10948,6 +10956,7 @@ components:
                 enum:
                   - AED
                   - AUD
+                  - CAD
                   - CHF
                   - CZK
                   - DKK
@@ -10990,6 +10999,7 @@ components:
                 enum:
                   - AED
                   - AUD
+                  - CAD
                   - CHF
                   - CZK
                   - DKK
@@ -11023,6 +11033,7 @@ components:
                 enum:
                   - AED
                   - AUD
+                  - CAD
                   - CHF
                   - CZK
                   - DKK
@@ -11057,6 +11068,7 @@ components:
                 enum:
                   - AED
                   - AUD
+                  - CAD
                   - CHF
                   - CZK
                   - DKK
@@ -11108,6 +11120,7 @@ components:
           enum:
             - AED
             - AUD
+            - CAD
             - CHF
             - CZK
             - DKK
@@ -11166,6 +11179,7 @@ components:
           enum:
             - AED
             - AUD
+            - CAD
             - CHF
             - CZK
             - DKK
@@ -12533,6 +12547,7 @@ components:
           enum:
             - AED
             - AUD
+            - CAD
             - CHF
             - CZK
             - DKK
@@ -12705,6 +12720,7 @@ components:
               enum:
                 - AED
                 - AUD
+                - CAD
                 - CHF
                 - CZK
                 - DKK
@@ -12776,6 +12792,7 @@ components:
               enum:
                 - AED
                 - AUD
+                - CAD
                 - CHF
                 - CZK
                 - DKK
