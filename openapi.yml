@@ -9011,7 +9011,7 @@ paths:
             type: array
         - description: Valid types of transfers.
           in: query
-          name: status
+          name: type
           required: false
           schema:
             items:
