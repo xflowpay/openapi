@@ -15696,9 +15696,12 @@
             "type": "string"
           },
           "payment_method": {
-            "description": "This is set to `domestic_credit` which specifies that funds are transferred using local ACH credit.",
+            "description": "Payment method via which funds were deposited.",
             "enum": [
-              "domestic_credit"
+              "domestic_credit",
+              "domestic_fast_credit",
+              "domestic_wire",
+              "global_wire"
             ],
             "type": "string"
           },
