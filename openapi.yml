@@ -11422,9 +11422,7 @@ components:
                   - receivable_invoice_transaction_type_incorrect
                   - receivable_parameter_not_editable
                   - receivable_partner_country_invoice_partner_country_mismatch
-                  - receivable_partner_deactivated
                   - receivable_partner_invoice_partner_mismatch
-                  - receivable_partner_not_active
                   - receivable_reconcile_action_disallowed
                   - receivable_reconcile_amount_exceed
                   - >-
@@ -12243,8 +12241,7 @@ components:
             - payout
           type: string
         payment_method:
-          description: >-
-            Payment method via which funds were deposited.
+          description: Payment method via which funds were deposited.
           enum:
             - domestic_credit
             - domestic_fast_credit
