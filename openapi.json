@@ -302,6 +302,10 @@
                   "business_details": {
                     "description": "Details about the business and activities that the account engages in.",
                     "properties": {
+                      "date_of_incorporation": {
+                        "description": "The date (YYYY-MM-DD) on which the business was incorporated.",
+                        "type": "string"
+                      },
                       "dba": {
                         "description": "Doing Business As, this is a 16 character customer-facing business name. Special characters like <, >, ', or \" are not allowed.",
                         "type": "string"
@@ -341,6 +345,19 @@
                       "legal_name": {
                         "description": "Unique name as per official documents.",
                         "type": "string"
+                      },
+                      "merchant_category_code": {
+                        "description": "Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.",
+                        "type": "string"
+                      },
+                      "merchant_size": {
+                        "description": "Merchant classification based on the annual turnover. The valid values include `small`, `medium` or `large`",
+                        "type": "string",
+                        "enum":[
+                          "small",
+                          "medium",
+                          "large"
+                        ]
                       },
                       "physical_address": {
                         "description": "Details about the physical address.",
@@ -536,6 +553,15 @@
                         ],
                         "title": "CreateAccountRequestBusinessDetailsPhysicalAddress",
                         "type": "object"
+                      },
+                      "product_category": {
+                        "description": "Category of the account's business activities.",
+                        "enum": [
+                          "goods",
+                          "services",
+                          "software"
+                        ],
+                        "type": "string"
                       },
                       "product_description": {
                         "description": "Description of the account’s business activities.",
@@ -891,6 +917,10 @@
                   "business_details": {
                     "description": "Details about the business and activities that the account engages in.",
                     "properties": {
+                      "date_of_incorporation": {
+                        "description": "The date (YYYY-MM-DD) on which the business was incorporated.",
+                        "type": "string"
+                      },
                       "dba": {
                         "description": "Doing Business As, this is a 16 character customer-facing business name. Special characters like <, >, ', or \" are not allowed.",
                         "type": "string"
@@ -930,6 +960,19 @@
                       "legal_name": {
                         "description": "Unique name as per official documents.",
                         "type": "string"
+                      },
+                      "merchant_category_code": {
+                        "description": "Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.",
+                        "type": "string"
+                      },
+                      "merchant_size": {
+                        "description": "Merchant classification based on the annual turnover. The valid values include `small`, `medium` or `large`",
+                        "type": "string",
+                        "enum":[
+                          "small",
+                          "medium",
+                          "large"
+                        ]
                       },
                       "physical_address": {
                         "description": "Details about the physical address.",
@@ -1122,6 +1165,15 @@
                         },
                         "title": "UpdateAccountRequestBusinessDetailsPhysicalAddress",
                         "type": "object"
+                      },
+                      "product_category": {
+                        "description": "Category of the account's business activities.",
+                        "enum": [
+                          "goods",
+                          "services",
+                          "software"
+                        ],
+                        "type": "string"
                       },
                       "product_description": {
                         "description": "Description of the account’s business activities.",
@@ -2856,6 +2908,10 @@
                   "bank_account": {
                     "description": "Bank account details.",
                     "properties": {
+                      "bank_name": {
+                        "description": "Name of the bank where the account is opened.",
+                        "type": "string"
+                      },
                       "domestic_credit": {
                         "description": "Represents the prefix associated with the bank account for a local ACH credit.",
                         "type": "string"
@@ -2922,6 +2978,7 @@
                       "EUR",
                       "GBP",
                       "HKD",
+                      "INR",
                       "NOK",
                       "PLN",
                       "SEK",
@@ -4341,6 +4398,7 @@
                       "EUR",
                       "GBP",
                       "HKD",
+                      "INR",
                       "NOK",
                       "PLN",
                       "SEK",
@@ -6050,6 +6108,36 @@
                     },
                     "type": "array"
                   },
+                  "receivable_reconcile": {
+                    "description": "Receivable reconcile fee details.",
+                    "items": {
+                      "properties": {
+                        "destination_currency": {
+                          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the destination amount currency. The character * is a wildcard and can be used to represent all supported currencies.",
+                          "type": "string"
+                        },
+                        "fixed": {
+                          "description": "Fixed payout fee amount.",
+                          "type": "string"
+                        },
+                        "minimum": {
+                          "description": "Minimum payout fee amount.",
+                          "type": "string"
+                        },
+                        "source_currency": {
+                          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the source amount currency. The character * is a wildcard and can be used to represent all supported currencies.",
+                          "type": "string"
+                        },
+                        "variable": {
+                          "description": "This is the percentage value that is used to calculate the fee.",
+                          "type": "string"
+                        }
+                      },
+                      "title": "CreateFeePlanReceivableReconcile",
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
                   "payout_fx": {
                     "description": "Payout FX fee details.",
                     "items": {
@@ -6597,7 +6685,8 @@
                   "identity_document",
                   "logo",
                   "payout_confirmation",
-                  "tax_document"
+                  "tax_document",
+                  "transactional_document"
                 ],
                 "type": "string"
               },
@@ -6785,7 +6874,8 @@
                           "identity_document",
                           "logo",
                           "payout_confirmation",
-                          "tax_document"
+                          "tax_document",
+                          "transactional_document"
                         ],
                         "type": "string"
                       }
@@ -8679,6 +8769,7 @@
                 "enum": [
                   "adjustment_negative",
                   "adjustment_positive",
+                  "deposit_reversal",
                   "fee_advance_debit",
                   "funds_credit",
                   "funds_debit",
@@ -8690,7 +8781,8 @@
                   "processing_fee",
                   "reconcile",
                   "reconcile_paypal",
-                  "transfer"
+                  "transfer",
+                  "unfunds_debit"
                 ],
                 "type": "string"
               },
@@ -10771,6 +10863,7 @@
                       "EUR",
                       "GBP",
                       "HKD",
+                      "INR",
                       "NOK",
                       "PLN",
                       "SEK",
@@ -10781,6 +10874,10 @@
                   },
                   "description": {
                     "description": "Represents an array of deposit objects due to which amount is locked.",
+                    "type": "string"
+                  },
+                  "hsn_code": {
+                    "description": "Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.",
                     "type": "string"
                   },
                   "invoice": {
@@ -10830,6 +10927,35 @@
                     "description": "Description of the purpose code.",
                     "type": "string"
                   },
+                  "documents": {
+                    "description": "Supporting documents like shipping, tax, or customs documents.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "file_id": {
+                          "description": "A file object identifier which references a document that validates the transaction made via the receivable.",
+                          "type": "string"
+                        },
+                        "id": {
+                          "description": "Internal id associated with the document submission.",
+                          "type": "string"
+                        },
+                        "reconcile_id": {
+                          "description": "Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.",
+                          "type": "string"
+                        },
+                        "status": {
+                          "description": "Status of the document. The supported values are `returned` and `submitted`.",
+                          "type": "string"
+                        },
+                        "type": {
+                          "description": "Type of the document. The supported values are `shipping` and `customs`.",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },   
                   "transaction_type": {
                     "description": "Receivable transaction type.",
                     "enum": [
@@ -11118,6 +11244,7 @@
                       "EUR",
                       "GBP",
                       "HKD",
+                      "INR",
                       "NOK",
                       "PLN",
                       "SEK",
@@ -11128,6 +11255,10 @@
                   },
                   "description": {
                     "description": "Represents an array of deposit objects due to which amount is locked.",
+                    "type": "string"
+                  },
+                  "hsn_code": {
+                    "description": "Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.",
                     "type": "string"
                   },
                   "invoice": {
@@ -11185,6 +11316,35 @@
                       "software"
                     ],
                     "type": "string"
+                  },
+                  "documents": {
+                    "description": "Supporting documents like shipping, tax, or customs documents.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "file_id": {
+                          "description": "A file object identifier which references a document that validates the transaction made via the receivable.",
+                          "type": "string"
+                        },
+                        "id": {
+                          "description": "Internal id associated with the document submission.",
+                          "type": "string"
+                        },
+                        "reconcile_id": {
+                          "description": "Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.",
+                          "type": "string"
+                        },
+                        "status": {
+                          "description": "Status of the document. The supported values are `returned` and `submitted`.",
+                          "type": "string"
+                        },
+                        "type": {
+                          "description": "Type of the document. The supported values are `shipping` and `customs`.",
+                          "type": "string"
+                        }
+                      }
+                    }
                   }
                 },
                 "title": "UpdateReceivableRequest",
@@ -11764,6 +11924,15 @@
             }
           },
           {
+            "description": "Unique identifier of the object associated with this Transfer.",
+            "in": "query",
+            "name": "linked_id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "description": "A cursor for use in pagination. `starting_after` is an object identifier that defines your place in the list. For instance, if you make a list request and receive 5 objects, ending with `obj_bar`, your subsequent call can include `starting_after=obj_bar` in order to fetch the next page of the list.",
             "in": "query",
             "name": "starting_after",
@@ -11812,7 +11981,8 @@
                   "internal_transfer",
                   "platform_credit",
                   "platform_debit",
-                  "platform_fee_payout"
+                  "platform_fee_payout",
+                  "deposit_transfer"
                 ],
                 "type": "string"
               },
@@ -11985,6 +12155,7 @@
                           "EUR",
                           "GBP",
                           "HKD",
+                          "INR",
                           "NOK",
                           "PLN",
                           "SEK",
@@ -11999,6 +12170,14 @@
                     ],
                     "title": "CreateTransferRequestFrom",
                     "type": "object"
+                  },
+                  "linked_id": {
+                    "description": "Unique identifier of the object associated with this Transfer.",
+                    "type": "string"
+                  },
+                  "linked_object": {
+                    "description": "The type of object that Transfer object is associated with. For type = deposit_transfer this can only be deposit.",
+                    "type": "string"
                   },
                   "metadata": {
                     "additionalProperties": {
@@ -12026,6 +12205,7 @@
                           "EUR",
                           "GBP",
                           "HKD",
+                          "INR",
                           "NOK",
                           "PLN",
                           "SEK",
@@ -13363,6 +13543,11 @@
           "business_details": {
             "description": "Details about the business and activities that the account engages in.",
             "properties": {
+              "date_of_incorporation": {
+                "description": "The date (YYYY-MM-DD) on which the business was incorporated.",
+                "nullable": true,
+                "type": "string"
+              },
               "dba": {
                 "description": "Doing Business As, this is a 16 character customer-facing business name. Special characters like <, >, ', or \" are not allowed.",
                 "nullable": true,
@@ -13408,6 +13593,21 @@
               },
               "legal_name": {
                 "description": "Unique name as per official documents.",
+                "type": "string"
+              },
+              "merchant_category_code": {
+                "description": "Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.",
+                "nullable": true,
+                "type": "string"
+              },
+              "merchant_size": {
+                "description": "Merchant classification based on the annual turnover.",
+                "enum": [
+                  "small",
+                  "medium",
+                  "large"
+                ],
+                "nullable": true,
                 "type": "string"
               },
               "physical_address": {
@@ -13607,6 +13807,16 @@
                 "title": "AccountBusinessDetailsPhysicalAddress",
                 "type": "object"
               },
+              "product_category": {
+                "description": "Merchant classification based on the service.",
+                "enum": [
+                  "goods",
+                  "service",
+                  "software"
+                ],
+                "nullable": true,
+                "type": "string"
+              },
               "product_description": {
                 "description": "Description of the account’s business activities.",
                 "nullable": true,
@@ -13681,6 +13891,15 @@
           },
           "parent_account_id": {
             "description": "Unique identifier for the parent account object which created this particular account.",
+            "nullable": true,
+            "type": "string"
+          },
+          "sub_type": {
+            "description": "A type of platform account that facilitates payments for users and is in the funds flow.",
+            "enum": [
+              "aggregator",
+              "referrer"
+            ],
             "nullable": true,
             "type": "string"
           },
@@ -13827,6 +14046,11 @@
             "description": "Unique identifier for the object.",
             "type": "string"
           },
+          "live_fx": {
+            "description": "Indicates whether live FX is enabled for a platform's connected users. If `true`, payouts are processed immediately for all connected users. At present, this will be set to `false`.",
+            "nullable": true,
+            "type": "boolean"
+          },
           "livemode": {
             "description": "Has the value `true` if the object exists in livemode, the value `false` if the object exists in testmode or `null` in the case of a direct user or a platform (a direct user is an Xflow account of `type=user` which is not connected to an account of `type=platform`).",
             "nullable": true,
@@ -13906,6 +14130,11 @@
           "bank_account": {
             "description": "Bank account details.",
             "properties": {
+              "bank_name": {
+                "description": "Name of the bank where the account is opened.",
+                "nullable": true,
+                "type": "string"
+              },
               "domestic_credit": {
                 "description": "Represents the prefix associated with the bank account for a local ACH credit.",
                 "nullable": true,
@@ -14017,6 +14246,7 @@
               "EUR",
               "GBP",
               "HKD",
+              "INR",
               "NOK",
               "PLN",
               "SEK",
@@ -14153,6 +14383,7 @@
                     "EUR",
                     "GBP",
                     "HKD",
+                    "INR",
                     "NOK",
                     "PLN",
                     "SEK",
@@ -14187,6 +14418,7 @@
                     "EUR",
                     "GBP",
                     "HKD",
+                    "INR",
                     "NOK",
                     "PLN",
                     "SEK",
@@ -14232,6 +14464,7 @@
                     "EUR",
                     "GBP",
                     "HKD",
+                    "INR",
                     "NOK",
                     "PLN",
                     "SEK",
@@ -14266,6 +14499,7 @@
                     "EUR",
                     "GBP",
                     "HKD",
+                    "INR",
                     "NOK",
                     "PLN",
                     "SEK",
@@ -14300,6 +14534,7 @@
                     "EUR",
                     "GBP",
                     "HKD",
+                    "INR",
                     "NOK",
                     "PLN",
                     "SEK",
@@ -14352,6 +14587,7 @@
               "EUR",
               "GBP",
               "HKD",
+              "INR",
               "NOK",
               "PLN",
               "SEK",
@@ -14406,6 +14642,7 @@
               "EUR",
               "GBP",
               "HKD",
+              "INR",
               "NOK",
               "PLN",
               "SEK",
@@ -14590,6 +14827,7 @@
                     "file_parameter_not_editable",
                     "file_purpose_mismatch",
                     "file_request_body_invalid",
+                    "file_size_limit_exceeded",
                     "file_type_unsupported",
                     "header_parameter_invalid",
                     "header_parameter_missing",
@@ -14871,9 +15109,10 @@
             "type": "object"
           },
           "type": {
-            "description": "Types of ExchangeRate objects. For now, this only accepts type `lock`.",
+            "description": "Types of ExchangeRate objects. For now, this only accepts type `lock` and `stp.",
             "enum": [
-              "lock"
+              "lock",
+              "stp"
             ],
             "type": "string"
           }
@@ -15036,6 +15275,36 @@
             },
             "type": "array"
           },
+          "receivable_reconcile": {
+            "description": "Receivable reconcile fee details.",
+            "items": {
+              "properties": {
+                "destination_currency": {
+                  "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the destination amount currency. The character * is a wildcard and can be used to represent all supported currencies.",
+                  "type": "string"
+                },
+                "fixed": {
+                  "description": "Fixed payout fee amount.",
+                  "type": "string"
+                },
+                "minimum": {
+                  "description": "Minimum payout fee amount.",
+                  "type": "string"
+                },
+                "source_currency": {
+                  "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit code for the source amount currency. The character * is a wildcard and can be used to represent all supported currencies.",
+                  "type": "string"
+                },
+                "variable": {
+                  "description": "This is the percentage value that is used to calculate the fee.",
+                  "type": "string"
+                }
+              },
+              "title": "FeePlanPayout",
+              "type": "object"
+            },
+            "type": "array"
+          },
           "status": {
             "description": "The status of the FeePlan.",
             "enum": [
@@ -15148,7 +15417,8 @@
               "identity_document",
               "logo",
               "payout_confirmation",
-              "tax_document"
+              "tax_document",
+              "transactional_document"
             ],
             "type": "string"
           },
@@ -15312,6 +15582,7 @@
                   "enum": [
                     "adjustment_negative",
                     "adjustment_positive",
+                    "deposit_reversal",
                     "fee_advance_debit",
                     "funds_credit",
                     "funds_debit",
@@ -15323,7 +15594,8 @@
                     "processing_fee",
                     "reconcile",
                     "reconcile_paypal",
-                    "transfer"
+                    "transfer",
+                    "unfunds_debit"
                   ],
                   "type": "string"
                 }
@@ -15371,6 +15643,7 @@
             "enum": [
               "adjustment_negative",
               "adjustment_positive",
+              "deposit_reversal",
               "fee_advance_debit",
               "funds_credit",
               "funds_debit",
@@ -15381,7 +15654,8 @@
               "platform_partner_debit",
               "processing_fee",
               "reconcile",
-              "transfer"
+              "transfer",
+              "unfunds_debit"
             ],
             "type": "string"
           }
@@ -15723,6 +15997,7 @@
               "EUR",
               "GBP",
               "HKD",
+              "INR",
               "NOK",
               "PLN",
               "SEK",
@@ -15742,6 +16017,11 @@
           },
           "description": {
             "description": "Represents an array of deposit objects due to which amount is locked.",
+            "nullable": true,
+            "type": "string"
+          },
+          "hsn_code": {
+            "description": "Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.",
             "nullable": true,
             "type": "string"
           },
@@ -15829,6 +16109,36 @@
             ],
             "type": "string"
           },
+          "documents": {
+            "description": "Supporting documents like shipping, tax, or customs documents.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "file_id": {
+                  "description": "A file object identifier which references a document that validates the transaction made via the receivable.",
+                  "type": "string"
+                },
+                "id": {
+                  "description": "Internal id associated with the document submission.",
+                  "type": "string"
+                },
+                "reconcile_id": {
+                  "description": "Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.",
+                  "type": "string"
+                },
+                "status": {
+                  "description": "Status of the document. The supported values are `returned` and `submitted`.",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Type of the document. The supported values are `shipping` and `customs`.",
+                  "type": "string"
+                }
+              },
+              "nullable": true
+            }
+          },          
           "system_message": {
             "description": "Details regarding issues with the receivable.",
             "items": {
@@ -15897,6 +16207,7 @@
                   "EUR",
                   "GBP",
                   "HKD",
+                  "INR",
                   "NOK",
                   "PLN",
                   "SEK",
@@ -15912,6 +16223,14 @@
           },
           "id": {
             "description": "Unique identifier for the object.",
+            "type": "string"
+          },
+          "linked_id": {
+            "description": "Unique identifier of the object associated with this Transfer.",
+            "type": "string"
+          },
+          "linked_object": {
+            "description": "The type of object that Transfer object is associated with. For type = `deposit_transfer` this can only be `deposit`.",
             "type": "string"
           },
           "livemode": {
@@ -15966,6 +16285,7 @@
                   "EUR",
                   "GBP",
                   "HKD",
+                  "INR",
                   "NOK",
                   "PLN",
                   "SEK",
@@ -15986,7 +16306,8 @@
               "internal_transfer",
               "platform_credit",
               "platform_debit",
-              "platform_fee_payout"
+              "platform_fee_payout",
+              "deposit_transfer"
             ],
             "type": "string"
           }

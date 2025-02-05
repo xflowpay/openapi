@@ -246,6 +246,10 @@ paths:
                     Details about the business and activities that the account
                     engages in.
                   properties:
+                    date_of_incorporation:
+                      description: >-
+                        The date (YYYY-MM-DD) on which the business was incorporated.
+                      type: string
                     dba:
                       description: >-
                         Doing Business As, this is a 16 character
@@ -284,6 +288,16 @@ paths:
                       type: object
                     legal_name:
                       description: Unique name as per official documents.
+                      type: string
+                    merchant_category_code:
+                      description: Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.
+                      type: string
+                    merchant_size:
+                      description: Merchant classification based on the annual turnover. The valid values include `small`, `medium` or `large`
+                      enum: 
+                        - small
+                        - medium
+                        - large
                       type: string
                     physical_address:
                       description: Details about the physical address.
@@ -473,6 +487,13 @@ paths:
                         - country
                       title: CreateAccountRequestBusinessDetailsPhysicalAddress
                       type: object
+                    product_category:
+                      description: Merchant classification based on the service. The valid values include `goods`, `services` and `software` 
+                      enum: 
+                        - goods
+                        - services
+                        - software
+                      type: string
                     product_description:
                       description: Description of the account’s business activities.
                       type: string
@@ -734,6 +755,10 @@ paths:
                     Details about the business and activities that the account
                     engages in.
                   properties:
+                    date_of_incorporation:
+                      description: >-
+                        The date (YYYY-MM-DD) on which the business was incorporated.
+                      type: string
                     dba:
                       description: >-
                         Doing Business As, this is a 16 character
@@ -772,6 +797,16 @@ paths:
                       type: object
                     legal_name:
                       description: Unique name as per official documents.
+                      type: string
+                    merchant_category_code:
+                      description: Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.
+                      type: string
+                    merchant_size:
+                      description: Merchant classification based on the annual turnover. The valid values include `small`, `medium` or `large`
+                      enum: 
+                        - small
+                        - medium
+                        - large
                       type: string
                     physical_address:
                       description: Details about the physical address.
@@ -959,6 +994,13 @@ paths:
                           type: string
                       title: UpdateAccountRequestBusinessDetailsPhysicalAddress
                       type: object
+                    product_category:
+                      description: Merchant classification based on the service. The valid values include `goods`, `services` and `software`
+                      enum: 
+                        - goods
+                        - services
+                        - software
+                      type: string
                     product_description:
                       description: Description of the account’s business activities.
                       type: string
@@ -2286,6 +2328,10 @@ paths:
                 bank_account:
                   description: Bank account details.
                   properties:
+                    bank_name :
+                      description: >-
+                        Name of the bank where the account is opened.
+                      type: string
                     domestic_credit:
                       description: >-
                         Represents the prefix associated with the bank account
@@ -2344,6 +2390,7 @@ paths:
                     - EUR
                     - GBP
                     - HKD
+                    - INR
                     - NOK
                     - PLN
                     - SEK
@@ -3387,6 +3434,7 @@ paths:
                     - EUR
                     - GBP
                     - HKD
+                    - INR
                     - NOK
                     - PLN
                     - SEK
@@ -4747,6 +4795,38 @@ paths:
                     title: CreateFeePlanPayoutFX
                     type: object
                   type: array
+                receivable_reconcile:
+                  description: Receivable reconcile fee details.
+                  type: array
+                  items:
+                    type: object
+                    title: FeePlanReceivableReconcile
+                    properties:
+                      destination_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                          3-digit code for the destination amount currency. The
+                          character * is a wildcard and can be used to represent
+                          all supported currencies.
+                        type: string
+                      fixed:
+                        description: Fixed receivable reconcile fee amount.
+                        type: string
+                      minimum:
+                        description: Minimum receivable reconcile fee amount.
+                        type: string
+                      source_currency:
+                        description: >-
+                          The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                          code for the source amount currency. The character * is a
+                          wildcard and can be used to represent all supported
+                          currencies.
+                        type: string
+                      variable:
+                        description: >-
+                          This is the percentage value that is used to calculate
+                          the fee.
+                        type: string
                 transfer_fx:
                   description: Transfer FX fee details.
                   items:
@@ -5128,6 +5208,7 @@ paths:
                 - logo
                 - payout_confirmation
                 - tax_document
+                - transactional_document
               type: string
             type: array
         - description: >-
@@ -5270,6 +5351,7 @@ paths:
                         - logo
                         - payout_confirmation
                         - tax_document
+                        - transactional_document
                       type: string
                   title: CreateFileRequestPayload
                   type: object
@@ -6590,6 +6672,7 @@ paths:
               enum:
                 - adjustment_negative
                 - adjustment_positive
+                - deposit_reversal
                 - fee_advance_debit
                 - funds_credit
                 - funds_debit
@@ -6602,6 +6685,7 @@ paths:
                 - reconcile
                 - reconcile_paypal
                 - transfer
+                - unfunds_debit
               type: string
             type: array
       responses:
@@ -8107,6 +8191,7 @@ paths:
                     - EUR
                     - GBP
                     - HKD
+                    - INR
                     - NOK
                     - PLN
                     - SEK
@@ -8117,6 +8202,10 @@ paths:
                   description: >-
                     Represents an array of deposit objects due to which amount
                     is locked.
+                  type: string
+                hsn_code:
+                  description: >- 
+                    Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.
                   type: string
                 invoice:
                   description: Relationship of the person with the account.
@@ -8168,6 +8257,33 @@ paths:
                 purpose_code_description:
                   description: Description of the purpose code.
                   type: string
+                supporting_documentation:
+                  description: Details of the supporting documentation.
+                  type: object
+                  properties:
+                    documents:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            description: Internal id associated with the document submission.
+                            type: string
+                          file_id:
+                            description: A file object identifier that references a document validating the transaction made via the receivable.
+                            type: string
+                          reconcile_id:
+                            description: Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.
+                            type: string
+                          type:
+                            description: Type of document submitted.
+                            type: string
+                            enum: 
+                              - customs
+                              - shipping
+                    status:
+                      description: Status of the supporting documentation.
+                      type: string
                 transaction_type:
                   description: Receivable transaction type.
                   enum:
@@ -8358,6 +8474,7 @@ paths:
                     - EUR
                     - GBP
                     - HKD
+                    - INR
                     - NOK
                     - PLN
                     - SEK
@@ -8368,6 +8485,9 @@ paths:
                   description: >-
                     Represents an array of deposit objects due to which amount
                     is locked.
+                  type: string
+                hsn_code: 
+                  description: Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.
                   type: string
                 invoice:
                   description: Relationship of the person with the account.
@@ -8419,6 +8539,33 @@ paths:
                 purpose_code_description:
                   description: Description of the purpose code.
                   type: string
+                supporting_documentation:
+                  description: Details of the supporting documentation.
+                  type: object
+                  properties:
+                    documents:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            description: Internal id associated with the document submission.
+                            type: string
+                          file_id:
+                            description: A file object identifier that references a document validating the transaction made via the receivable.
+                            type: string
+                          reconcile_id:
+                            description: Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.
+                            type: string
+                          type:
+                            description: Type of document submitted.
+                            type: string
+                            enum: 
+                              - customs
+                              - shipping
+                    status:
+                      description: Status of the supporting documentation.
+                      type: string
                 transaction_type:
                   description: Receivable transaction type.
                   enum:
@@ -8817,6 +8964,13 @@ paths:
           schema:
             type: integer
         - description: >-
+            Unique identifier of the object associated with this Transfer.
+          in: query
+          name: linked_id
+          required: false
+          schema:
+            type: string
+        - description: >-
             A cursor for use in pagination. `starting_after` is an object
             identifier that defines your place in the list. For instance, if you
             make a list request and receive 5 objects, ending with `obj_bar`,
@@ -8862,6 +9016,7 @@ paths:
                 - platform_credit
                 - platform_debit
                 - platform_fee_payout
+                - deposit_transfer
               type: string
             type: array
       responses:
@@ -8991,6 +9146,7 @@ paths:
                         - EUR
                         - GBP
                         - HKD
+                        - INR
                         - NOK
                         - PLN
                         - SEK
@@ -9001,6 +9157,12 @@ paths:
                     - account_id
                   title: CreateTransferRequestFrom
                   type: object
+                linked_id: 
+                  description: Unique identifier of the object associated with this Transfer.
+                  type: string
+                linked_object:
+                  description: The type of object that Transfer object is associated with. For type = deposit_transfer this can only be deposit.
+                  type: string
                 metadata:
                   additionalProperties:
                     type: string
@@ -9037,6 +9199,7 @@ paths:
                         - EUR
                         - GBP
                         - HKD
+                        - INR
                         - NOK
                         - PLN
                         - SEK
@@ -9958,6 +10121,11 @@ components:
             Details about the business and activities that the account engages
             in.
           properties:
+            date_of_incorporation:
+              description: >-
+                The date (YYYY-MM-DD) on which the business was incorporated.
+              nullable: true
+              type: string
             dba:
               description: >-
                 Doing Business As, this is a 16 character customer-facing
@@ -10001,6 +10169,18 @@ components:
               type: object
             legal_name:
               description: Unique name as per official documents.
+              type: string
+            merchant_category_code:
+              description: Popularly known as MCC, is a four-digit code used to classify businesses by the type of goods or services they provide.
+              nullable: true
+              type: string
+            merchant_size:
+              description: Merchant classification based on the annual turnover.
+              enum:
+                - small
+                - medium
+                - large
+              nullable: true
               type: string
             physical_address:
               description: Details about the physical address.
@@ -10193,6 +10373,14 @@ components:
                   type: string
               title: AccountBusinessDetailsPhysicalAddress
               type: object
+            product_category:
+              description: Merchant classification based on the service.
+              enum:
+                - goods
+                - service
+                - software
+              nullable: true 
+              type: string
             product_description:
               description: Description of the account’s business activities.
               nullable: true
@@ -10276,6 +10464,13 @@ components:
           description: >-
             Unique identifier for the parent account object which created this
             particular account.
+          nullable: true
+          type: string
+        sub_type:
+          description: A type of platform account that facilitates payments for users and is in the funds flow.
+          enum: 
+            - aggregator
+            - referrer
           nullable: true
           type: string
         supporting_documentation:
@@ -10430,6 +10625,11 @@ components:
         id:
           description: Unique identifier for the object.
           type: string
+        live_fx:
+          description: >-
+            Indicates whether live FX is enabled for a platform's connected users. If `true`, payouts are processed immediately for all connected users. At present, this will be set to `false`.
+          nullable: true
+          type: boolean
         livemode:
           description: >-
             Has the value `true` if the object exists in livemode, the value
@@ -10520,6 +10720,11 @@ components:
         bank_account:
           description: Bank account details.
           properties:
+            bank_name :
+              description: >-
+                Name of the bank where the account is opened.
+              nullable: true
+              type: string
             domestic_credit:
               description: >-
                 Represents the prefix associated with the bank account for a
@@ -10629,6 +10834,7 @@ components:
             - EUR
             - GBP
             - HKD
+            - INR
             - NOK
             - PLN
             - SEK
@@ -10763,6 +10969,7 @@ components:
                   - EUR
                   - GBP
                   - HKD
+                  - INR
                   - NOK
                   - PLN
                   - SEK
@@ -10796,6 +11003,7 @@ components:
                   - EUR
                   - GBP
                   - HKD
+                  - INR
                   - NOK
                   - PLN
                   - SEK
@@ -10838,6 +11046,7 @@ components:
                   - EUR
                   - GBP
                   - HKD
+                  - INR
                   - NOK
                   - PLN
                   - SEK
@@ -10871,6 +11080,7 @@ components:
                   - EUR
                   - GBP
                   - HKD
+                  - INR
                   - NOK
                   - PLN
                   - SEK
@@ -10905,6 +11115,7 @@ components:
                   - EUR
                   - GBP
                   - HKD
+                  - INR
                   - NOK
                   - PLN
                   - SEK
@@ -10956,6 +11167,7 @@ components:
             - EUR
             - GBP
             - HKD
+            - INR
             - NOK
             - PLN
             - SEK
@@ -11014,6 +11226,7 @@ components:
             - EUR
             - GBP
             - HKD
+            - INR
             - NOK
             - PLN
             - SEK
@@ -11208,6 +11421,7 @@ components:
                   - file_name_length_invalid
                   - file_parameter_not_editable
                   - file_purpose_mismatch
+                  - file_size_limit_exceeded
                   - file_request_body_invalid
                   - file_type_unsupported
                   - header_parameter_invalid
@@ -11495,9 +11709,10 @@ components:
         type:
           description: >-
             Types of ExchangeRate objects. For now, this only accepts type
-            `lock`.
+            `lock` and `stp`.
           enum:
             - lock
+            - stp
           type: string
       title: ExchangeRate
       type: object
@@ -11661,6 +11876,38 @@ components:
             title: FeePlanPayoutFX
             type: object
           type: array
+        receivable_reconcile:
+          description: Receivable reconcile fee details.
+          type: array
+          items:
+            type: object
+            title: FeePlanReceivableReconcile
+            properties:
+              destination_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
+                  3-digit code for the destination amount currency. The
+                  character * is a wildcard and can be used to represent
+                  all supported currencies.
+                type: string
+              fixed:
+                description: Fixed receivable reconcile fee amount.
+                type: string
+              minimum:
+                description: Minimum receivable reconcile fee amount.
+                type: string
+              source_currency:
+                description: >-
+                  The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 3-digit
+                  code for the source amount currency. The character * is a
+                  wildcard and can be used to represent all supported
+                  currencies.
+                type: string
+              variable:
+                description: >-
+                  This is the percentage value that is used to calculate
+                  the fee.
+                type: string
         status:
           description: The status of the FeePlan.
           enum:
@@ -11773,6 +12020,7 @@ components:
             - logo
             - payout_confirmation
             - tax_document
+            - transactional_document
           type: string
         size:
           description: The size in bytes of the uploaded file.
@@ -11945,6 +12193,7 @@ components:
                 enum:
                   - adjustment_negative
                   - adjustment_positive
+                  - deposit_reversal
                   - fee_advance_debit
                   - funds_credit
                   - funds_debit
@@ -11957,6 +12206,7 @@ components:
                   - reconcile
                   - reconcile_paypal
                   - transfer
+                  - unfunds_debit
                 type: string
             title: PaymentLinkedPayments
             type: object
@@ -12003,6 +12253,7 @@ components:
           enum:
             - adjustment_negative
             - adjustment_positive
+            - deposit_reversal
             - fee_advance_debit
             - funds_credit
             - funds_debit
@@ -12014,6 +12265,7 @@ components:
             - processing_fee
             - reconcile
             - transfer
+            - unfunds_debit
           type: string
       title: Payment
       type: object
@@ -12381,6 +12633,7 @@ components:
             - EUR
             - GBP
             - HKD
+            - INR
             - NOK
             - PLN
             - SEK
@@ -12400,6 +12653,11 @@ components:
           description: >-
             Represents an array of deposit objects due to which amount is
             locked.
+          nullable: true
+          type: string
+        hsn_code: 
+          description: >-
+            Harmonized System Nomenclature (HSN) code use to classify the goods for cross-border trade.
           nullable: true
           type: string
         id:
@@ -12483,6 +12741,35 @@ components:
             - hold
             - input_required
           type: string
+        supporting_documentation:
+          description: Details of the supporting documentation.
+          type: object
+          properties:
+            documents:
+              description: Supporting documents like shipping, tax or customs documents.
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    description: Internal id associated with the document submission.
+                    type: string
+                  file_id:
+                    description: A file object identifier that references a document validating the transaction made via the receivable.
+                    type: string
+                  reconcile_id:
+                    description: Id of the reconcile event. It is used to associate the document with a specific reconcile action. If not provided, the document is considered to be against the receivable.
+                    type: string
+                  type:
+                    description: Type of document submitted.
+                    type: string
+                    enum: 
+                      - customs
+                      - shipping
+            status:
+              description: Status of the supporting documentation.
+              type: string
+          nullable: true
         system_message:
           description: Details regarding issues with the receivable.
           items:
@@ -12553,6 +12840,7 @@ components:
                 - EUR
                 - GBP
                 - HKD
+                - INR
                 - NOK
                 - PLN
                 - SEK
@@ -12564,6 +12852,12 @@ components:
           type: object
         id:
           description: Unique identifier for the object.
+          type: string
+        linked_id:
+          description: Unique identifier of the object associated with this Transfer.
+          type: string
+        linked_object:
+          description: The type of object that Transfer object is associated with. For type = deposit_transfer this can only be deposit.
           type: string
         livemode:
           description: >-
@@ -12624,6 +12918,7 @@ components:
                 - EUR
                 - GBP
                 - HKD
+                - INR
                 - NOK
                 - PLN
                 - SEK
@@ -12641,6 +12936,7 @@ components:
             - platform_credit
             - platform_debit
             - platform_fee_payout
+            - deposit_transfer
           type: string
       title: Transfer
       type: object
